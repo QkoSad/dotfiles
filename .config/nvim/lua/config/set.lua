@@ -14,7 +14,7 @@ vim.opt.textwidth = 80
 -- backup moved to the undotree plugin
 vim.opt.swapfile = false
 vim.opt.backup = false
-vim.opt.undodir = os.getenv("HOME") .. "/.config/nvim/undodir"
+vim.opt.undodir = os.getenv("HOME") .. "/.config/vim/undodir"
 vim.opt.undofile = true
 -- search options
 vim.opt.hlsearch = false
