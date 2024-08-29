@@ -1,0 +1,6 @@
+directory: /mnt/hardDrive/Music
+library: ~/.local/share/beets/musiclibrary.db
+plugins: fetchart lyrics lastgenre
+import:
+    write: yes
+

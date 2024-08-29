@@ -1,0 +1,11 @@
+hide_scroll=true
+show=drun
+width=30%
+height=50%
+term=foot
+always_parse_args=false
+layer=overlay
+prompt=
+location=center
+key_expand=Tab
+insensitive=true

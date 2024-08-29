@@ -1,0 +1,104 @@
+
+* {
+  transition: none;
+  box-shadow: none;
+  font-family: FiraCode Nerd Font Regular;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+#waybar {
+  background: transparent;
+  border-radius: 3px;
+  border: none;
+}
+
+#workspaces,
+#window {
+  border-radius: 13px;
+  margin: 6px 0;
+  margin-left: 6px;
+  padding: 0 10px;
+  font-weight: 500;
+  background: transparent;
+  color: white;
+  transition: all 0.3s ease-out;
+}
+
+#window {
+  padding: 0 12px;
+}
+
+window#waybar.empty #window {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  background: transparent;
+}
+
+#workspaces button {
+  margin: 0 3px;
+  padding: 0;
+  color: white;
+  background: none;
+  border: none;
+  transition: all 0.3s ease-out;
+}
+
+#workspaces button.active {
+  color: #fde018;
+}
+
+#workspaces button.empty{
+  color: gray;
+}
+
+#workspaces button.visible {
+  color: #fde018;
+}
+
+
+#taskbar button.active {
+  color: #fde018;
+}
+
+#taskbar button {
+  color: white;
+}
+
+#wireplumber {
+  color: white;
+  padding: 0 20px;
+}
+
+#wireplumber.muted {
+  color: #40484c;
+  padding: 0 20px;
+}
+
+#mode,
+#clock,
+#temperature,
+#language,
+#wireplumber,
+#custom-notification,
+#taskbar {
+  margin: 6px 0px;
+  padding: 0 11px;
+  margin-right: 6px;
+  border-radius: 13px;
+  min-width: 8px;
+  background-color: transparent;
+  color: white;
+}
+
+#language {
+  min-width: 16px;
+}
+
+#clock {
+  margin: 6px 0;
+  color: white;
+  padding: 0 20px;
+}
+
