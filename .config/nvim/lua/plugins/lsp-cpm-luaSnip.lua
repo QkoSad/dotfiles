@@ -29,7 +29,12 @@ return {
 			ensure_installed = {
 				"lua_ls",
 				"cssls",
-				-- weird thing started giving errors out of nowhere
+				"html",
+				"tailwindcss",
+				"tsserver",
+				-- "prettierd",
+				-- "stylua",
+				-- those 2 need manual install on new
 			},
 			handlers = {
 				function(server_name) -- default handler (optional)
