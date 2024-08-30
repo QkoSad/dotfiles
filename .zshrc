@@ -1,5 +1,5 @@
 autoload -U colors && colors
-HISTFILE=~/.histfile
+HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 alias history="history 1"
@@ -65,7 +65,8 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -v '^?' backward-delete-char
 
 # for some reason no history search in vim mode
-bindkey "^R" history-incremental-search-backward
+# atuin overrides it
+# bindkey "^R" history-incremental-search-backward
 
 
 #notes
@@ -86,6 +87,8 @@ alias fzf="fzf --preview '/usr/bin/bat {} --color=always'"
 # zoxided
 eval "$(zoxide init zsh)"
 
+# atuin
+eval "$(atuin init zsh)"
 # lynx 
 alias lynx="lynx --useragent='Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_0) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.79 Safari/537.1 Lynx' -cfg=$HOME/.config/lynx/lynx.cfg -lss=$HOME/.config/lynx/lynx.lss"
 

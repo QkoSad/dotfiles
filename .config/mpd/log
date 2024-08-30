@@ -1337,3 +1337,5 @@ Aug 27 23:25 : exception: Failed to commit /home/arch/.config/mpd/state: File ex
 Aug 28 07:52 : exception: Failed to read from /home/arch/.config/mpd/state: Is a directory
 Aug 28 22:45 : exception: Failed to commit /home/arch/.config/mpd/state: File exists
 Aug 29 07:23 : exception: Failed to read from /home/arch/.config/mpd/state: Is a directory
+Aug 29 22:22 : exception: Failed to commit /home/arch/.config/mpd/state: File exists
+Aug 30 08:47 : exception: Failed to read from /home/arch/.config/mpd/state: Is a directory
