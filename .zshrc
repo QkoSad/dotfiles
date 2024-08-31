@@ -83,15 +83,12 @@ open(){
 alias getpath="find -type f | fzf | sed 's/^..//' | tr -d '\n' | xclip -selection c"
 # fzf with preview
 alias fzf="fzf --preview '/usr/bin/bat {} --color=always'"
-
 # zoxided
 eval "$(zoxide init zsh)"
-
 # atuin
 eval "$(atuin init zsh)"
 # lynx 
 alias lynx="lynx --useragent='Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_0) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.79 Safari/537.1 Lynx' -cfg=$HOME/.config/lynx/lynx.cfg -lss=$HOME/.config/lynx/lynx.lss"
-
 # lyxn search ripped rom https://github.com/rwxrob
 urlencode() {
   declare str="$*"
@@ -125,6 +122,7 @@ alias la="exa -lah"
 alias ll="exa -l"
 alias vim=nvim
 alias rm=trash
+alias bc="bc -l"
 # alias cd=z
 alias grep="grep --with-filename --line-number --color=auto -i"
 

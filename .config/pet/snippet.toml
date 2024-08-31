@@ -12,3 +12,10 @@
   Output = ""
   Tag = []
   command = "sudo efibootmgr -B -b 0000"
+
+[[Snippets]]
+  Description = "mount ntfs"
+  Filename = "/home/arch/.config/pet/snippet.toml"
+  Output = ""
+  Tag = []
+  command = "sudo mount /dev/sdb2 /mnt/hardDrive"
