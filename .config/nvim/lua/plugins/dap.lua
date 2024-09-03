@@ -3,7 +3,7 @@ return {
   -- keys ={},
   config = function()
     local dap = require("dap")
-    -- vscode and deno adapters
+    -- vscode and deno adapter
     dap.adapters["pwa-node"] = {
       type = "server",
       host = "localhost",

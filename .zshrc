@@ -68,10 +68,26 @@ bindkey -v '^?' backward-delete-char
 # atuin overrides it
 # bindkey "^R" history-incremental-search-backward
 
-
 #notes
 notes() { nvim --cmd 'cd ~/.notes'}   
-
+# commands
+remem(){
+  declare desc="$1"
+  declare com="$2"
+  echo "Description:\n"${desc}"\nCommand:\n"${com}"\n------------" >> ~/.commands 
+}
+remem-ls(){
+  cat ~/.commands
+}
+#time-tracking
+time-start(){
+  declare desc="$1"
+  echo "${1} Started - `date +'%H:%m %D'`"
+}
+time-stop(){
+  declare desc="$1"
+  echo "${1} Finished - `date +'%H:%m %D'`"
+}
 # finding things
 fcd(){
   cd "$(find -type d | fzf)"
@@ -121,6 +137,7 @@ alias ls=exa
 alias la="exa -lah"
 alias ll="exa -l"
 alias vim=nvim
+alias urm=rm
 alias rm=trash
 alias bc="bc -l"
 # alias cd=z
