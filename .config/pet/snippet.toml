@@ -19,3 +19,10 @@
   Output = ""
   Tag = []
   command = "sudo mount /dev/sdb2 /mnt/hardDrive"
+
+[[Snippets]]
+  Description = "units conversion"
+  Filename = "/home/arch/.config/pet/snippet.toml"
+  Output = ""
+  Tag = []
+  command = "rink"

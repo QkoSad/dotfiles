@@ -82,11 +82,26 @@ remem-ls(){
 #time-tracking
 time-start(){
   declare desc="$1"
-  echo "${1} Started - `date +'%H:%m %D'`"
+  echo "${1} Started - `date +'%H:%m %D'`" >>  ~/.time
 }
 time-stop(){
   declare desc="$1"
-  echo "${1} Finished - `date +'%H:%m %D'`"
+  echo "${1} Finished - `date +'%H:%m %D'`" >>  ~/.time
+}
+time-ls(){
+  cat ~/.time
+}
+todo-add(){
+  declare desc="$1"
+  echo "Do:\n${desc}" >> ~/.todos
+}
+todo-rm(){
+  declare desc="$1"
+  sed -zi "s/Do:\n${desc}//" ~/.todos
+  sed -ri '/^\s*$/d' ~/.todos
+}
+todo-ls(){
+  cat ~/.todos
 }
 # finding things
 fcd(){
@@ -125,12 +140,6 @@ duck () {
 }
 alias "?"=duck
 
-# configurations so home dir stays clean
-alias irssi="irssi --config='$XDG_CONFIG_HOME'/irssi/config --home='$XDG_DATA_HOME'/irssi"
-alias nvidia-settings="nvidia-settings --config='$XDG_CONFIG_HOME'/nvidia/settings"
-alias mbsync="mbsync -c '$XDG_CONFIG_HOME'/isync/mbsyncrc"
-alias yarn="yarn --use-yarnrc '$XDG_CONFIG_HOME/yarn/config'"
-
 #aliases
 alias cat=bat
 alias ls=exa
@@ -143,18 +152,26 @@ alias bc="bc -l"
 # alias cd=z
 alias grep="grep --with-filename --line-number --color=auto -i"
 
+# shell built ins man pages
+unalias run-help
+autoload run-help
+
+# autostart DE
+if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
+  exec Hyprland
+fi
+# configurations so home dir stays clean
+alias irssi="irssi --config='$XDG_CONFIG_HOME'/irssi/config --home='$XDG_DATA_HOME'/irssi"
+alias nvidia-settings="nvidia-settings --config='$XDG_CONFIG_HOME'/nvidia/settings"
+alias mbsync="mbsync -c '$XDG_CONFIG_HOME'/isync/mbsyncrc"
+alias yarn="yarn --use-yarnrc '$XDG_CONFIG_HOME/yarn/config'"
+
 # Plugins
 # zsh substring
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 bindkey '^[k' history-substring-search-up
 bindkey '^[j' history-substring-search-down
-
-
-# autostart DE
-if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
-  exec Hyprland
-fi
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 

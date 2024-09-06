@@ -5,6 +5,7 @@ vim.g.maplocalleader = " "
 
 -- vim.keymap.set('n','<leader>pv',':Lex 30 <cr>')
 
+vim.keymap.set("n", "<C-w>x", "<C-w>q")
 -- don't move the cursor for J
 vim.keymap.set("n", "J", "mzJ`z")
 -- center screen on movement
