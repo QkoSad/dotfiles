@@ -1345,3 +1345,218 @@ Sep 01 08:17 : exception: Failed to read from /home/arch/.config/mpd/state: Is a
 Sep 01 22:28 : player: played "100 gecs/1000 gecs and The Tree of Clues/01 money machine (A.G. Cook remix).flac"
 Sep 02 07:52 : exception: Failed to decode /mnt/hardDrive/Music/100 gecs/1000 gecs and The Tree of Clues/01 money machine (A.G. Cook remix).flac; Failed to open '/mnt/hardDrive/Music/100 gecs/1000 gecs and The Tree of Clues/01 money machine (A.G. Cook remix).flac': No such file or directory
 Sep 02 07:52 : player: played "100 gecs/1000 gecs and The Tree of Clues/01 money machine (A.G. Cook remix).flac"
+Sep 06 19:36 : player: played "AJJ/Only God Can Judge Me and More/01 Darkest Heart.mp3"
+Sep 06 19:37 : player: played "AJJ/Only God Can Judge Me and More/02 Jesus Saves.mp3"
+Sep 06 19:39 : player: played "AJJ/Only God Can Judge Me and More/03 Human Kittens.mp3"
+Sep 06 19:41 : player: played "AJJ/Only God Can Judge Me and More/04 Growing Up.mp3"
+Sep 06 19:44 : player: played "AJJ/Only God Can Judge Me and More/05 Candle in the Wind (Ben’s Song).mp3"
+Sep 06 19:49 : player: played "AJJ/Only God Can Judge Me and More/06 Guilt_ The Song.mp3"
+Sep 06 19:50 : player: played "AJJ/Only God Can Judge Me and More/07 I Am So Mad at You.mp3"
+Sep 06 19:53 : player: played "AJJ/Only God Can Judge Me and More/08 El Principito.mp3"
+Sep 06 19:54 : player: played "AJJ/Only God Can Judge Me and More/09 We Shall All Die Alone Someday.mp3"
+Sep 06 19:55 : player: played "AJJ/Only God Can Judge Me and More/10 Forest Fire.mp3"
+Sep 06 19:58 : player: played "AJJ/Only God Can Judge Me and More/11 Let Us Get Murdered.mp3"
+Sep 06 20:00 : player: played "AJJ/Only God Can Judge Me and More/12 All the Dead Kids.mp3"
+Sep 06 20:01 : player: played "AJJ/Only God Can Judge Me and More/13 Unicron.mp3"
+Sep 06 23:33 : player: played "AJJ/Only God Can Judge Me and More/14 Power Plant.mp3"
+Sep 07 08:07 : exception: Failed to decode /mnt/hardDrive/Music/AJJ/Only God Can Judge Me and More/14 Power Plant.mp3; Failed to open '/mnt/hardDrive/Music/AJJ/Only God Can Judge Me and More/14 Power Plant.mp3': No such file or directory
+Sep 07 08:07 : exception: Failed to decode /mnt/hardDrive/Music/AJJ/Only God Can Judge Me and More/15 This Is Why I'm Hot.mp3; Failed to open '/mnt/hardDrive/Music/AJJ/Only God Can Judge Me and More/15 This Is Why I'm Hot.mp3': No such file or directory
+Sep 07 08:07 : player: played "AJJ/Only God Can Judge Me and More/14 Power Plant.mp3"
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Butterfly 3000/01 Yours.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Butterfly 3000/02 Shanghai.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Butterfly 3000/03 Dreams.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Butterfly 3000/04 Blue Morpho.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Butterfly 3000/05 Interior People.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Butterfly 3000/06 Catching Smoke.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Butterfly 3000/07 2.02 Killer Year.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Butterfly 3000/08 Black Hot Soup.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Butterfly 3000/09 Ya Love.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Butterfly 3000/10 Butterfly 3000.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Changes/01 Change.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Changes/02 Hate Dancin’.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Changes/03 Astroturf.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Changes/04 No Body.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Changes/05 Gondii.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Changes/06 Exploding Suns.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Changes/07 Short Change.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Float Along – Fill Your Lungs/01 Head On_Pill.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Float Along – Fill Your Lungs/02 I Am Not a Man Unless I Have a Woman.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Float Along – Fill Your Lungs/03 God Is Calling Me Back Home.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Float Along – Fill Your Lungs/04 30 Past 7.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Float Along – Fill Your Lungs/05 Let Me Mend the Past.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Float Along – Fill Your Lungs/06 Mystery Jack.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Float Along – Fill Your Lungs/07 Pop in My Step.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Float Along – Fill Your Lungs/08 Float Along – Fill Your Lungs.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Flying Microtonal Banana/01 Rattlesnake.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Flying Microtonal Banana/02 Melting.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Flying Microtonal Banana/03 Open Water.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Flying Microtonal Banana/04 Sleep Drifter.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Flying Microtonal Banana/05 Billabong Valley.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Flying Microtonal Banana/06 Anoxia.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Flying Microtonal Banana/07 Doom City.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Flying Microtonal Banana/08 Nuclear Fusion.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Flying Microtonal Banana/09 Flying Microtonal Banana.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Ice, Death, Planets, Lungs, Mushrooms and Lava/01 Mycelium.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Ice, Death, Planets, Lungs, Mushrooms and Lava/02 Ice V.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Ice, Death, Planets, Lungs, Mushrooms and Lava/03 Magma.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Ice, Death, Planets, Lungs, Mushrooms and Lava/04 Lava.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Ice, Death, Planets, Lungs, Mushrooms and Lava/05 Hell’s Itch.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Ice, Death, Planets, Lungs, Mushrooms and Lava/06 Iron Lung.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Ice, Death, Planets, Lungs, Mushrooms and Lava/07 Gliese 710.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/K.G_/01 K.G.L.W_.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/K.G_/02 Automation.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/K.G_/03 Minimum Brain Size.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/K.G_/04 Straws in the Wind.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/K.G_/05 Some of Us.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/K.G_/06 Ontology.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/K.G_/07 Intrasport.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/K.G_/08 Oddlife.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/K.G_/09 Honey.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/K.G_/10 The Hungry Wolf of Fate.flac
+Sep 10 23:37 : update: removing King Gizzard & the Lizard Wizard/Nonagon Infinity/01 Robot Stop.mp3
+Sep 10 23:37 : update: removing King Gizzard & the Lizard Wizard/Nonagon Infinity/02 Big Fig Wasp.mp3
+Sep 10 23:37 : update: removing King Gizzard & the Lizard Wizard/Nonagon Infinity/03 Gamma Knife.mp3
+Sep 10 23:37 : update: removing King Gizzard & the Lizard Wizard/Nonagon Infinity/04 People‐Vultures.mp3
+Sep 10 23:37 : update: removing King Gizzard & the Lizard Wizard/Nonagon Infinity/05 Mr. Beat.mp3
+Sep 10 23:37 : update: removing King Gizzard & the Lizard Wizard/Nonagon Infinity/06 Evil Death Roll.mp3
+Sep 10 23:37 : update: removing King Gizzard & the Lizard Wizard/Nonagon Infinity/07 Invisible Face.mp3
+Sep 10 23:37 : update: removing King Gizzard & the Lizard Wizard/Nonagon Infinity/08 Wah Wah.mp3
+Sep 10 23:37 : update: removing King Gizzard & the Lizard Wizard/Nonagon Infinity/09 Road Train.mp3
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Nonagon Infinity/01 Robot Stop.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Nonagon Infinity/02 Big Fig Wasp.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Nonagon Infinity/03 Gamma Knife.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Nonagon Infinity/04 People-Vultures.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Nonagon Infinity/05 Mr. Beat.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Nonagon Infinity/06 Evil Death Roll.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Nonagon Infinity/07 Invisible Face.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Nonagon Infinity/08 Wah Wah.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Nonagon Infinity/09 Road Train.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Oddments/01 Alluda Majaka.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Oddments/02 Stressin'.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Oddments/03 Vegemite.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Oddments/04 It's Got Old.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Oddments/05 Work This Time.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Oddments/06 ABABCD.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Oddments/07 Sleepwalker.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Oddments/08 Hot Wax.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Oddments/09 Crying.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Oddments/10 Pipe-Dream.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Oddments/11 Homeless Man in Adidas.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Oddments/12 Oddments.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Omnium Gatherum/01 The Dripping Tap.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Omnium Gatherum/02 Magenta Mountain.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Omnium Gatherum/03 Kepler‐22b.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Omnium Gatherum/04 Gaia.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Omnium Gatherum/05 Ambergris.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Omnium Gatherum/06 Sadie Sorceress.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Omnium Gatherum/07 Evilest Man.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Omnium Gatherum/08 The Garden Goblin.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Omnium Gatherum/09 Blame It on the Weather.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Omnium Gatherum/10 Persistence.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Omnium Gatherum/11 The Grim Reaper.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Omnium Gatherum/12 Presumptuous.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Omnium Gatherum/13 Predator X.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Omnium Gatherum/14 Red Smoke.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Omnium Gatherum/15 Candles.flac
+Sep 10 23:37 : update: added King Gizzard & the Lizard Wizard/Omnium Gatherum/16 The Funeral.flac
+Sep 10 23:37 : update: added Lou Reed/Transformer/01 Vicious.flac
+Sep 10 23:37 : update: added Lou Reed/Transformer/02 Andy’s Chest.flac
+Sep 10 23:37 : update: added Lou Reed/Transformer/03 Perfect Day.flac
+Sep 10 23:37 : update: added Lou Reed/Transformer/04 Hangin’ ’Round.flac
+Sep 10 23:37 : update: added Lou Reed/Transformer/05 Walk on the Wild Side.flac
+Sep 10 23:37 : update: added Lou Reed/Transformer/06 Make Up.flac
+Sep 10 23:37 : update: added Lou Reed/Transformer/07 Satellite of Love.flac
+Sep 10 23:37 : update: added Lou Reed/Transformer/08 Wagon Wheel.flac
+Sep 10 23:37 : update: added Lou Reed/Transformer/09 New York Telephone Conversation.flac
+Sep 10 23:37 : update: added Lou Reed/Transformer/10 I’m So Free.flac
+Sep 10 23:37 : update: added Lou Reed/Transformer/11 Goodnight Ladies.flac
+Sep 10 23:37 : update: added Iggy Pop/Lust for Life/01 Lust for Life.flac
+Sep 10 23:37 : update: added Iggy Pop/Lust for Life/02 Sixteen.flac
+Sep 10 23:37 : update: added Iggy Pop/Lust for Life/03 Some Weird Sin.flac
+Sep 10 23:37 : update: added Iggy Pop/Lust for Life/04 The Passenger.flac
+Sep 10 23:37 : update: added Iggy Pop/Lust for Life/05 Tonight.flac
+Sep 10 23:37 : update: added Iggy Pop/Lust for Life/06 Success.flac
+Sep 10 23:37 : update: added Iggy Pop/Lust for Life/07 Turn Blue.flac
+Sep 10 23:37 : update: added Iggy Pop/Lust for Life/08 Neighborhood Threat.flac
+Sep 10 23:37 : update: added Iggy Pop/Lust for Life/09 Fall in Love With Me.flac
+Sep 12 18:40 : exception: Failed to decode /mnt/hardDrive/Music/King Gizzard & the Lizard Wizard/Nonagon Infinity/01 Robot Stop.flac; Failed to open '/mnt/hardDrive/Music/King Gizzard & the Lizard Wizard/Nonagon Infinity/01 Robot Stop.flac': No such file or directory
+Sep 12 18:40 : player: played "King Gizzard & the Lizard Wizard/Nonagon Infinity/01 Robot Stop.flac"
+Sep 12 18:40 : exception: Failed to decode /mnt/hardDrive/Music/King Gizzard & the Lizard Wizard/Nonagon Infinity/02 Big Fig Wasp.flac; Failed to open '/mnt/hardDrive/Music/King Gizzard & the Lizard Wizard/Nonagon Infinity/02 Big Fig Wasp.flac': No such file or directory
+Sep 12 18:40 : player: played "King Gizzard & the Lizard Wizard/Nonagon Infinity/02 Big Fig Wasp.flac"
+Sep 15 15:20 : player: played "Sabaton/The Last Stand/01 Sparta.mp3"
+Sep 15 15:24 : player: played "Sabaton/The Last Stand/02 Last Dying Breath.mp3"
+Sep 15 15:27 : player: played "Sabaton/The Last Stand/03 Blood of Bannockburn.mp3"
+Sep 15 15:27 : player: played "Sabaton/The Last Stand/04 Diary of an Unknown Soldier.mp3"
+Sep 15 21:58 : player: played "Sabaton/The Last Stand/06 Rorke's Drift.mp3"
+Sep 16 08:58 : exception: Failed to decode /mnt/hardDrive/Music/Sabaton/The Last Stand/06 Rorke's Drift.mp3; Failed to open '/mnt/hardDrive/Music/Sabaton/The Last Stand/06 Rorke's Drift.mp3': No such file or directory
+Sep 16 08:58 : player: played "Sabaton/The Last Stand/06 Rorke's Drift.mp3"
+Sep 17 15:20 : pipewire_output: Decoder is too slow; playing silence to avoid xrun
+Sep 17 22:19 : player: played "Giacomo Puccini; Joan Sutherland, Luciano Pavarotti, Montserrat Caballé, Nicolaï Ghiaurov, Tom Krause, Peter Pears, The John Alldis Choir, London Philharmonic Orchestra, Zubin Mehta/Turandot/01 Turandot_ Atto I. “Popolo di Pekino!” …“Indietro, cani!”.flac"
+Sep 18 19:43 : exception: Failed to decode /mnt/hardDrive/Music/Giacomo Puccini; Joan Sutherland, Luciano Pavarotti, Montserrat Caballé, Nicolaï Ghiaurov, Tom Krause, Peter Pears, The John Alldis Choir, London Philharmonic Orchestra, Zubin Mehta/Turandot/01 Turandot_ Atto I. “Popolo di Pekino!” …“Indietro, cani!”.flac; Failed to open '/mnt/hardDrive/Music/Giacomo Puccini; Joan Sutherland, Luciano Pavarotti, Montserrat Caballé, Nicolaï Ghiaurov, Tom Krause, Peter Pears, The John Alldis Choir, London Philharmonic Orchestra, Zubin Mehta/Turandot/01 Turandot_ Atto I. “Popolo di Pekino!” …“Indietro, cani!”.flac': No such file or directory
+Sep 18 19:43 : player: played "Giacomo Puccini; Joan Sutherland, Luciano Pavarotti, Montserrat Caballé, Nicolaï Ghiaurov, Tom Krause, Peter Pears, The John Alldis Choir, London Philharmonic Orchestra, Zubin Mehta/Turandot/01 Turandot_ Atto I. “Popolo di Pekino!” …“Indietro, cani!”.flac"
+Sep 18 19:43 : exception: Failed to decode /mnt/hardDrive/Music/Giacomo Puccini; Joan Sutherland, Luciano Pavarotti, Montserrat Caballé, Nicolaï Ghiaurov, Tom Krause, Peter Pears, The John Alldis Choir, London Philharmonic Orchestra, Zubin Mehta/Turandot/02 Turandot_ Atto I. “Gira la cote!” … “Perchè tarda la luna_”.flac; Failed to open '/mnt/hardDrive/Music/Giacomo Puccini; Joan Sutherland, Luciano Pavarotti, Montserrat Caballé, Nicolaï Ghiaurov, Tom Krause, Peter Pears, The John Alldis Choir, London Philharmonic Orchestra, Zubin Mehta/Turandot/02 Turandot_ Atto I. “Gira la cote!” … “Perchè tarda la luna_”.flac': No such file or directory
+Sep 18 19:43 : player: played "Giacomo Puccini; Joan Sutherland, Luciano Pavarotti, Montserrat Caballé, Nicolaï Ghiaurov, Tom Krause, Peter Pears, The John Alldis Choir, London Philharmonic Orchestra, Zubin Mehta/Turandot/02 Turandot_ Atto I. “Gira la cote!” … “Perchè tarda la luna_”.flac"
+Sep 19 22:05 : exception: Not playing
+Sep 19 22:53 : player: played "Zack Hemsey/Empty Room/01 The Arrival.flac"
+Sep 20 08:53 : exception: Failed to decode /mnt/hardDrive/Music/Zack Hemsey/Empty Room/01 The Arrival.flac; Failed to open '/mnt/hardDrive/Music/Zack Hemsey/Empty Room/01 The Arrival.flac': No such file or directory
+Sep 20 08:53 : exception: Failed to decode /mnt/hardDrive/Music/Zack Hemsey/Empty Room/02 Remember Me.flac; Failed to open '/mnt/hardDrive/Music/Zack Hemsey/Empty Room/02 Remember Me.flac': No such file or directory
+Sep 20 08:53 : player: played "Zack Hemsey/Empty Room/01 The Arrival.flac"
+Sep 23 09:05 : player: played "Buena Vista Social Club/Buena Vista Social Club/01 Chan Chan.flac"
+Sep 23 09:10 : player: played "Buena Vista Social Club/Buena Vista Social Club/02 De camino a la vereda.flac"
+Sep 23 09:18 : player: played "Buena Vista Social Club/Buena Vista Social Club/03 El cuarto de Tula.flac"
+Sep 23 09:23 : pipewire_output: Decoder is too slow; playing silence to avoid xrun
+Sep 23 09:23 : pipewire_output: Decoder is too slow; playing silence to avoid xrun
+Sep 23 09:23 : pipewire_output: Decoder is too slow; playing silence to avoid xrun
+Sep 23 09:23 : pipewire_output: Decoder is too slow; playing silence to avoid xrun
+Sep 23 09:23 : pipewire_output: Decoder is too slow; playing silence to avoid xrun
+Sep 23 09:23 : pipewire_output: Decoder is too slow; playing silence to avoid xrun
+Sep 23 09:23 : pipewire_output: Decoder is too slow; playing silence to avoid xrun
+Sep 23 09:23 : pipewire_output: Decoder is too slow; playing silence to avoid xrun
+Sep 23 09:23 : pipewire_output: Decoder is too slow; playing silence to avoid xrun
+Sep 23 09:24 : player: played "Buena Vista Social Club/Buena Vista Social Club/04 Pueblo Nuevo.flac"
+Sep 23 09:27 : player: played "Buena Vista Social Club/Buena Vista Social Club/05 Dos gardenias.flac"
+Sep 23 09:30 : player: played "Buena Vista Social Club/Buena Vista Social Club/06 ¿Y tú qué has hecho_.flac"
+Sep 23 09:34 : player: played "Buena Vista Social Club/Buena Vista Social Club/07 Veinte años.flac"
+Sep 23 09:37 : player: played "Buena Vista Social Club/Buena Vista Social Club/08 El carretero.flac"
+Sep 23 09:43 : player: played "Buena Vista Social Club/Buena Vista Social Club/09 Candela.flac"
+Sep 23 21:57 : player: played "Buena Vista Social Club/Buena Vista Social Club/10 Amor de loca juventud.flac"
+Sep 24 08:08 : exception: Failed to decode /mnt/hardDrive/Music/Buena Vista Social Club/Buena Vista Social Club/10 Amor de loca juventud.flac; Failed to open '/mnt/hardDrive/Music/Buena Vista Social Club/Buena Vista Social Club/10 Amor de loca juventud.flac': No such file or directory
+Sep 24 08:08 : player: played "Buena Vista Social Club/Buena Vista Social Club/10 Amor de loca juventud.flac"
+Sep 25 08:20 : exception: Failed to decode /mnt/hardDrive/Music/Buena Vista Social Club/Buena Vista Social Club/10 Amor de loca juventud.flac; Failed to open '/mnt/hardDrive/Music/Buena Vista Social Club/Buena Vista Social Club/10 Amor de loca juventud.flac': No such file or directory
+Sep 25 08:20 : player: played "Buena Vista Social Club/Buena Vista Social Club/10 Amor de loca juventud.flac"
+Sep 25 08:20 : exception: Failed to decode /mnt/hardDrive/Music/Buena Vista Social Club/Buena Vista Social Club/11 Orgullecida.flac; Failed to open '/mnt/hardDrive/Music/Buena Vista Social Club/Buena Vista Social Club/11 Orgullecida.flac': No such file or directory
+Sep 25 08:20 : player: played "Buena Vista Social Club/Buena Vista Social Club/11 Orgullecida.flac"
+Sep 29 16:34 : update: added The Beatles/Rubber Soul/01 Drive My Car.flac
+Sep 29 16:34 : update: added The Beatles/Rubber Soul/02 Norwegian Wood (This Bird Has Flown).flac
+Sep 29 16:34 : update: added The Beatles/Rubber Soul/03 You Won’t See Me.flac
+Sep 29 16:34 : update: added The Beatles/Rubber Soul/04 Nowhere Man.flac
+Sep 29 16:34 : update: added The Beatles/Rubber Soul/05 Think for Yourself.flac
+Sep 29 16:34 : update: added The Beatles/Rubber Soul/06 The Word.flac
+Sep 29 16:34 : update: added The Beatles/Rubber Soul/07 Michelle.flac
+Sep 29 16:34 : update: added The Beatles/Rubber Soul/08 What Goes On.flac
+Sep 29 16:34 : update: added The Beatles/Rubber Soul/09 Girl.flac
+Sep 29 16:34 : update: added The Beatles/Rubber Soul/10 I’m Looking Through You.flac
+Sep 29 16:34 : update: added The Beatles/Rubber Soul/11 In My Life.flac
+Sep 29 16:34 : update: added The Beatles/Rubber Soul/12 Wait.flac
+Sep 29 16:34 : update: added The Beatles/Rubber Soul/13 If I Needed Someone.flac
+Sep 29 16:34 : update: added The Beatles/Rubber Soul/14 Run for Your Life.flac
+Sep 29 16:35 : exception: Not playing
+Sep 29 16:37 : player: played "The Beatles/Rubber Soul/01 Drive My Car.flac"
+Sep 29 16:43 : player: played "The Beatles/Rubber Soul/02 Norwegian Wood (This Bird Has Flown).flac"
+Sep 29 16:46 : player: played "The Beatles/Rubber Soul/03 You Won’t See Me.flac"
+Sep 29 16:50 : player: played "Sabaton/Attero Dominatus/01 Attero Dominatus.mp3"
+Sep 29 16:54 : player: played "Sabaton/Attero Dominatus/02 Nuclear Attack.mp3"
+Sep 29 17:02 : player: played "Sabaton/Attero Dominatus/03 Rise of Evil.mp3"
+Sep 29 17:06 : player: played "Sabaton/Attero Dominatus/04 In the Name of God.mp3"
+Sep 29 17:25 : player: played "Sabaton/Attero Dominatus/05 We Burn.mp3"
+Sep 29 17:31 : player: played "Sabaton/Attero Dominatus/06 Angels Calling.mp3"
+Sep 29 17:35 : player: played "Sabaton/Attero Dominatus/07 Back in Control.mp3"
+Sep 29 17:39 : player: played "Sabaton/Attero Dominatus/08 Light in the Black.mp3"
+Sep 29 17:40 : player: played "Sabaton/Carolus Rex/01 Dominium maris Baltici.mp3"
+Sep 29 17:45 : player: played "Sabaton/Carolus Rex/02 The Lion From the North.mp3"
+Sep 29 17:48 : player: played "Sabaton/Carolus Rex/03 Gott mit uns.mp3"
+Sep 29 17:54 : player: played "Sabaton/Carolus Rex/04 A Lifetime of War.mp3"
+Sep 29 17:58 : player: played "Sabaton/Carolus Rex/05 1 6 4 8.mp3"
+Sep 29 18:04 : player: played "Sabaton/Carolus Rex/06 The Carolean’s Prayer.mp3"
+Sep 29 18:09 : player: played "Sabaton/Carolus Rex/07 Carolus Rex.mp3"
+Sep 29 18:13 : player: played "Sabaton/Carolus Rex/08 Killing Ground.mp3"

@@ -10,6 +10,7 @@ return {
 		"ellisonleao/gruvbox.nvim",
 	},
 	{ "nxvu699134/vn-night.nvim" },
+	{ "EdenEast/nightfox.nvim" },
 	{
 		"navarasu/onedark.nvim",
 		config = function()
@@ -19,7 +20,7 @@ return {
 			-- 	require("onedark").load()
 			-- 	vim.cmd("colorscheme onedark")
 			-- 	vim.cmd("colorscheme tokyonight-night")
-			vim.cmd("colorscheme onedark")
+			vim.cmd("colorscheme duskfox")
 		end,
 	},
 }

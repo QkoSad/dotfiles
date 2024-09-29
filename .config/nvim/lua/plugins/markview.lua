@@ -1,13 +1,16 @@
 return {
 	"OXY2DEV/markview.nvim",
-	lazy = false, -- Recommended
-
+	-- lazy = false, -- Recommended
+	ft = "markdown",
 	dependencies = {
 		"nvim-treesitter/nvim-treesitter",
 		"nvim-tree/nvim-web-devicons",
 	},
 	config = function()
 		require("markview").setup({
+			latex = {
+				enable = false,
+			},
 			modes = { "n", "i", "no", "c" },
 			hybrid_modes = { "i" },
 
