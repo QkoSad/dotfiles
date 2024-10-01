@@ -5,23 +5,28 @@ source ~/.config/mutt/colors.muttrc
 # color <element> <color> <attr> optional<regex>
 
 # Folder hooks
-folder-hook 'malakrapon.gmail' 'source ~/.config/mutt/accounts/malakrapon.gmail/malakrapongmail'
-folder-hook 'andreangrudev.gmail' 'source ~/.config/mutt/accounts/andreangrudev.gmail/andreangrudevgmail'
+folder-hook 'malakrapon.gmail' 'source ~/.config/mutt/accounts/malakrapon.gmail/settings'
+folder-hook 'andreangrudev.gmail' 'source ~/.config/mutt/accounts/andreangrudev.gmail/settings'
+folder-hook 'malakrapon.abv' 'source ~/.config/mutt/accounts/malakrapon.abv/settings'
+folder-hook 'baloonbalrog.cock' 'source ~/.config/mutt/accounts/baloonbalrog.cock/settings'
+folder-hook 'cockaroach.cock' 'source ~/.config/mutt/accounts/cockaroach.cock/settings'
 
 # Default account
-source ~/.config/mutt/accounts/andreangrudev.gmail/andreangrudevgmail
-# source ~/.config/mutt/accounts/malakrapon.gmail/malakrapongmail
+source ~/.config/mutt/accounts/andreangrudev.gmail/settings
 
 
 # Macros for switching accounts
-macro index <f2> '<sync-mailbox><enter-command>source ~/.config/mutt/accounts/malakrapon.gmail/malakrapongmail<enter><change-folder>!<enter>'
-macro index <f3> '<sync-mailbox><enter-command>source ~/.config/mutt/accounts/andreangrudev.gmail/andreangrudevgmail<enter><change-folder>!<enter>'
-
-macro index G "!mbsync -a^M" "Update through mbsync"
-set move = no
+macro index <f2> '<sync-mailbox><enter-command>source ~/.config/mutt/accounts/malakrapon.gmail/settings<enter><change-folder>!<enter>'
+macro index <f3> '<sync-mailbox><enter-command>source ~/.config/mutt/accounts/andreangrudev.gmail/settings<enter><change-folder>!<enter>'
+macro index <f4> '<sync-mailbox><enter-command>source ~/.config/mutt/accounts/malakrapon.abv/settings<enter><change-folder>!<enter>'
+macro index <f5> '<sync-mailbox><enter-command>source ~/.config/mutt/accounts/baloonbalrog.cock/settings<enter><change-folder>!<enter>'
+macro index <f6> '<sync-mailbox><enter-command>source ~/.config/mutt/accounts/cockaroach.cock//settings<enter><change-folder>!<enter>'
 
 # Fetch mail shortcut
 # bind index G imap-fetch-mail
+macro index G "!mbsync -a^M" "Update through mbsync"
+set move = no
+
 # settings
 set pager_index_lines = 10          
 set pager_context = 3                # show 3 lines of context

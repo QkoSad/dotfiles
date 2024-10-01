@@ -1,0 +1,25 @@
+set imap_user = "baloonbalrog@cock.li"
+# get passwords
+source "gpg -dq $XDG_CONFIG_HOME/mutt/accounts/baloonbalrog.cock/passwords.gpg |"
+set smtp_url = "smtps://baloonbalrog@cock.li@mail.cock.li:465/"
+set smtp_authenticators = 'gssapi:login'
+
+set ssl_starttls = yes
+set ssl_force_tls = yes
+
+set from = "baloonbalrog@cock.li"
+set realname = "Baloon Balrog"
+
+unmailboxes *
+set mbox_type = Maildir
+set folder = "~/.local/share/email/accounts/baloonbalrog.cock/"
+set spoolfile = "+All Mail"
+set postponed = "+Drafts"
+set record = "+Sent Mail"
+set trash = "+Bin"
+mailboxes ="All Mail" ="Drafts" ="Sent Mail" ="Bin" =INBOX
+
+set header_cache = "$XDG_CACHE_HOME/mutt/accounts/baloonbalrog.cock/headers"
+set message_cachedir = "$XDG_CACHE_HOME/mutt/accounts/baloonbalrog.cock/bodies"
+set certificate_file = "$XDG_CACHE_HOME/mutt/accounts/baloonbalrog.cock/certificates"
+unset record # this is for sent mails

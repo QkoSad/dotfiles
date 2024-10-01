@@ -152,8 +152,8 @@ alias bc="bc -l"
 # alias cd=z
 alias grep="grep --with-filename --line-number --color=auto -i"
 alias t="NNN_TRASH=1 nnn -e"
-alias cp="cp -g"
-alias mv="mv -g"
+alias cp="advcp -g"
+alias mv="advmv -g"
 
 # shell built ins man pages
 unalias run-help

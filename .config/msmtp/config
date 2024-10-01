@@ -15,14 +15,41 @@ from           malakrapon@gmail.com
 user           malakrapon@gmail.com
 passwordeval   "gpg -dq ~/.config/mutt/accounts/malakrapon.gmail/msmtp.gpg"
 
-# Gmail
-account        gmail
+# Gmail 2
+account        gmail2
 host           smtp.gmail.com
 port           465
 tls_starttls   off
 from           andreangrudev@gmail.com
 user           andreangrudev@gmail.com
-passwordeval   "gpg -dq ~/.config/mutt/accounts/andrean.gmail/msmtp.gpg"
+passwordeval   "gpg -dq ~/.config/mutt/accounts/andreangrudev.gmail/msmtp.gpg"
+
+# Cock
+account        cock
+host           mail.cock.li
+port           465
+tls_starttls   off
+from           cockaroach@cock.li
+user           cockaroach@cock.li
+passwordeval   "gpg -dq ~/.config/mutt/accounts/cockaroach.cock/isync-msmtp.gpg"
+
+# Cock 2
+account        cock2
+host           mail.cock.li
+port           465
+tls_starttls   off
+from           baloonbalrog@cock.li
+user           baloonbalrog@cock.li
+passwordeval   "gpg -dq ~/.config/mutt/accounts/baloonbalrog.cock/isync-msmtp.gpg"
+
+# abv
+account        abv
+host           smtp.abv.bg
+port           465
+tls_starttls   off
+from           malak_rapon@abv.bg
+user           malak_rapon@abv.bg
+passwordeval   "gpg -dq ~/.config/mutt/accounts/malakrapon.abv/isync-msmtp.gpg"
 
 # Set a default account
 account default: gmail
