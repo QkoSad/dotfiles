@@ -1,0 +1,26 @@
+defaults
+tls on
+tls_starttls off
+
+account abv
+delivery maildir ~/.local/share/email/accounts/malakrapon.abv/
+host pop3.abv.bg
+user malak_rapon@abv.bg
+passwordeval "gpg -dq $XDG_CONFIG_HOME/mutt/accounts/malakrapon.abv/passwords.gpg"
+port 995
+
+account cock
+delivery maildir ~/.local/share/email/accounts/cockaroach.cock/
+host mail.cock.li
+user cockaroach@cock.li
+passwordeval "gpg -dq $XDG_CONFIG_HOME/mutt/accounts/cockaroack.cock/passwords.gpg"
+port 995
+
+account cock2
+delivery maildir ~/.local/share/email/accounts/baloonbalrog.cock/
+host mail.cock.li
+user baloonbalrog@cock.li
+passwordeval "gpg -dq $XDG_CONFIG_HOME/mutt/accounts/baloonbalrog.cock//passwords.gpg"
+port 995
+
+account default : abv
