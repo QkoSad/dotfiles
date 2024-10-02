@@ -22,9 +22,8 @@ macro index <f4> '<sync-mailbox><enter-command>source ~/.config/mutt/accounts/ma
 macro index <f5> '<sync-mailbox><enter-command>source ~/.config/mutt/accounts/baloonbalrog.cock/settings<enter><change-folder>!<enter>'
 macro index <f6> '<sync-mailbox><enter-command>source ~/.config/mutt/accounts/cockaroach.cock//settings<enter><change-folder>!<enter>'
 
-# Fetch mail shortcut
-# bind index G imap-fetch-mail
-macro index G "!mbsync -a^M" "Update through mbsync"
+macro index S "<shell-escape>mbsync -a && mpop -a <enter><shell-escape>notmuch new<enter>" "sync email"
+macro index \Cf "<enter-command>unset wait_key<enter><shell-escape>read -p 'Enter a search term to find with notmuch: ' x; echo \$x >~/.cache/mutt_terms<enter><limit>~i \"\`notmuch search --output=messages \$(cat ~/.cache/mutt_terms) | head -n 600 | perl -le '@a=<>;s/\^id:// for@a;$,=\"|\";print@a' | perl -le '@a=<>; chomp@a; s/\\+/\\\\+/ for@a;print@a' \`\"<enter>" "show only messages matching a notmuch pattern"
 set move = no
 
 # settings

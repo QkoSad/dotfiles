@@ -22,5 +22,3 @@ host mail.cock.li
 user baloonbalrog@cock.li
 passwordeval "gpg -dq $XDG_CONFIG_HOME/mutt/accounts/baloonbalrog.cock/isync-msmtp.gpg"
 port 995
-
-account default : abv
