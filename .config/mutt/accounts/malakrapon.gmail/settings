@@ -17,7 +17,7 @@ set spoolfile = "+[Gmail].All Mail"
 set postponed = "+[Gmail].Drafts"
 set record = "+[Gmail].Sent Mail"
 set trash = "+[Gmail].Bin"
-mailboxes ="[Gmail].All Mail" ="[Gmail].Starred" ="[Gmail].Important" ="[Gmail].Drafts" ="[Gmail].Sent Mail" ="[Gmail].Bin" ="[Gmail].Spam" =INBOX
+mailboxes ="[Gmail].All Mail" ="[Gmail].Drafts" ="[Gmail].Sent Mail" ="[Gmail].Bin" ="[Gmail].Spam" =INBOX
 
 set header_cache = "$XDG_CACHE_HOME/mutt/accounts/malakrapon/headers"
 set message_cachedir = "$XDG_CACHE_HOME/mutt/accounts/malakrapon/bodies"

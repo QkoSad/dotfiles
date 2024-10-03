@@ -26,8 +26,7 @@ vim.keymap.set("n", "<leader>D", '"_D')
 -- remove Q
 vim.keymap.set("n", "Q", "<nop<")
 -- puts the current word under cursort to be replaced
--- vim.keymap.set("n", "<leader>s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left>")
-vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+vim.keymap.set("v", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 -- buffer navigation
 vim.keymap.set("n", "<C-l>", ":bnext<CR>")
 vim.keymap.set("n", "<C-h>", ":bprevious<CR>")

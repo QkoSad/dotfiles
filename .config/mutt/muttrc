@@ -22,7 +22,8 @@ macro index <f4> '<sync-mailbox><enter-command>source ~/.config/mutt/accounts/ma
 macro index <f5> '<sync-mailbox><enter-command>source ~/.config/mutt/accounts/baloonbalrog.cock/settings<enter><change-folder>!<enter>'
 macro index <f6> '<sync-mailbox><enter-command>source ~/.config/mutt/accounts/cockaroach.cock//settings<enter><change-folder>!<enter>'
 
-macro index S "<shell-escape>mbsync -a && mpop -a <enter><shell-escape>notmuch new<enter>" "sync email"
+macro index S "<shell-escape>mbsync -a<enter><shell-escape>notmuch new<enter>" "sync email"
+macro index \Cs "<shell-escape>mpop -a<enter><shell-escape>notmuch new<enter>" "sync email"
 macro index \Cf "<enter-command>unset wait_key<enter><shell-escape>read -p 'Enter a search term to find with notmuch: ' x; echo \$x >~/.cache/mutt_terms<enter><limit>~i \"\`notmuch search --output=messages \$(cat ~/.cache/mutt_terms) | head -n 600 | perl -le '@a=<>;s/\^id:// for@a;$,=\"|\";print@a' | perl -le '@a=<>; chomp@a; s/\\+/\\\\+/ for@a;print@a' \`\"<enter>" "show only messages matching a notmuch pattern"
 set move = no
 
@@ -67,7 +68,8 @@ set quote_regexp = "^( {0,4}[>|:#%]| {0,4}[a-z0-9]+[>|]+)+"
 set send_charset = "utf-8:iso-8859-1:us-ascii" # send in utf-8
 
 #sidebar
-set sidebar_visible # comment to disable sidebar by default
+set sidebar_visible 
+set sidebar_width = 25
 set sidebar_short_path
 set sidebar_folder_indent
 set sidebar_format = "%B %* [%?N?%N / ?%S]"
