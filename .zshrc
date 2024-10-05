@@ -144,7 +144,6 @@ alias cat=bat
 alias ls=exa
 alias la="exa -lah"
 alias ll="exa -l"
-alias vim=nvim
 alias urm=rm
 alias rm=trash
 alias bc="bc -l"

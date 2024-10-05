@@ -7,12 +7,7 @@ TODO:
     4. hyprland messing the order of windows when i put one in fullscreen
 4. neomutt -  
     * add alerts on new messages,
-    * see how it works pgp and fix from
-    * addressbook, 
+    * abook install and configure, 
     * notmuch, 
     * hide labels inside email
     * how to write html
-    * marked as read in all mail should mark it everywhere else
-
-There are 2 same files for isync because neomutt requries one and systemd
-service the other

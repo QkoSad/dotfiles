@@ -8,7 +8,7 @@ set ssl_starttls = yes
 set ssl_force_tls = yes
 
 set from = "andrean.grudev@gmail.com"
-set realname = "Jhon Doe"
+set realname = "Andrean Grudev"
 
 unmailboxes *
 set mbox_type = Maildir
@@ -23,3 +23,9 @@ set header_cache = "$XDG_CACHE_HOME/mutt/accounts/andreangrudev/headers"
 set message_cachedir = "$XDG_CACHE_HOME/mutt/accounts/andreangrudev/bodies"
 set certificate_file = "$XDG_CACHE_HOME/mutt/accounts/andreangrudev/certificates"
 unset record # this is for sent mails
+# msmtp integration
+# set sendmail = "msmtp -a andrean.grudev@gmail.com"
+# botoom text on mail aka kind regards 
+set signature = "$XDG_CONFIG_HOME/mutt/signature"
+# botoom text on mail aka kind regards 
+set signature = "$XDG_CONFIG_HOME/mutt/accounts/andreangrudev.gmail/signature"

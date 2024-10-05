@@ -23,3 +23,7 @@ set header_cache = "$XDG_CACHE_HOME/mutt/accounts/baloonbalrog.cock/headers"
 set message_cachedir = "$XDG_CACHE_HOME/mutt/accounts/baloonbalrog.cock/bodies"
 set certificate_file = "$XDG_CACHE_HOME/mutt/accounts/baloonbalrog.cock/certificates"
 unset record # this is for sent mails
+# msmtp integration
+# set sendmail = "msmtp -a baloonbalrog@cock.li"
+# botoom text on mail aka kind regards 
+set signature = "$XDG_CONFIG_HOME/mutt/accounts/baloonbalrog.cock/signature"

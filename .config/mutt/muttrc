@@ -25,6 +25,7 @@ macro index <f6> '<sync-mailbox><enter-command>source ~/.config/mutt/accounts/co
 macro index S "<shell-escape>mbsync -a<enter><shell-escape>notmuch new<enter>" "sync email"
 macro index \Cs "<shell-escape>mpop -a<enter><shell-escape>notmuch new<enter>" "sync email"
 macro index \Cf "<enter-command>unset wait_key<enter><shell-escape>read -p 'Enter a search term to find with notmuch: ' x; echo \$x >~/.cache/mutt_terms<enter><limit>~i \"\`notmuch search --output=messages \$(cat ~/.cache/mutt_terms) | head -n 600 | perl -le '@a=<>;s/\^id:// for@a;$,=\"|\";print@a' | perl -le '@a=<>; chomp@a; s/\\+/\\\\+/ for@a;print@a' \`\"<enter>" "show only messages matching a notmuch pattern"
+
 set move = no
 
 # settings
@@ -79,9 +80,6 @@ bind index,pager \CJ sidebar-next
 bind index,pager \CE sidebar-open
 bind index,pager B sidebar-toggle-visible
 
-# botoom text on mail aka kind regards 
-set signature = "$XDG_CONFIG_HOME/mutt/signature"
-
 set editor = "nvim"
 
 #keybinds
@@ -114,26 +112,29 @@ macro index,pager \cb "<pipe-message> urlscan<Enter>" "call urlscan to extract U
 macro attach,compose \cb "<pipe-entry> urlscan<Enter>" "call urlscan to extract URLs out of a message"
 
 # Use GPGME
-# Use my key for signing and encrypting
-set pgp_default_key = 67B378F3C3B3ADA4A050173B6BD6E29CC80D1BC5
+# if i want to encrypt my messages i would have to create a separete key for
+# each account and reencrypt everything
+
+# Use my key for signing and encrypting 
+# set pgp_default_key = 67B378F3C3B3ADA4A050173B6BD6E29CC80D1BC5
 
 # Use GPGME
-set crypt_use_gpgme = yes
+# set crypt_use_gpgme = yes
 
 # Automatically sign all out-going email
-set crypt_autosign = yes
+# set crypt_autosign = yes
 
 # Sign replies to signed emails
-set crypt_replysign = yes
+# set crypt_replysign = yes
 
 # Encrypt replies to encrypted emails
-set crypt_replyencrypt = yes
+# set crypt_replyencrypt = yes
 
 # Encrypt and sign replies to encrypted and signed email
-set crypt_replysignencrypted = yes
+# set crypt_replysignencrypted = yes
 
 # Attempt to verify signatures automatically
-set crypt_verify_sig = yes
+# set crypt_verify_sig = yes
 
 # Attempt to encrypt automatically, if possible
 # I would recommend setting this to no as university often have spam filters
@@ -143,10 +144,3 @@ set crypt_opportunistic_encrypt = no
 
 # So you can view encrypted emails automatically
 auto_view application/pgp-encrypted
-
-# msmtp integration
-set sendmail = "msmtp -a malakrapon@gmail.com"
-# macro index S "<shell-escape>mbsync -V gmail<enter><shell-escape>notmuch new<enter>" "sync email"
-
-# notmuch integration
-macro index \Cf "<enter-command>unset wait_key<enter><shell-escape>read -p 'Enter a search term to find with notmuch: ' x; echo \$x >~/.cache/mutt_terms<enter><limit>~i \"\`notmuch search --output=messages \$(cat ~/.cache/mutt_terms) | head -n 600 | perl -le '@a=<>;s/\^id:// for@a;$,=\"|\";print@a' | perl -le '@a=<>; chomp@a; s/\\+/\\\\+/ for@a;print@a' \`\"<enter>" "show only messages matching a notmuch pattern"
