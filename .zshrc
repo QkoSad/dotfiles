@@ -14,6 +14,29 @@ setopt extendedglob nomatch notify
 # turn off beeping
 unsetopt autocd beep
 
+#aliases
+alias cat=bat
+alias ls=exa
+alias la="exa -lah"
+alias ll="exa -l"
+alias urm=rm
+alias rm=trash
+# starts bc in float mode
+alias bc="bc -l"
+# alias cd=z
+alias grep="grep --with-filename --line-number --color=auto -i"
+# makes nnn rash instead of delete
+alias t="NNN_TRASH=1 nnn -e"
+alias cp="advcp -g"
+alias mv="advmv -g"
+# Mozilla Bug 1908825 makes both browsers crash in wayland this forces them to
+# run in xwayland and not crash, those aliases can be removed when the bugfix is
+# mergen in the browsers. It is unknow when this will happen since both browsers
+# merge mozilla extended release which are 52 weaks behind. This link will say
+# when the bugfix has been merged: https://gitlab.torproject.org/tpo/applications/tor-browser-build/-/raw/maint-13.5/projects/browser/Bundle-Data/Docs-TBB/ChangeLog.txt
+alias mullvad-browser="MOZ_ENABLE_WAYLAND=0 mullvad-browser"
+alias torbrowser-launcher="MOZ_ENABLE_WAYLAND=0 torbrowser-launcher"
+
 # prompt
 PS1="%F{magenta}%n@%m%f %B%F{yellow}%~%f%b"$'\n'"%F{yellow}%?%f %F{cyan}%%%f "
 # vi mode
@@ -72,13 +95,12 @@ bindkey "^R" history-incremental-search-backward
 #notes
 notes() { nvim --cmd 'cd ~/.notes'}   
 # commands
-remem(){
-  declare desc="$1"
-  declare com="$2"
-  echo "Description:\n"${desc}"\nCommand:\n"${com}"\n------------" >> ~/.commands 
-}
-remem-ls(){
-  cat ~/.commands
+mem(){
+  if [[ -z $1 ]]; then
+    cat ~/.commands
+  else
+    echo "Description:\n"$1"\nCommand:\n"$2"\n------------" >> ~/.commands 
+  fi
 }
 #time-tracking
 time-start(){
@@ -91,18 +113,6 @@ time-stop(){
 }
 time-ls(){
   cat ~/.time
-}
-todo-add(){
-  declare desc="$1"
-  echo "Do:\n${desc}" >> ~/.todos
-}
-todo-rm(){
-  declare desc="$1"
-  sed -zi "s/Do:\n${desc}//" ~/.todos
-  sed -ri '/^\s*$/d' ~/.todos
-}
-todo-ls(){
-  cat ~/.todos
 }
 # finding things
 fcd(){
@@ -139,23 +149,10 @@ duck () {
 }
 alias "?"=duck
 
-#aliases
-alias cat=bat
-alias ls=exa
-alias la="exa -lah"
-alias ll="exa -l"
-alias urm=rm
-alias rm=trash
-alias bc="bc -l"
-# alias cd=z
-alias grep="grep --with-filename --line-number --color=auto -i"
-alias t="NNN_TRASH=1 nnn -e"
-alias cp="advcp -g"
-alias mv="advmv -g"
-
 # shell built ins man pages
 unalias run-help
 autoload run-help
+alias help=run-help
 
 # autostart DE
 if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then

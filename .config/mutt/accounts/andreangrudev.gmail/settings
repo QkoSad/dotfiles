@@ -26,6 +26,4 @@ unset record # this is for sent mails
 # msmtp integration
 # set sendmail = "msmtp -a andrean.grudev@gmail.com"
 # botoom text on mail aka kind regards 
-set signature = "$XDG_CONFIG_HOME/mutt/signature"
-# botoom text on mail aka kind regards 
 set signature = "$XDG_CONFIG_HOME/mutt/accounts/andreangrudev.gmail/signature"

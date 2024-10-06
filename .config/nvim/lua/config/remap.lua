@@ -23,6 +23,7 @@ vim.keymap.set("n", "<leader>Y", '"+y$')
 vim.keymap.set("n", "<leader>d", '"_d')
 vim.keymap.set("v", "<leader>d", '"_d')
 vim.keymap.set("n", "<leader>D", '"_D')
+vim.keymap.set("n", "<leader>x", '"_x')
 -- remove Q
 vim.keymap.set("n", "Q", "<nop<")
 -- puts the current word under cursort to be replaced
