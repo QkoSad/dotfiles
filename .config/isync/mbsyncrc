@@ -7,7 +7,7 @@ Host imap.gmail.com
 Port 993
 User malakrapon@gmail.com
 PassCmd "gpg -dq --for-your-eyes-only --no-tty ~/.config/mutt/accounts/malakrapon.gmail/isync.gpg"
-SSLType IMAPS
+TLSType IMAPS
 CertificateFile /etc/ssl/certs/ca-certificates.crt
 
 IMAPStore malakrapon.gmail-remote
@@ -22,14 +22,15 @@ Flatten .
 Channel malakrapon.gmail
 Far :malakrapon.gmail-remote:
 Near :malakrapon.gmail-local:
-Patterns *
+Patterns * ![Gmail]* "[Gmail]/Sent Mail" "[Gmail]/Starred" "[Gmail]/All Mail"
 
 IMAPAccount andreangrudev.gmail
 Host imap.gmail.com
 Port 993
+AuthMechs LOGIN
 User andrean.grudev@gmail.com
 PassCmd "gpg -dq --for-your-eyes-only --no-tty ~/.config/mutt/accounts/andreangrudev.gmail/isync.gpg"
-SSLType IMAPS
+TLSType IMAPS
 CertificateFile /etc/ssl/certs/ca-certificates.crt
 
 IMAPStore andreangrudev.gmail-remote
@@ -44,5 +45,5 @@ Flatten .
 Channel andreangrudev.gmail
 Far :andreangrudev.gmail-remote:
 Near :andreangrudev.gmail-local:
-Patterns *
+Patterns * ![Gmail]* "[Gmail]/Sent Mail" "[Gmail]/Starred" "[Gmail]/All Mail"
 

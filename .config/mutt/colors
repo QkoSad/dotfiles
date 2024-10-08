@@ -1,33 +1,36 @@
 # vim: filetype=neomuttrc
-
 # Default index colors:
 color index yellow default '.*'
 color index_author red default '.*'
 color index_number blue default
 color index_subject cyan default '.*'
 
-# For new mail:
+# New mail is boldened:
 color index brightyellow black "~N"
 color index_author brightred black "~N"
 color index_subject brightcyan black "~N"
 
-# Header colors:
-color header blue default ".*"
-color header brightmagenta default "^(From)"
-color header brightcyan default "^(Subject)"
-color header brightwhite default "^(CC|BCC)"
+# Tagged mail is highlighted:
+color index brightyellow blue "~T"
+color index_author brightred blue "~T"
+color index_subject brightcyan blue "~T"
 
+# Flagged mail is highlighted:
+color index brightgreen default "~F"
+color index_subject brightgreen default "~F"
+color index_author brightgreen default "~F"
+
+# Other colors and aesthetic settings:
 mono bold bold
 mono underline underline
 mono indicator reverse
 mono error bold
 color normal default default
 color indicator brightblack white
-color sidebar_highlight black magenta
-color sidebar_divider yellow black
+color sidebar_highlight red default
+color sidebar_divider brightblack black
 color sidebar_flagged red black
 color sidebar_new green black
-color normal brightyellow default
 color error red default
 color tilde black default
 color message cyan default
@@ -45,8 +48,12 @@ color quoted5 brightred default
 color signature brightgreen default
 color bold black default
 color underline black default
-color normal default default
 
+# Regex highlighting:
+color header brightmagenta default "^From"
+color header brightcyan default "^Subject"
+color header brightwhite default "^(CC|BCC)"
+color header blue default ".*"
 color body brightred default "[\-\.+_a-zA-Z0-9]+@[\-\.a-zA-Z0-9]+" # Email addresses
 color body brightblue default "(https?|ftp)://[\-\.,/%~_:?&=\#a-zA-Z0-9]+" # URL
 color body green default "\`[^\`]*\`" # Green text between ` and `

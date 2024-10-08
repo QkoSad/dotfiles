@@ -1,29 +1,22 @@
-set imap_user = "andrean.grudev@gmail.com"
-# get passwords
-source "gpg -dq $XDG_CONFIG_HOME/mutt/accounts/andreangrudev.gmail/passwords.gpg |"
-set smtp_url = "smtps://andrean.grudev@gmail.com@smtp.gmail.com:465/"
-set smtp_authenticators = 'gssapi:login'
-
-set ssl_starttls = yes
-set ssl_force_tls = yes
-
-set from = "andrean.grudev@gmail.com"
+# vim: filetype=neomuttrc
 set realname = "Andrean Grudev"
-
-unmailboxes *
-set mbox_type = Maildir
+set from = "andrean.grudev@gmail.com"
+set sendmail = "msmtp -a andrean.grudev@gmail.com"
+alias me andreangrudev <andrean.grudev@gmail.com>
 set folder = "~/.local/share/email/accounts/andreangrudev.gmail/"
+set header_cache = "$XDG_CACHE_HOME/mutt/accounts/andreangrudev/headers"
+set message_cachedir = "$XDG_CACHE_HOME/mutt/accounts/andreangrudev/bodies"
+set mbox_type = Maildir
+unset hostname
+unmy_hdr Organization
+unmailboxes *
+unalternates *
+unset signature
+set hostname = 'gmail.com'
 set spoolfile = "+[Gmail].All Mail"
 set postponed = "+[Gmail].Drafts"
 set record = "+[Gmail].Sent Mail"
 set trash = "+[Gmail].Bin"
-mailboxes ="[Gmail].All Mail" ="[Gmail].Drafts" ="[Gmail].Sent Mail" ="[Gmail].Bin" ="[Gmail].Spam" =INBOX
-
-set header_cache = "$XDG_CACHE_HOME/mutt/accounts/andreangrudev/headers"
-set message_cachedir = "$XDG_CACHE_HOME/mutt/accounts/andreangrudev/bodies"
-set certificate_file = "$XDG_CACHE_HOME/mutt/accounts/andreangrudev/certificates"
-unset record # this is for sent mails
-# msmtp integration
-# set sendmail = "msmtp -a andrean.grudev@gmail.com"
-# botoom text on mail aka kind regards 
 set signature = "$XDG_CONFIG_HOME/mutt/accounts/andreangrudev.gmail/signature"
+
+mailboxes =INBOX ="[Gmail].Sent Mail" ="[Gmail].Drafts" ="[Gmail].Bin" ="[Gmail].Spam" ="[Gmail].All Mail" 

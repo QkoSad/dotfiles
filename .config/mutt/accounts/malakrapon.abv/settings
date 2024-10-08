@@ -1,29 +1,22 @@
-set imap_user = "malak_rapon@abv.bg"
-# get passwords
-source "gpg -dq $XDG_CONFIG_HOME/mutt/accounts/malakrapon.abv/passwords.gpg |"
-set smtp_url = "smtps://malak_rapon@abv.bg@smtp.abv.bg:465/"
-set smtp_authenticators = 'gssapi:login'
-
-set ssl_starttls = yes
-set ssl_force_tls = yes
-
+# vim: filetype=neomuttrc
+set realname = "malakrapon"
 set from = "malak_rapon@abv.bg"
-set realname = "Malak Rapon"
-
-unmailboxes *
-set mbox_type = Maildir
+set sendmail = "msmtp -a malak_rapon@abv.bg"
+alias me malak_rapon <malak_rapon@abv.bg>
 set folder = "~/.local/share/email/accounts/malakrapon.abv/"
-set spoolfile = "+All Mail"
-set postponed = "+Drafts"
-set record = "+Sent Mail"
-set trash = "+Bin"
-mailboxes ="All Mail" ="Drafts" ="Sent Mail" ="Bin" =INBOX
-
 set header_cache = "$XDG_CACHE_HOME/mutt/accounts/malakrapon.abv/headers"
 set message_cachedir = "$XDG_CACHE_HOME/mutt/accounts/malakrapon.abv/bodies"
-set certificate_file = "$XDG_CACHE_HOME/mutt/accounts/malakrapon.abv/certificates"
-unset record # this is for sent mails
-# msmtp integration
-# set sendmail = "msmtp -a malak_rapon@abv.bg"
-# botoom text on mail aka kind regards 
+set mbox_type = Maildir
+unset hostname
+unmy_hdr Organization
+unmailboxes *
+unalternates *
+unset signature
+set hostname = 'abv.bg'
+set spoolfile = "+INBOX"
+set postponed = "+Drafts"
+set trash = "+Bin"
+set record = "+Sent"
 set signature = "$XDG_CONFIG_HOME/mutt/accounts/malakrapon.abv/signature"
+
+mailboxes "=INBOX" "=Sent" "=Drafts" "=Bin" 

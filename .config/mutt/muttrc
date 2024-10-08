@@ -1,146 +1,62 @@
-#colors
-source ~/.config/mutt/colors.muttrc
-# color status green default
-# in general, the order is:
-# color <element> <color> <attr> optional<regex>
+set send_charset="us-ascii:utf-8"
+set mailcap_path = $HOME/.config/mutt/mailcap
+set mime_type_query_command = "file --mime-type -b %s"
+set date_format="%y/%m/%d %I:%M%p"
+set index_format="%2C %Z %?X?A& ? %D %-15.15F %s (%-4.4c)"
+set sort = 'reverse-date'
+set smtp_authenticators = 'gssapi:login'
+set query_command = "abook --mutt-query '%s'"
+set rfc2047_parameters = yes
+set sleep_time = 0		# Pause 0 seconds for informational messages
+set markers = no		# Disables the `+` displayed at line wraps
+set mark_old = no		# Unread mail stay unread until read
+set mime_forward = no	# mail body is forwarded as text
+set forward_attachments = yes	# attachments are forwarded with mail
+set wait_key = no		# mutt won't ask "press key to continue"
+set fast_reply			# skip to compose when replying
+set fcc_attach			# save attachments with the body
+set forward_format = "Fwd: %s"	# format of subject when forwarding
+set forward_quote		# include message in forwards
+set reverse_name		# reply as whomever it was to
+set include			# include message in replies
+set mail_check=60 # to avoid lags using IMAP with some email providers (yahoo for example)
+auto_view text/html		# automatically show html (mailcap uses lynx)
+auto_view application/pgp-encrypted
+#set display_filter = "tac | sed '/\\\[-- Autoview/,+1d' | tac" # Suppress autoview messages.
+alternative_order text/plain text/enriched text/html
 
-# Folder hooks
-folder-hook 'malakrapon.gmail' 'source ~/.config/mutt/accounts/malakrapon.gmail/settings'
-folder-hook 'andreangrudev.gmail' 'source ~/.config/mutt/accounts/andreangrudev.gmail/settings'
-folder-hook 'malakrapon.abv' 'source ~/.config/mutt/accounts/malakrapon.abv/settings'
-folder-hook 'baloonbalrog.cock' 'source ~/.config/mutt/accounts/baloonbalrog.cock/settings'
-folder-hook 'cockaroach.cock' 'source ~/.config/mutt/accounts/cockaroach.cock/settings'
-
-# Default account
-source ~/.config/mutt/accounts/andreangrudev.gmail/settings
-
-
-# Macros for switching accounts
-macro index <f2> '<sync-mailbox><enter-command>source ~/.config/mutt/accounts/malakrapon.gmail/settings<enter><change-folder>!<enter>'
-macro index <f3> '<sync-mailbox><enter-command>source ~/.config/mutt/accounts/andreangrudev.gmail/settings<enter><change-folder>!<enter>'
-macro index <f4> '<sync-mailbox><enter-command>source ~/.config/mutt/accounts/malakrapon.abv/settings<enter><change-folder>!<enter>'
-macro index <f5> '<sync-mailbox><enter-command>source ~/.config/mutt/accounts/baloonbalrog.cock/settings<enter><change-folder>!<enter>'
-macro index <f6> '<sync-mailbox><enter-command>source ~/.config/mutt/accounts/cockaroach.cock//settings<enter><change-folder>!<enter>'
-
-macro index S "<shell-escape>mbsync -a<enter><shell-escape>notmuch new<enter>" "sync email"
-macro index \Cs "<shell-escape>mpop -a<enter><shell-escape>notmuch new<enter>" "sync email"
-macro index \Cf "<enter-command>unset wait_key<enter><shell-escape>read -p 'Enter a search term to find with notmuch: ' x; echo \$x >~/.cache/mutt_terms<enter><limit>~i \"\`notmuch search --output=messages \$(cat ~/.cache/mutt_terms) | head -n 600 | perl -le '@a=<>;s/\^id:// for@a;$,=\"|\";print@a' | perl -le '@a=<>; chomp@a; s/\\+/\\\\+/ for@a;print@a' \`\"<enter>" "show only messages matching a notmuch pattern"
-
-set move = no
-
-# settings
-set pager_index_lines = 10          
-set pager_context = 3                # show 3 lines of context
-set pager_stop                       # stop at end of message
-set menu_scroll                      # scroll menu
-set tilde                            # use ~ to pad mutt
-set move=no                          # don't move messages when marking as read
-set mail_check = 30                  # check for new mail every 30 seconds
-set imap_keepalive = 900             # 15 minutes
-set sleep_time = 0                   # don't sleep when idle
-set wait_key = no		                 # mutt won't ask "press key to continue"
-set envelope_from                    # which from?
-set edit_headers                     # show headers when composing
-set fast_reply                       # skip to compose when replying
-set askcc                            # ask for CC:
-set fcc_attach                       # save attachments with the body
-set forward_format = "Fwd: %s"       # format of subject when forwarding
-set forward_decode                   # decode when forwarding
-set forward_quote                    # include message in forwards
-set mime_forward                     # forward attachments as part of body
-set attribution = "On %d, %n wrote:" # format of quoting header
-set reply_to                         # reply to Reply to: field
-set reverse_name                     # reply as whomever it was to
-set include                          # include message in replies
-set text_flowed=yes                  # correct indentation for plain text
-unset sig_dashes                     # no dashes before sig
-unset markers
-
-# Sort by newest conversation first.
-set charset = "utf-8"
-set uncollapse_jump
-set sort_re
-set sort = reverse-threads
-set sort_aux = last-date-received
-
-# How we reply and quote emails.
-set reply_regexp = "^(([Rr][Ee]?(\[[0-9]+\])?: *)?(\[[^]]+\] *)?)*"
-set quote_regexp = "^( {0,4}[>|:#%]| {0,4}[a-z0-9]+[>|]+)+"
+#-------------------------
+# set pager_format="" #this is bottom line that says the name of the email
+set pager_index_lines=10 # how big the pager window is
+set pager_context=3 # can't figure out what this is
+set pager_stop # stop from moving to next meesage when hitting d
+set menu_scroll
+set tilde # pads empty lines with tilde
+set edit_headers # when composing new message shows headers
+set text_flowed=yes
 set send_charset = "utf-8:iso-8859-1:us-ascii" # send in utf-8
 
-#sidebar
-set sidebar_visible 
-set sidebar_width = 25
-set sidebar_short_path
-set sidebar_folder_indent
-set sidebar_format = "%B %* [%?N?%N / ?%S]"
+#-------------------------
+
+# Sidebar mappings
+set sidebar_visible = yes
+set sidebar_width = 20
+set sidebar_short_path = yes
+set sidebar_next_new_wrap = yes
 set mail_check_stats
-bind index,pager \CK sidebar-prev
-bind index,pager \CJ sidebar-next
-bind index,pager \CE sidebar-open
+set sidebar_format = '%D%?F? [%F]?%* %?N?%N/? %?S?%S?'
+bind index,pager \Ck sidebar-prev
+bind index,pager \Cj sidebar-next
+bind index,pager \Co sidebar-open
+bind index,pager \Cp sidebar-prev-new
+bind index,pager \Cn sidebar-next-new
 bind index,pager B sidebar-toggle-visible
 
-set editor = "nvim"
-
-#keybinds
-macro index A \
-    "<tag-pattern>~N<enter><tag-prefix><clear-flag>N<untag-pattern>.<enter>" \
-    "mark all new as read"
-
-bind index j next-entry
-bind index k previous-entry
-bind pager j next-line
-bind pager k previous-line
-
-bind attach,index,pager \CD next-page
-bind attach,index,pager \CU previous-page
-bind pager g top
-bind pager G bottom
-bind attach,index g first-entry
-bind attach,index G last-entry
-
-# link to mailcap file
-set mailcap_path = "$XDG_CONFIG_HOME/mutt/mailcap"
-# open attachments with mailcap with <return>
-bind attach <return> view-mailcap             
-# save attachments to a folder
-macro attach s '<save-entry> <bol>~/Documents/attachments/<eol>' 'save attachment'
-auto_view text/html		# automatically show html (mailcap uses lynx)
-
-#clickable urls
-macro index,pager \cb "<pipe-message> urlscan<Enter>" "call urlscan to extract URLs out of a message"
-macro attach,compose \cb "<pipe-entry> urlscan<Enter>" "call urlscan to extract URLs out of a message"
-
-# Use GPGME
-# if i want to encrypt my messages i would have to create a separete key for
-# each account and reencrypt everything
-
-# Use my key for signing and encrypting 
-# set pgp_default_key = 67B378F3C3B3ADA4A050173B6BD6E29CC80D1BC5
-
-# Use GPGME
-# set crypt_use_gpgme = yes
-
-# Automatically sign all out-going email
-# set crypt_autosign = yes
-
-# Sign replies to signed emails
-# set crypt_replysign = yes
-
-# Encrypt replies to encrypted emails
-# set crypt_replyencrypt = yes
-
-# Encrypt and sign replies to encrypted and signed email
-# set crypt_replysignencrypted = yes
-
-# Attempt to verify signatures automatically
-# set crypt_verify_sig = yes
-
-# Attempt to encrypt automatically, if possible
-# I would recommend setting this to no as university often have spam filters
-# And this will cause your emails to be marked as spam
-# as they can't decrypt your emails LMAO
-set crypt_opportunistic_encrypt = no
-
-# So you can view encrypted emails automatically
-auto_view application/pgp-encrypted
+source $XDG_CONFIG_HOME/mutt/keybindings
+source $XDG_CONFIG_HOME/mutt/colors
+source $XDG_CONFIG_HOME/mutt/accounts/malakrapon.gmail/settings
+macro index,pager i1 '<sync-mailbox><enter-command>source /home/arch/.config/mutt/accounts/andreangrudev.gmail/settings<enter><change-folder>!<enter>;<check-stats>' "switch to malak_rapon@abv.bg"
+macro index,pager i2 '<sync-mailbox><enter-command>source /home/arch/.config/mutt/accounts/malakrapon.gmail/settings<enter><change-folder>!<enter>;<check-stats>' "switch to malak_rapon@abv.bg"
+macro index,pager i3 '<sync-mailbox><enter-command>source /home/arch/.config/mutt/accounts/malakrapon.abv/settings<enter><change-folder>!<enter>;<check-stats>' "switch to malak_rapon@abv.bg"
+macro index,pager i4 '<sync-mailbox><enter-command>source /home/arch/.config/mutt/accounts/baloonbalrog.cock/settings<enter><change-folder>!<enter>;<check-stats>' "switch to baloonbalrog@cock.li"
+macro index,pager i5 '<sync-mailbox><enter-command>source /home/arch/.config/mutt/accounts/cockaroach.cock/settings<enter><change-folder>!<enter>;<check-stats>' "switch to cockaroach@cock.li"

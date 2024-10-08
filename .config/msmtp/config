@@ -4,7 +4,7 @@ auth           on
 tls on
 tls_starttls on
 tls_trust_file /etc/ssl/certs/ca-certificates.crt
-logfile        ~/.config/msmtp/msmtp.log
+logfile        ~/.local/share/msmtp/msmtp.log
 
 # Gmail
 account        gmail
@@ -25,7 +25,7 @@ user           andreangrudev@gmail.com
 passwordeval   "gpg -dq ~/.config/mutt/accounts/andreangrudev.gmail/msmtp.gpg"
 
 # Cock
-account        cock
+account        cockaroach@cock.li
 host           mail.cock.li
 port           465
 tls_starttls   off
