@@ -23,7 +23,10 @@ set mail_check=60 # to avoid lags using IMAP with some email providers (yahoo fo
 auto_view text/html		# automatically show html (mailcap uses lynx)
 auto_view application/pgp-encrypted
 #set display_filter = "tac | sed '/\\\[-- Autoview/,+1d' | tac" # Suppress autoview messages.
-alternative_order text/plain text/enriched text/html
+
+# tells neomut pager which format to try to open first when the message is 
+# composed in multipart/alternative, aka try to open message as html when you have a choice
+alternative_order text/html text/plain text/enriched 
 
 #-------------------------
 # set pager_format="" #this is bottom line that says the name of the email

@@ -6,8 +6,6 @@ TODO:
 3. replace waybar with eww since waybar can't show current active windows in this workplace
  4. hypland messing the order of windows when I one window in fullscreen
 5. neomutt -  
-    * add alerts on new messages,
     * abook install and configure, 
     * notmuch, 
-    * hide labels inside email
     * how to write html
