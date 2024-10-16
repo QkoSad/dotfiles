@@ -1,50 +1,64 @@
-
 // i would like to have per workspace windows
 {
-    "layer": "top",
-    "position": "top",
-    "height": 48,
-    "margin": "0, 0, 0, 0",
-
-    "modules-left": ["hyprland/workspaces"],
-    //"modules-center": ["wlr/taskbar"],
-    "modules-right": ["wireplumber","hyprland/language","clock"] ,
-
-    "hyprland/workspaces": {
-      "on-click": "activate",
-      "active-only": "false",
-      "format": "  {name}  ",
-      "persistent-workspaces": {
-        "*":9
-      }
-    },
-
-    "wlr/taskbar": {
-      "format": "  {name}  ",
-        "on-click": "activate",
-        "rewrite": {
-          ".*Mullvad Browser.*": "  Mullvad  ", 
-          ".*Foot Client.*": "  Foot  "
-        }
-    },
-
-    "hyprland/language": {
-        "format": "{}",
-        "format-en": "En",
-        "format-bg": "Bg",
-        "keyboard-name": "gaming-kb--gaming-kb-"
-    },
-
-    "clock": {
-        "tooltip": false,
-        "format": "{:%H:%M  | %d %b }"
-    },
-
-    "wireplumber": {
-      "tooltop": false,
-      "format": "{volume}% {icon}",
-      "format-muted": "",
-      "on-click": "helvum",
-      "format-icons": ["", "", ""]
+  "layer": "top",
+  "position": "top",
+  "height": 48,
+  "margin": "0, 0, 0, 0",
+  "modules-left": [
+    "hyprland/workspaces",
+    "hyprland/submap"
+  ],
+  //"modules-center": ["wlr/taskbar"],
+  "modules-right": [
+    "wireplumber",
+    "tray",
+    "hyprland/language",
+    "clock"
+  ],
+  "hyprland/workspaces": {
+    "on-click": "activate",
+    "active-only": "false",
+    "format": "  {name}  ",
+    "persistent-workspaces": {
+      "*": 9
     }
+  },
+  "wlr/taskbar": {
+    "format": "  {name}  ",
+    "on-click": "activate",
+    "rewrite": {
+      ".*Mullvad Browser.*": "  Mullvad  ",
+      ".*Foot Client.*": "  Foot  "
+    }
+  },
+  "hyprland/submap": {
+    "format": "✌️ {}",
+    "max-length": 8,
+    "tooltip": false
+  },
+  "hyprland/language": {
+    "format": "{}",
+    "format-en": "En",
+    "format-bg": "Bg",
+    "keyboard-name": "gaming-kb--gaming-kb-"
+  },
+  "clock": {
+    "tooltip": false,
+    "format": "{:%H:%M  | %d %b }"
+  },
+  "wireplumber": {
+    "tooltop": false,
+    "format": "{volume}% {icon}",
+    "format-muted": "",
+    "on-click": "helvum",
+    "format-icons": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "tray": {
+    "icon-size": 21,
+    "spacing": 10
+  }
 }

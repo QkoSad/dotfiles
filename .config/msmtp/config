@@ -7,7 +7,7 @@ tls_trust_file /etc/ssl/certs/ca-certificates.crt
 logfile        ~/.local/share/msmtp/msmtp.log
 
 # Gmail
-account        gmail
+account        malakrapon@gmail.com
 host           smtp.gmail.com
 port           465
 tls_starttls   off
@@ -16,7 +16,7 @@ user           malakrapon@gmail.com
 passwordeval   "gpg -dq ~/.config/mutt/accounts/malakrapon.gmail/msmtp.gpg"
 
 # Gmail 2
-account        gmail2
+account        andreangrudev@gmail.com
 host           smtp.gmail.com
 port           465
 tls_starttls   off
@@ -34,7 +34,7 @@ user           cockaroach@cock.li
 passwordeval   "gpg -dq ~/.config/mutt/accounts/cockaroach.cock/isync-msmtp.gpg"
 
 # Cock 2
-account        cock2
+account        baloonbalrog@cock.li
 host           mail.cock.li
 port           465
 tls_starttls   off
@@ -43,7 +43,7 @@ user           baloonbalrog@cock.li
 passwordeval   "gpg -dq ~/.config/mutt/accounts/baloonbalrog.cock/isync-msmtp.gpg"
 
 # abv
-account        abv
+account        malak_rapon@abv.bg
 host           smtp.abv.bg
 port           465
 tls_starttls   off
@@ -52,4 +52,4 @@ user           malak_rapon@abv.bg
 passwordeval   "gpg -dq ~/.config/mutt/accounts/malakrapon.abv/isync-msmtp.gpg"
 
 # Set a default account
-account default: gmail
+account default: malakrapon@gmail.com

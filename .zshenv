@@ -15,4 +15,23 @@ export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history
 export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
 export DOCKER_CONFIG="$XDG_CONFIG_HOME"/docker
 export W3M_DIR="$XDG_STATE_HOME/w3m"
-# export PATH=$PATH:$HOME/Documents/scripts
+
+# fabric AI, if fabric fails i can uncomment those
+# export GOROOT=/usr/local/go
+# export GOPATH=$HOME/go
+# path=($GOROOT/bin $path)
+# path=($GOPATH/bin $path)
+# path=($HOME/.local/bin $path)
+# export PATH=$GOPATH/bin:$GOROOT/bin:$HOME/.local/bin:$PATH
+
+# from archwiki to prevent path duplication
+typeset -U path PATH
+path=($HOME/Documents/scripts $path)
+
+# needed for webUI stable diffusion
+export python_cmd="python3.11"
+
+# conda
+export CRYPTOGRAPHY_OPENSSL_NO_LEGACY=1
+
+export PATH

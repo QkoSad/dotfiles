@@ -36,6 +36,7 @@ alias mv="advmv -g"
 # when the bugfix has been merged: https://gitlab.torproject.org/tpo/applications/tor-browser-build/-/raw/maint-13.5/projects/browser/Bundle-Data/Docs-TBB/ChangeLog.txt
 alias mullvad-browser="MOZ_ENABLE_WAYLAND=0 nohup mullvad-browser &>/dev/null &"
 alias torbrowser-launcher="MOZ_ENABLE_WAYLAND=0 nohup torbrowser-launcher &>/dev/null &"
+alias webRip="wget --random-wait -r -p -e robots=off -U mozilla"
 
 # prompt
 PS1="%F{magenta}%n@%m%f %B%F{yellow}%~%f%b"$'\n'"%F{yellow}%?%f %F{cyan}%%%f "
@@ -97,7 +98,7 @@ notes() { nvim --cmd 'cd ~/.notes'}
 # commands
 mem(){
   if [[ -z $1 ]]; then
-    cat ~/.commands
+    \cat ~/.commands
   else
     echo "Description:\n"$1"\nCommand:\n"$2"\n------------" >> ~/.commands 
   fi
@@ -170,6 +171,22 @@ bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 bindkey '^[k' history-substring-search-up
 bindkey '^[j' history-substring-search-down
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/opt/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/opt/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/opt/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/opt/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 
