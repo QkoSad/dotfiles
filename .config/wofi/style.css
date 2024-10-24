@@ -6,22 +6,18 @@
 
 #window {
   background: rgba(41, 46, 66, 1);
-  border-radius: 10px;
-  border: 2px solid rgb(253,224,24);
 }
+
 
 #input {
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 15px;
+  outline: 2px solid red;
 }
 
-#outer-box {
-  padding: 20px;
-}
-
-#img {
-  margin-right: 6px;
+#inner-box {
+  padding: 10px;
 }
 
 #entry {

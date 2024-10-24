@@ -16,7 +16,7 @@ user           malakrapon@gmail.com
 passwordeval   "gpg -dq ~/.config/mutt/accounts/malakrapon.gmail/msmtp.gpg"
 
 # Gmail 2
-account        andreangrudev@gmail.com
+account        andrean.grudev@gmail.com
 host           smtp.gmail.com
 port           465
 tls_starttls   off

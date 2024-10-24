@@ -17,27 +17,31 @@ window#waybar {
   background: @background;
 }
 
-window#waybar.fullscreen #window {
-  color: @focused;
+#tags button {
+  padding: 0px;
+  min-width: 24px;
+  color: @empty;
+  border-radius: 0px;
+}
+
+#tags button:hover {
+  box-shadow: none;
+  text-shadow: none;
+  background: transparent;
+}
+
+#tags button.occupied {
+  color: @occupied;
   font-weight: bold;
 }
 
-#workspaces button {
-  padding: 0px;
-  margin: 5px;
-  border-radius: 0px;
-  color: @occupied;
-}
-
-#workspaces button.empty {
-  color: @empty;
-}
-
-#workspaces button.active {
+#tags button.focused {
   color: @focused;
 }
 
-#workspaces button.urgent {
+#tags button.urgent,
+#bluetooth.off,
+#custom-record {
   color: @urgent;
 }
 
@@ -50,6 +54,14 @@ window#waybar.fullscreen #window {
   font-weight: bold;
 }
 
-#tray {
+#tray,
+#bluetooth,
+#battery,
+#custom-player,
+#custom-weather,
+#custom-signal,
+#custom-inbox,
+#custom-record,
+#custom-clock {
   padding: 0px 12px;
 }

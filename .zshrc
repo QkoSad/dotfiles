@@ -13,7 +13,10 @@ setopt EXTENDED_HISTORY
 setopt extendedglob nomatch notify
 # turn off beeping
 unsetopt autocd beep
-
+# autostart DE
+if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
+  exec Hyprland
+fi
 #aliases
 alias cat=bat
 alias ls=exa
@@ -65,6 +68,7 @@ echo -ne '\e[5 q' # Use beam shape cursor on startup.
 preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
 # Basic auto/tab complete:
+fpath=(/usr/share/zsh/plugins/conda-zsh-completion/ $fpath)
 autoload -Uz compinit 
 # menu when tabbing
 zstyle ':completion:*' menu select
@@ -155,10 +159,6 @@ unalias run-help
 autoload run-help
 alias help=run-help
 
-# autostart DE
-if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
-  exec Hyprland
-fi
 # configurations so home dir stays clean
 alias irssi="irssi --config='$XDG_CONFIG_HOME'/irssi/config --home='$XDG_DATA_HOME'/irssi"
 alias nvidia-settings="nvidia-settings --config='$XDG_CONFIG_HOME'/nvidia/settings"
@@ -188,7 +188,9 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# the gray text when writing a command 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 
+# reverse history surch with upper arrow when writing command
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
-
+# colors for command, example show errored commands
+source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh

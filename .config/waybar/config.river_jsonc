@@ -5,25 +5,18 @@
   "height": 32,
   "margin": "0, 0, 0, 0",
   "modules-left": [
-    "hyprland/workspaces"
+    "river/tags"
   ],
   "modules-center": [
-    // "wlr/taskbar"
-    "hyprland/window"
+    "wlr/taskbar"
   ],
   "modules-right": [
     "wireplumber",
     "tray",
-    "hyprland/language",
     "clock"
   ],
-  "hyprland/workspaces": {
-    "on-click": "activate",
-    "active-only": "false",
-    "format": "{name}",
-    "persistent-workspaces": {
-      "*": 9
-    }
+  "river/tags": {
+    "num-tags": 9
   },
   "wlr/taskbar": {
     "format": "  {name}  ",
@@ -32,12 +25,6 @@
       ".*Mullvad Browser.*": "  Mullvad  ",
       ".*Foot Client.*": "  Foot  "
     }
-  },
-  "hyprland/language": {
-    "format": "{} ",
-    "format-en": "En",
-    "format-bg": "Bg",
-    "keyboard-name": "gaming-kb--gaming-kb-"
   },
   "clock": {
     "tooltip": false,
