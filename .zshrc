@@ -17,12 +17,15 @@ unsetopt autocd beep
 if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
   exec Hyprland
 fi
+# use vim for man pages
+export MANPAGER='nvim +Man!'
+
 #aliases
+alias sync-mail="mpop -a | /home/arch/Documents/scripts/send-notify-mpop && mbsync -aV | tee /dev/tty | \grep -A 4 -B 6 'Opening near side box INBOX' | tee /dev/tty | /home/arch/Documents/scripts/send-notify-isync "
 alias cat=bat
 alias ls=exa
 alias la="exa -lah"
 alias ll="exa -l"
-alias urm=rm
 alias rm=trash
 # starts bc in float mode
 alias bc="bc -l"

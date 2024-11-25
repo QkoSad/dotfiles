@@ -27,6 +27,7 @@ export W3M_DIR="$XDG_STATE_HOME/w3m"
 # from archwiki to prevent path duplication
 typeset -U path PATH
 path=($HOME/Documents/scripts/bin $path)
+path=($HOME/.dotnet/tools $path)
 
 # needed for webUI stable diffusion
 export python_cmd="python3.11"

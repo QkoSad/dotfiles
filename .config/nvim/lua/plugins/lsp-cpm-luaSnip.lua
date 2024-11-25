@@ -27,6 +27,7 @@ return {
 		require("mason").setup()
 		require("mason-lspconfig").setup({
 			ensure_installed = {
+				"awk_ls",
 				"bashls",
 				"cssls",
 				"dockerls",
@@ -34,12 +35,15 @@ return {
 				"jsonls",
 				"lua_ls",
 				"pylsp",
-				"tailwindcss",
-				-- "ts_ls",
+				"ts_ls",
 				"yamlls",
+				-- "tailwindcss",
+				--
 				-- "prettierd",
 				-- "stylua",
-				-- those 2 need manual install because they are formatters
+				-- "black",
+				-- "js-debug-adapter",
+				-- those 4 need manual install because they are not lsps
 			},
 			handlers = {
 				function(server_name) -- default handler (optional)

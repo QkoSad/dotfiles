@@ -1,7 +1,6 @@
 defaults
 tls on
 tls_starttls off
-timeout 10
 
 account abv
 user malak_rapon@abv.bg
@@ -9,6 +8,7 @@ passwordeval "gpg -dq ~/.config/mutt/accounts/malakrapon.abv/isync-msmtp.gpg"
 host pop3.abv.bg
 port 995
 delivery maildir "~/.local/share/email/accounts/malakrapon.abv/INBOX"
+timeout 10
 
 account cock
 user cockaroach@cock.li
@@ -16,6 +16,7 @@ passwordeval "gpg -dq ~/.config/mutt/accounts/cockaroach.cock/isync-msmtp.gpg"
 host mail.cock.li
 port 995
 delivery maildir "~/.local/share/email/accounts/cockaroach.cock/INBOX"
+timeout 10
 
 account cock2
 user baloonbalrog@cock.li
@@ -23,3 +24,4 @@ passwordeval "gpg -dq ~/.config/mutt/accounts/baloonbalrog.cock/isync-msmtp.gpg"
 host mail.cock.li
 port 995
 delivery maildir "~/.local/share/email/accounts/baloonbalrog.cock/INBOX"
+timeout 10
