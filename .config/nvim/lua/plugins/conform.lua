@@ -25,6 +25,7 @@ return {
 			typescript = { "prettierd" },
 			typescriptreact = { "prettierd" },
 			javascriptreact = { "prettierd" },
+			cs = { "csharpier" },
 		},
 		-- Set default options
 		default_format_opts = {

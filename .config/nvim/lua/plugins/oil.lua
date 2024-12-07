@@ -1,10 +1,6 @@
 return {
 	"stevearc/oil.nvim",
 	dependencies = { "nvim-tree/nvim-web-devicons" },
-	-- keys = {
-	-- 	{ "<leader>t", "<cmd>Oil --float<cr>" },
-	-- },
-	-- tag = "v2.8.0",
 	config = function()
 		require("oil").setup({
 			keymaps = {

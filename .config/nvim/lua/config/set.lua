@@ -33,22 +33,32 @@ vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 -- add visual column at the 80
 vim.opt.colorcolumn = "80"
--- folding
--- use treessitter for folding
-vim.opt.foldmethod = "expr"
-vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
--- change the way the folds looks, stole it from somewhere
-vim.opt.foldtext =
-	[[substitute(getline(v:foldstart),'\\\\t',repeat('\\ ',&tabstop),'g').'...'.trim(getline(v:foldend)) . ' (' . (v:foldend - v:foldstart + 1) . ' lines)']]
--- dunno what this was
-vim.opt.fillchars = "fold: "
+vim.opt.diffopt = "vertical"
+
+-- -- folding
+-- -- use treessitter for folding
+-- vim.opt.foldmethod = "expr"
+-- vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+-- -- change the way the folds looks, stole it from somewhere
+-- vim.opt.foldtext =
+-- 	[[substitute(getline(v:foldstart),'\\\\t',repeat('\\ ',&tabstop),'g').'...'.trim(getline(v:foldend)) . ' (' . (v:foldend - v:foldstart + 1) . ' lines)']]
+-- -- dunno what this was
+-- vim.opt.fillchars = "fold: "
 -- so it dosent open files folded
-vim.opt.foldlevel = 8
--- ignores node_modules, and git for vimgrep
-vim.opt.wildignore:append({ "**/node_modules", ".git/**" })
+-- vim.opt.foldlevel = 8
+
+-- folding plugin
+vim.opt.foldcolumn = "0" -- sets column on left telling the fold level
+vim.opt.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
+vim.opt.foldlevelstart = 10
+vim.opt.foldenable = true
+
 -- grep
 vim.opt.grepprg = "rg --vimgrep"
 vim.opt.grepformat = "%f:%l:%c:%m"
+-- ignores node_modules, and git for vimgrep
+vim.opt.wildignore:append({ "**/node_modules", ".git/**" })
+
 -- netrw
 -- vim.g.netrw_keepdir = 0
 -- vim.g.netrw_banner = 0
