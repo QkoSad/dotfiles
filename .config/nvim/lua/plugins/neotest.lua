@@ -3,6 +3,7 @@ return {
 	cmd = { "Neotest" },
 	dependencies = {
 		"nvim-neotest/neotest-jest",
+		"issafalcon/neotest-dotnet",
 		"nvim-neotest/nvim-nio",
 		"nvim-lua/plenary.nvim",
 		"antoinemadec/FixCursorHold.nvim",
@@ -13,6 +14,7 @@ return {
 			-- your neotest config here
 			adapters = {
 				require("neotest-jest"),
+				require("neotest-dotnet"),
 			},
 		}
 	end,

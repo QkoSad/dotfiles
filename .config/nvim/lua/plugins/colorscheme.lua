@@ -1,13 +1,9 @@
 return {
 	-- { "rose-pine/neovim", name = "rose-pine" },
-	-- {
-	-- 	"folke/tokyonight.nvim",
-	-- },
-	-- {
-	-- 	"ellisonleao/gruvbox.nvim",
-	-- },
+	-- { "folke/tokyonight.nvim", },
+	-- { "ellisonleao/gruvbox.nvim", },
 	-- { "nxvu699134/vn-night.nvim" },
-	{ "navarasu/onedark.nvim" },
+	-- { "navarasu/onedark.nvim" },
 	{
 		"EdenEast/nightfox.nvim",
 		config = function()
@@ -15,6 +11,7 @@ return {
 			-- 		style = "deep",
 			-- 	})
 			-- 	require("onedark").load()
+			-- 	vim.cmd("colorscheme tokyonight-night")
 			vim.cmd("colorscheme duskfox")
 		end,
 	},

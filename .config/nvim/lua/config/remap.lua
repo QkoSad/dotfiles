@@ -35,10 +35,15 @@ vim.keymap.set("n", "<C-l>", ":bnext<CR>")
 vim.keymap.set("n", "<C-h>", ":bprevious<CR>")
 vim.keymap.set("n", "<leader>bd", ":bd<CR>")
 -- change list
-vim.keymap.set("n", "<leader>cn", ":cn<CR>")
-vim.keymap.set("n", "<leader>cp", ":cp<CR>")
+vim.keymap.set("n", "<C-j>", ":cn<CR>")
+vim.keymap.set("n", "<C-k>", ":cp<CR>")
 -- change dir
 vim.keymap.set("n", "<leader>cd", ":cd %:h<CR>")
+--
+vim.keymap.set("n", "<A-h>", "<C-w>h")
+vim.keymap.set("n", "<A-j>", "<C-w>j")
+vim.keymap.set("n", "<A-k>", "<C-w>k")
+vim.keymap.set("n", "<A-l>", "<C-w>l")
 
 -- find a way to set keymaps dynamically
 -- this does not work

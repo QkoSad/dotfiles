@@ -1,14 +1,14 @@
 return {
 	{
 		"JoosepAlviste/nvim-ts-context-commentstring",
-		lazy = true,
 		opts = {
 			enable_autocmd = false,
 		},
+		ft = { "typescriptreact", "javascriptreact" },
 	},
 	{
 		"echasnovski/mini.comment",
-		event = "VeryLazy",
+		event = "InsertEnter",
 		opts = {
 			options = {
 				custom_commentstring = function()

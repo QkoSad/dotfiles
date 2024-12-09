@@ -6,7 +6,7 @@ return { -- treesitter defaults
 	},
 	{
 		"nvim-treesitter/nvim-treesitter",
-		--  build = ":TSUpdate",
+		build = ":TSUpdate",
 		config = function()
 			local configs = require("nvim-treesitter.configs")
 			configs.setup({
@@ -29,6 +29,10 @@ return { -- treesitter defaults
 						keymaps = {
 							["af"] = "@function.outer",
 							["if"] = "@function.inner",
+							["ac"] = "@conditional.outer",
+							["ic"] = "@conditional.inner",
+							["al"] = "@loop.outer",
+							["il"] = "@loop.inner",
 						},
 						include_surrounding_whitespace = true,
 					},

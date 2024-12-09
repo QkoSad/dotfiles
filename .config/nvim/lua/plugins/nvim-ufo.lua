@@ -1,9 +1,9 @@
 return {
 	"kevinhwang91/nvim-ufo",
-	event = "VeryLazy",
 	dependencies = {
 		"kevinhwang91/promise-async",
 	},
+	event = "VeryLazy",
 	config = function()
 		local capabilities = vim.lsp.protocol.make_client_capabilities()
 		capabilities.textDocument.foldingRange = {

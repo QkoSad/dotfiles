@@ -21,6 +21,11 @@ fi
 export MANPAGER='nvim +Man!'
 
 #aliases
+alias -g ...='cd ../..'
+alias -g ....='cd ../../..'
+alias -g .....='cd ../../../..'
+alias -g ......='cd ../../../../..'
+
 alias sync-mail="mpop -a | /home/arch/Documents/scripts/send-notify-mpop && mbsync -aV | tee /dev/tty | \grep -A 4 -B 6 'Opening near side box INBOX' | tee /dev/tty | /home/arch/Documents/scripts/send-notify-isync "
 alias cat=bat
 alias ls=exa
@@ -33,8 +38,8 @@ alias bc="bc -l"
 alias grep="grep --with-filename --line-number --color=auto -i"
 # makes nnn rash instead of delete
 alias t="NNN_TRASH=1 nnn -e"
-alias cp="advcp -g"
-alias mv="advmv -g"
+alias cp="advcp -gi"
+alias mv="advmv -gi"
 # Mozilla Bug 1908825 makes both browsers crash in wayland this forces them to
 # run in xwayland and not crash, those aliases can be removed when the bugfix is
 # mergen in the browsers. It is unknow when this will happen since both browsers
