@@ -4,10 +4,9 @@ return {
 	event = "VeryLazy",
 	---@module "quicker"
 	---@type quicker.SetupOptions
+	enabled = false,
 	opts = {},
 	config = function()
-		vim.keymap.set("n", "<leader>q", "<cmd>copen<CR>")
-		vim.keymap.set("n", "<leader>l", "<cmd>lli<CR>")
 		require("quicker").setup({
 			keys = {
 				{

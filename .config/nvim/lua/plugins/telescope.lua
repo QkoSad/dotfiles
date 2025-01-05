@@ -13,9 +13,15 @@ return {
 			{ "<leader>fg", "<cmd>Telescope live_grep<cr>" },
 			{ "<leader>fb", "<cmd>Telescope buffers<cr>" },
 			{ "<leader>fh", "<cmd>Telescope help_tags<cr>" },
+			{ "<leader>fs", "<cmd>Telescope lsp_document_symbols<cr>" },
 		},
 		config = function()
-			require("telescope").setup()
+			require("telescope").setup({
+				-- defaults = {
+				-- 	file_ignore_patterns = { "bin", "obj" },
+				-- },
+				extensions = { fzf = {} },
+			})
 			require("telescope").load_extension("fzf")
 		end,
 	},

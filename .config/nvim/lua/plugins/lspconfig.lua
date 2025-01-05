@@ -22,14 +22,6 @@ return {
 				"lua_ls",
 				"pylsp",
 				"yamlls",
-				"ts_ls",
-				-- "tailwindcss",
-				--
-				-- "prettierd",
-				-- "stylua",
-				-- "black",
-				-- "js-debug-adapter",
-				-- those 4 need manual install because they are not lsps
 			},
 			handlers = {
 				function(server_name) -- default handler (optional)
@@ -37,20 +29,6 @@ return {
 						capabilities = capabilities,
 					})
 				end,
-				-- custom settings for the lua ls language server
-				-- ["lua_ls"] = function()
-				-- 	local lspconfig = require("lspconfig")
-				-- 	lspconfig.lua_ls.setup({
-				-- 		capabilities = capabilities,
-				-- 		settings = {
-				-- 			Lua = {
-				-- 				diagnostics = {
-				-- 					globals = { "vim" },
-				-- 				},
-				-- 			},
-				-- 		},
-				-- 	})
-				-- end,
 			},
 		})
 		vim.diagnostic.config({

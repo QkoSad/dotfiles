@@ -26,6 +26,8 @@ return {
 			typescriptreact = { "prettierd" },
 			javascriptreact = { "prettierd" },
 			cs = { "csharpier" },
+			sql = { "sql_formatter" },
+			mysql = { "sql_formatter" },
 		},
 		-- Set default options
 		default_format_opts = {

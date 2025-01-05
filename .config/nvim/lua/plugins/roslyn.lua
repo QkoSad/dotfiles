@@ -4,4 +4,11 @@ return {
 	opts = {
 		-- your configuration comes here; leave empty for default settings
 	},
+	config = function()
+		require("roslyn").setup({
+			config = {
+				filetypes = { "cs" },
+			},
+		})
+	end,
 }

@@ -8,7 +8,7 @@ return {
 	},
 	{
 		"echasnovski/mini.comment",
-		event = "InsertEnter",
+		event = "VeryLazy",
 		opts = {
 			options = {
 				custom_commentstring = function()
