@@ -55,8 +55,8 @@ vim.keymap.set("n", "]c", ":cn<CR>")
 vim.keymap.set("n", "[c", ":cp<CR>")
 -- toggle term
 local termtoggle = require("stx.term") -- I have put the above code under ~/.config/nvim/lua/stx/term.lua
-vim.keymap.set("n", "<C-m>", termtoggle.toggleterm, { desc = "toggle terminal" })
-vim.keymap.set("t", "<C-m>", termtoggle.toggleterm, { buffer = termtoggle.buf, desc = "toggle terminal" })
+vim.keymap.set("n", "<C-t>", termtoggle.toggleterm, { desc = "toggle terminal" })
+vim.keymap.set("t", "<C-t>", termtoggle.toggleterm, { buffer = termtoggle.buf, desc = "toggle terminal" })
 
 vim.api.nvim_set_keymap("n", "<space>r", "", {
 	noremap = true,

@@ -10,15 +10,9 @@ local autocmd = vim.api.nvim_create_autocmd
 
 -- stop netrw from spawning empty buffers, modified to stop oil from spawning,
 -- currently not in use since i use oil.nvim plugin
--- empty buffers
 -- autocmd("BufEnter", {
 -- 	pattern = "{}",
 -- 	command = ":setlocal bufhidden=wipe",
--- })
-
--- Autocmd for some formatter.nvim plugin, not in use, replaced by conform.nvim
--- autocmd("BufWritePost", {
--- 	command = ":FormatWrite",
 -- })
 
 -- set cwd to the entered file
@@ -70,7 +64,6 @@ vim.api.nvim_create_autocmd({ "UIEnter", "ColorScheme" }, {
 		io.write(string.format("\027]11;#%06x\027\\", normal.bg))
 	end,
 })
-
 vim.api.nvim_create_autocmd("UILeave", {
 	callback = function()
 		io.write("\027]111\027\\")

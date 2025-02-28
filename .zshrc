@@ -45,8 +45,8 @@ alias mv="advmv -gi"
 # mergen in the browsers. It is unknow when this will happen since both browsers
 # merge mozilla extended release which are 52 weaks behind. This link will say
 # when the bugfix has been merged: https://gitlab.torproject.org/tpo/applications/tor-browser-build/-/raw/maint-13.5/projects/browser/Bundle-Data/Docs-TBB/ChangeLog.txt
-alias mullvad-browser="MOZ_ENABLE_WAYLAND=0 nohup mullvad-browser &>/dev/null &"
-alias torbrowser-launcher="MOZ_ENABLE_WAYLAND=0 nohup torbrowser-launcher &>/dev/null &"
+# alias mullvad-browser="MOZ_ENABLE_WAYLAND=0 nohup mullvad-browser &>/dev/null &"
+# alias torbrowser-launcher="MOZ_ENABLE_WAYLAND=0 nohup torbrowser-launcher &>/dev/null &"
 alias webRip="wget --random-wait -r -p -e robots=off -U mozilla"
 
 # prompt
