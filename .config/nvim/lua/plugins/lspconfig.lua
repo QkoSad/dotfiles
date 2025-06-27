@@ -42,5 +42,17 @@ return {
 			},
 			virtual_text = false,
 		})
+		vim.lsp.config("roslyn_ls", {
+			cmd = {
+				"dotnet",
+				"/home/arch/.local/share/nvim/mason/bin/roslyn_ls/content/LanguageServer/linux-x64/Microsoft.CodeAnalysis.LanguageServer.dll",
+				"--logLevel",
+				"Information",
+				"--extensionLogDirectory",
+				vim.fs.joinpath(vim.uv.os_tmpdir(), "roslyn_ls/logs"),
+				"--stdio",
+			},
+		})
+		vim.lsp.enable("roslyn_ls")
 	end,
 }

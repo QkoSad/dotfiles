@@ -130,8 +130,9 @@ return {
 		local dap = require("dap")
 		dap.adapters.coreclr = {
 			type = "executable",
-			command = "netcoredbg",
+			command = "/home/arch/.local/share/nvim/mason/bin/netcoredbg",
 			args = { "--interpreter=vscode" },
+			options = { detached = false },
 		}
 		-- vscode and deno adapter
 		dap.adapters["pwa-node"] = {
@@ -146,13 +147,22 @@ return {
 			},
 		}
 
+		-- for c# netcoredbg use the second option when choosing debugger
 		dap.configurations.cs = {
 			{
 				type = "coreclr",
 				name = "launch - netcoredbg",
 				request = "launch",
 				program = function()
-					return vim.fn.input("Path to dll:", vim.fn.getcwd() .. "/bin/Debug/", "file")
+					local cwd = vim.fn.getcwd()
+					local project_name = vim.fn.fnamemodify(cwd, ":t")
+
+					-- Match all DLLs under bin/Debug/net*/<project>.dll
+					local glob_pattern = cwd .. "/bin/Debug/net*/" .. project_name .. ".dll"
+
+					-- Find matching paths (returns a list of full paths)
+					local dll_files = vim.fn.glob(glob_pattern, false, true)
+					return vim.fn.input(dll_files[1])
 				end,
 			},
 		}

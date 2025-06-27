@@ -17,6 +17,8 @@ nvim-dap = debugger
 nvim-dap-ui = debugger UI
 nvim-dap-virtual-text = addition to debugger UI
 
+for c# netcoredbg use the second option when choosing debugger
+
 # completions
 nvim-cmp = part of base neovim. Used for autocompletions for anything from lsp
     to auto suggestion like in a messaging app

@@ -2,14 +2,16 @@
 {
   "layer": "top",
   "position": "top",
-  "height": 32,
+  "height": 34,
   "margin": "0, 0, 0, 0",
   "modules-left": [
-    "hyprland/workspaces"
+    "hyprland/workspaces",
+    "hyprland/windowcount"
   ],
   "modules-center": [
     // "wlr/taskbar"
-    "hyprland/window"
+    //"hyprland/window"
+    "custom/clients_titles"
   ],
   "modules-right": [
     "wireplumber",
@@ -17,6 +19,13 @@
     "hyprland/language",
     "clock"
   ],
+  "hyprland/windowcount": {
+    "format": "[{}]",
+    "format-empty": "[X]",
+    "format-windowed": "[T]",
+    "format-fullscreen": "[F]",
+    "separate-outputs": true
+  },
   "hyprland/workspaces": {
     "on-click": "activate",
     "active-only": "false",
@@ -57,5 +66,13 @@
   "tray": {
     "icon-size": 21,
     "spacing": 10
+  },
+  "custom/clients_titles": {
+    "exec": "~/.config/waybar/scripts/hyprland_clients_titles_live.sh",
+    "return-type": "json",
+    "format": "{}",
+    "exec-on-event": false,
+    "restart-interval": 0,
+    "markup": "pango"
   }
 }

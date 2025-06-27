@@ -52,3 +52,9 @@ window#waybar.fullscreen #window {
 #tray {
   padding: 0px 12px;
 }
+
+/* Adding margin and padding */
+#windowcount {
+  margin-left: 0px;
+  padding: 0px 5px;
+}
