@@ -31,26 +31,36 @@ alias cat=bat
 alias ls=exa
 alias la="exa -lah"
 alias ll="exa -l"
-alias rm=trash
+alias rm=trash-put
 # starts bc in float mode
 alias bc="bc -l"
 # alias cd=z
 alias grep="grep --with-filename --line-number --color=auto -i"
+
 # makes nnn rash instead of delete
-alias t="NNN_TRASH=1 nnn -e"
-alias cp="advcp -gi"
-alias mv="advmv -gi"
-# Mozilla Bug 1908825 makes both browsers crash in wayland this forces them to
-# run in xwayland and not crash, those aliases can be removed when the bugfix is
-# mergen in the browsers. It is unknow when this will happen since both browsers
-# merge mozilla extended release which are 52 weaks behind. This link will say
-# when the bugfix has been merged: https://gitlab.torproject.org/tpo/applications/tor-browser-build/-/raw/maint-13.5/projects/browser/Bundle-Data/Docs-TBB/ChangeLog.txt
-# alias mullvad-browser="MOZ_ENABLE_WAYLAND=0 nohup mullvad-browser &>/dev/null &"
-# alias torbrowser-launcher="MOZ_ENABLE_WAYLAND=0 nohup torbrowser-launcher &>/dev/null &"
+alias n="nnn_tmux"
+export NNN_PLUG="z:autojump;i:imgview;p:preview-tui;"
+export NNN_FIFO=/tmp/nnn.fifo
+# since preview need tmux 
+function nnn_tmux(){
+  tmux has-session -t nnn 2>/dev/null
+  if [[  $? -eq 0 ]]; then
+    tmux a -t nnn
+  else
+    tmux new-session -s nnn 'NNN_TRASH=1 nnn -e;'
+  fi
+}
+
+# alias cp="advcp -gi"
+# alias mv="advmv -gi"
 alias webRip="wget --random-wait -r -p -e robots=off -U mozilla"
 
 # prompt
-PS1="%F{magenta}%n@%m%f %B%F{yellow}%~%f%b"$'\n'"%F{yellow}%?%f %F{cyan}%%%f "
+function parse_git_branch(){
+  git branch 2> /dev/null | sed -n -e 's/^\* \(.*\)/[\1] /p'
+}
+setopt PROMPT_SUBST
+PS1="%F{magenta}%n@%m%f "'$(parse_git_branch)'"%B%F{yellow}%~%f%b"$'\n'"%F{yellow}%?%f %F{cyan}%%%f "
 # vi mode
 bindkey -v
 export KEYTIMEOUT=1
@@ -101,7 +111,6 @@ bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -v '^?' backward-delete-char
-
 # for some reason no history search in vim mode
 bindkey "^R" history-incremental-search-backward
 

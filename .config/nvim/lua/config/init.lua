@@ -26,7 +26,7 @@ autocmd("VimEnter", {
 autocmd({
 	"BufEnter",
 }, {
-	pattern = { "*.md" },
+	pattern = { "*.md,*.txt" },
 	callback = function()
 		-- :setlocal spell spelllang=en_us
 		vim.opt_local.spelllang = "en_us"
