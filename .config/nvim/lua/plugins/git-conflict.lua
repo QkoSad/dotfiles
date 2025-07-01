@@ -1,1 +1,6 @@
-return { "akinsho/git-conflict.nvim", version = "*", config = true, enabled = false }
+return {
+	"akinsho/git-conflict.nvim",
+	version = "*",
+	cmd = { "GitConflictChooseBase" },
+	config = true,
+}

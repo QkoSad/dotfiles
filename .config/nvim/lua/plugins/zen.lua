@@ -16,6 +16,7 @@ return {
 				vim.wo.number = true
 				vim.wo.rnu = true
 			end,
+			desc = "Zen mode",
 		},
 		{
 			"<leader>zZ",
@@ -28,9 +29,11 @@ return {
 				})
 				require("zen-mode").toggle()
 				vim.wo.wrap = false
-				vim.wo.number = true
-				vim.wo.rnu = true
+				vim.wo.number = false
+				vim.wo.rnu = false
+				vim.opt.colorcolumn = "0"
 			end,
+			desc = "Full Zen mode",
 		},
 	},
 }

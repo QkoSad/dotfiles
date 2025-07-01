@@ -23,6 +23,7 @@ return {
 				["g."] = "actions.toggle_hidden",
 				["g\\"] = "actions.toggle_trash",
 			},
+			skip_confirm_for_simple_edits = true,
 			view_options = {
 				-- Show files and directories that start with "."
 				show_hidden = false,
@@ -30,7 +31,7 @@ return {
 			float = {
 				-- Padding around the floating window
 				padding = 2,
-				max_width = 80,
+				max_width = 100,
 				max_height = 0,
 				border = "rounded",
 				win_options = {

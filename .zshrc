@@ -47,7 +47,7 @@ function nnn_tmux(){
   if [[  $? -eq 0 ]]; then
     tmux a -t nnn
   else
-    tmux new-session -s nnn 'NNN_TRASH=1 nnn -e;'
+    tmux new-session -s nnn 'NNN_PREVIEWIMGPROG=viu NNN_TRASH=1 nnn -e;'
   fi
 }
 
@@ -147,8 +147,6 @@ open(){
 alias getpath="find -type f | fzf | sed 's/^..//' | tr -d '\n' | xclip -selection c"
 # fzf with preview
 alias fzf="fzf --preview '/usr/bin/bat {} --color=always'"
-# zoxided
-eval "$(zoxide init zsh)"
 # lynx 
 alias lynx="lynx --useragent='Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_0) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.79 Safari/537.1 Lynx' -cfg=$HOME/.config/lynx/lynx.cfg -lss=$HOME/.config/lynx/lynx.lss"
 # lyxn search ripped rom https://github.com/rwxrob
@@ -170,6 +168,9 @@ duck () {
   lynx "https://duckduckgo.com/lite?q=$url"
 }
 alias "?"=duck
+
+# zoxided
+eval "$(zoxide init zsh)"
 
 # shell built ins man pages
 unalias run-help

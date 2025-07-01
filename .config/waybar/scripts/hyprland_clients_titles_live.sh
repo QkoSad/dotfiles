@@ -44,7 +44,8 @@ SOCKET_PATH="${XDG_RUNTIME_DIR}/hypr/${HYPRLAND_INSTANCE_SIGNATURE}/.socket2.soc
 
 # Listen with socat
 socat - UNIX-CONNECT:"$SOCKET_PATH" | while read -r line; do
-    if echo "$line" | grep -Eq "^(workspace|createwindow|destroywindow|movewindow|activewindow)"; then
+    # if echo "$line" | grep -Eq "^(openwindow|workspace|createwindow|destroywindow|movewindow|activewindow)"; then
+    if echo "$line" | grep -Eq "^(activewindow|openwindow|closewindow)"; then
         print_clients
     fi
 done

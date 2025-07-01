@@ -3,6 +3,6 @@ return {
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 	},
-	event = "VeryLazy",
+	cmd = { "CurlOpen" },
 	config = true,
 }

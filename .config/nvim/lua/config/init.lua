@@ -2,19 +2,6 @@
 
 local autocmd = vim.api.nvim_create_autocmd
 
--- update folds when open new buffer
--- autocmd({ "BufEnter" }, {
--- 	pattern = { "*" },
--- 	command = "normal zx",
--- })
-
--- stop netrw from spawning empty buffers, modified to stop oil from spawning,
--- currently not in use since i use oil.nvim plugin
--- autocmd("BufEnter", {
--- 	pattern = "{}",
--- 	command = ":setlocal bufhidden=wipe",
--- })
-
 -- set cwd to the entered file
 -- why :p:h https://vimdoc.sourceforge.net/htmldoc/cmdline.html#filename-modifiers
 -- or :h filename-modifiers
