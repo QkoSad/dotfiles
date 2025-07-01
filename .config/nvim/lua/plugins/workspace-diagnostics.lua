@@ -22,7 +22,7 @@ return {
 		---------------------------------------------------------------------------
 		--- Key Mappings
 
-		vim.api.nvim_set_keymap("n", "<space>r", "", {
+		vim.api.nvim_set_keymap("n", "<leader>r", "", {
 			noremap = true,
 			callback = function()
 				for _, client in ipairs(vim.lsp.get_clients()) do

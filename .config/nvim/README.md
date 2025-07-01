@@ -46,7 +46,7 @@ nvim-autopairs = adds second pair
 harpoon = quick movement between couple of files
 telescope.nvim = quick search and open files
 oil = file explorere
-scope = makes each tab have separete buffers
+scope = makes each tab have separate buffers
 
 # Misc
 nvim-ufo = better folding
@@ -79,6 +79,6 @@ set filetype? - prints the current buffer file type
 
 tsc-nvim, ts-error-translator might be unneeded not sure what use they are
 Unsure about trouble
-lsp-zero.nvim = lsp mangers helps set up and running lsp servers. It removes the
+lsp-zero.nvim = lsp managers helps set up and running lsp servers. It removes the
     need of manual configuration with nvim-cmp and nvim-lspconfig. 
     !No longer used.

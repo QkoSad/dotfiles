@@ -26,7 +26,7 @@ vim.opt.smartcase = true
 vim.opt.termguicolors = true
 -- never have less the 8 lines on top or bottom
 vim.opt.scrolloff = 8
--- stop the signcolumn from disapearing when there are no errors
+-- stop the signcolumn from disappearing when there are no errors
 vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 -- fast updatetime
@@ -44,7 +44,7 @@ vim.opt.diffopt = "vertical"
 -- 	[[substitute(getline(v:foldstart),'\\\\t',repeat('\\ ',&tabstop),'g').'...'.trim(getline(v:foldend)) . ' (' . (v:foldend - v:foldstart + 1) . ' lines)']]
 -- -- dunno what this was
 -- vim.opt.fillchars = "fold: "
--- so it dosent open files folded
+-- so it doesn't open files folded
 -- vim.opt.foldlevel = 8
 
 -- folding plugin

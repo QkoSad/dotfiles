@@ -22,7 +22,7 @@ autocmd({
 	end,
 })
 
--- higlight when yanking
+-- highlight when yanking
 autocmd("TextYankPost", {
 	pattern = "*",
 	callback = function()
