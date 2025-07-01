@@ -2,7 +2,12 @@ return {
 	"neovim/nvim-lspconfig",
 	dependencies = {
 		-- install language servers
-		{ "williamboman/mason.nvim", opts = {} },
+		{
+			"williamboman/mason.nvim",
+			opts = {
+				registries = { "github:mason-org/mason-registry", "github:Crashdummyy/mason-registry" },
+			},
+		},
 		"williamboman/mason-lspconfig.nvim",
 		"saghen/blink.cmp",
 	},
@@ -34,8 +39,7 @@ return {
 
 		vim.lsp.config("roslyn_ls", {
 			cmd = {
-				"dotnet",
-				"/home/arch/.local/share/nvim/mason/bin/roslyn_ls/content/LanguageServer/linux-x64/Microsoft.CodeAnalysis.LanguageServer.dll",
+				"roslyn",
 				"--logLevel",
 				"Information",
 				"--extensionLogDirectory",
