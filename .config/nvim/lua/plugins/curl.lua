@@ -5,4 +5,5 @@ return {
 	},
 	cmd = { "CurlOpen" },
 	config = true,
+	enabled = false,
 }

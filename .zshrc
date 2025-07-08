@@ -28,14 +28,15 @@ alias -g ......='cd ../../../../..'
 
 alias sync-mail="mpop -a | /home/arch/Documents/scripts/send-notify-mpop && mbsync -aV | tee /dev/tty | \grep -A 4 -B 6 'Opening near side box INBOX' | tee /dev/tty | /home/arch/Documents/scripts/send-notify-isync "
 alias cat=bat
-alias ls=exa
-alias la="exa -lah"
-alias ll="exa -l"
+alias ls=eza
+alias la="eza -lah"
+alias ll="eza -l"
 alias rm=trash-put
 # starts bc in float mode
 alias bc="bc -l"
 # alias cd=z
 alias grep="grep --with-filename --line-number --color=auto -i"
+alias docker=podman
 
 # makes nnn rash instead of delete
 alias n="nnn_tmux"
@@ -182,6 +183,7 @@ alias irssi="irssi --config='$XDG_CONFIG_HOME'/irssi/config --home='$XDG_DATA_HO
 alias nvidia-settings="nvidia-settings --config='$XDG_CONFIG_HOME'/nvidia/settings"
 alias mbsync="mbsync -c '$XDG_CONFIG_HOME'/isync/mbsyncrc"
 alias yarn="yarn --use-yarnrc '$XDG_CONFIG_HOME/yarn/config'"
+alias wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"
 
 # Plugins
 # zsh substring

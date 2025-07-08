@@ -33,7 +33,12 @@ vim.keymap.set("n", "q:", "<nop>", { desc = "Remove q:" })
 -- buffer navigation
 vim.keymap.set("n", "<C-l>", ":bnext<CR>", { desc = "Next buffer" })
 vim.keymap.set("n", "<C-h>", ":bprevious<CR>", { desc = "Prev buffer" })
+vim.keymap.set("n", "<A-Tab>", ":b#<CR>", { desc = "Prev buffer" })
 vim.keymap.set("n", "<leader>bd", ":bp | sp | bn | bd<CR>", { desc = "Delete buffer" })
+-- tabs
+vim.keymap.set("n", "<C-j>", "gt", { desc = "Next tab" })
+vim.keymap.set("n", "<C-k>", "gT", { desc = "Prev buffer" })
+
 -- change dir
 vim.keymap.set("n", "<leader>cd", ":cd %:h<CR>", { desc = "Change dir" })
 --window
@@ -45,13 +50,19 @@ vim.keymap.set("n", "<A-l>", "<C-w>l", { desc = "Right Window" })
 vim.keymap.set("n", "<A-x>", "<C-w>x", { desc = "Swap Window" })
 vim.keymap.set("n", "<A-w>", "<C-w>w", { desc = "Prev Window" })
 vim.keymap.set("n", "<A-q>", "<C-w>q", { desc = "Close window" })
+vim.keymap.set("n", "<A-s>", "<C-w>s", { desc = "Side split" })
+vim.keymap.set("n", "<A-h>", "<C-w>h", { desc = "Vertical split" })
 
 -- quickfix
-vim.keymap.set("n", "<leader>q", ":copen<CR>", { desc = "Open quickfix" })
-vim.keymap.set("n", "<leader>l", ":lli<CR>", { desc = "Open location" })
+vim.keymap.set("n", "<leader>q", function()
+	vim.cmd(vim.fn.getqflist({ winid = 0 }).winid > 0 and "cclose" or "copen")
+end, { desc = "Toggle Quickfix" })
+
+vim.keymap.set("n", "<leader>l", function()
+	vim.cmd(vim.fn.getloclist(0, { winid = 0 }).winid > 0 and "lclose" or "lopen")
+end, { desc = "Toggle Location", silent = true })
+
+-- vim.keymap.set("n", "<leader>q", ":copen<CR>", { desc = "Open quickfix" })
+-- vim.keymap.set("n", "<leader>l", ":lli<CR>", { desc = "Open location" })
 vim.keymap.set("n", "]c", ":cn<CR>", { desc = "Next quickfix" })
 vim.keymap.set("n", "[c", ":cp<CR>", { desc = "Prev quickfix" })
--- toggle term
-local termtoggle = require("stx.term") -- I have put the above code under ~/.config/nvim/lua/stx/term.lua
-vim.keymap.set("n", "<C-t>", termtoggle.toggleterm, { desc = "toggle terminal" })
-vim.keymap.set("t", "<C-t>", termtoggle.toggleterm, { buffer = termtoggle.buf, desc = "toggle terminal" })

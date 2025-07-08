@@ -1,13 +1,13 @@
 return {
 	"danymat/neogen",
 	cmd = { "Neogen" },
-	config = function()
-		require("neogen").setup({
-			languages = {
-				["typescriptreact.tsdoc"] = require("neogen.configurations.typescriptreact"),
-			},
-		})
-	end,
+	config = true,
+	keys = { {
+		"<leader>n",
+		function()
+			require("neogen").generate()
+		end,
+	} },
 	-- Uncomment next line if you want to follow only stable versions
 	-- version = "*"
 }

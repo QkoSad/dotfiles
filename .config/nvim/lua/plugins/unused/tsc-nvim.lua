@@ -1,6 +1,6 @@
 return {
 	"dmmulroy/tsc.nvim",
-	enabled = false,
+	enabled = true,
 	cmd = "TSC",
 	opts = {
 		auto_start_watch_mode = false,

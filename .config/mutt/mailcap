@@ -5,7 +5,7 @@ text/plain; $EDITOR %s ;
 # this one does not work but looks like it will also be good
 # text/html; links %s; nametemplate=%s.html; copiousoutput;
 # elinks looks the best for now, needs more testing
-text/html; elinks %s; nametemplate=%s.html; copiousoutput;
+text/html; cha %s; nametemplate=%s.html; copiousoutput;
 
 image/*; feh %s ;
 video/*; setsid mpv --quiet %s &; copiousoutput

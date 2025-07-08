@@ -1,6 +1,6 @@
 return {
 	"akinsho/git-conflict.nvim",
 	version = "*",
-	cmd = { "GitConflictChooseBase" },
+	cmd = { "GitConflictRefresh" },
 	config = true,
 }

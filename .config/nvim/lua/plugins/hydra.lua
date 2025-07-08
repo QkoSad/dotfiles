@@ -1,124 +1,155 @@
--- nah ill figure this one next time
 return {
 	"nvimtools/hydra.nvim",
-	enabled = false,
+	enabled = true,
 	config = function()
 		local Hydra = require("hydra")
-		local dap = require("dap")
+		-- local dap = require("dap")
 		Hydra({
-			-- string? only used in auto-generated hint
-			name = "Debug",
-
-			-- string | string[] modes where the hydra exists, same as `vim.keymap.set()` accepts
+			name = "window",
 			mode = "n",
-
-			-- string? key required to activate the hydra, when excluded, you can use
-			-- Hydra:activate()
-			body = "<leader>bh",
-
-			-- these are explained below
-			hint = [[ Debug mode ]],
-			config = { exit = false },
+			body = "<C-w>",
+			hint = [[ Resize window ]],
 			heads = {
 				{
-					"c",
-					function()
-						dap.continue()
-					end,
-					desc = "Run/Continue",
+					">",
+					"<C-w>>",
+					{ desc = "Increase windth" },
 				},
 				{
-					"a",
-					function()
-						dap.continue({ before = get_args })
-					end,
-					desc = "Run with Args",
+					"<",
+					"<C-w><",
+					{ desc = "Decrease windth" },
 				},
 				{
-					"g",
-					function()
-						dap.goto_()
-					end,
-					desc = "Go to Line (No Execute)",
+					"+",
+					"<C-w>+",
+					{ desc = "Increase hight" },
 				},
 				{
-					"i",
-					function()
-						dap.step_into()
-					end,
-					desc = "Step Into",
-				},
-				{
-					"J",
-					function()
-						dap.down()
-					end,
-					desc = "Down",
-				},
-				{
-					"K",
-					function()
-						dap.up()
-					end,
-					desc = "Up",
-				},
-				{
-					"L",
-					function()
-						dap.run_last()
-					end,
-					desc = "Run Last",
-				},
-				{
-					"o",
-					function()
-						dap.step_out()
-					end,
-					desc = "Step Out",
-				},
-				{
-					"O",
-					function()
-						dap.step_over()
-					end,
-					desc = "Step Over",
-				},
-				{
-					"p",
-					function()
-						dap.pause()
-					end,
-					desc = "Pause",
-				},
-				{
-					"r",
-					function()
-						dap.repl.toggle()
-					end,
-					desc = "Toggle REPL",
-				},
-				{
-					"s",
-					function()
-						dap.session()
-					end,
-					desc = "Session",
-				},
-				{
-					"t",
-					function()
-						dap.terminate()
-					end,
-					desc = "Terminate",
-				},
-				{
-					"w",
-					function()
-						require("dap.ui.widgets").hover()
-					end,
-					desc = "Widgets",
+					"-",
+					"<C-w>-",
+					{ desc = "Decrease hight" },
 				},
 			},
 		})
+
+		-- nah ill figure this one next time
+		-- 	Hydra({
+		-- 		-- string? only used in auto-generated hint
+		-- 		name = "Debug",
+		--
+		-- 		-- string | string[] modes where the hydra exists, same as `vim.keymap.set()` accepts
+		-- 		mode = "n",
+		--
+		-- 		-- string? key required to activate the hydra, when excluded, you can use
+		-- 		-- Hydra:activate()
+		-- 		body = "<leader>bh",
+		--
+		-- 		-- these are explained below
+		-- 		hint = [[ Debug mode ]],
+		-- 		config = {
+		-- 		foreign_keys= run,
+		-- 		exit = false },
+		-- 		heads = {
+		-- 			{
+		-- 				"c",
+		-- 				function()
+		-- 					dap.continue()
+		-- 				end,
+		-- 				desc = "Run/Continue",
+		-- 			},
+		-- 			{
+		-- 				"a",
+		-- 				function()
+		-- 					dap.continue({ before = get_args })
+		-- 				end,
+		-- 				desc = "Run with Args",
+		-- 			},
+		-- 			{
+		-- 				"g",
+		-- 				function()
+		-- 					dap.goto_()
+		-- 				end,
+		-- 				desc = "Go to Line (No Execute)",
+		-- 			},
+		-- 			{
+		-- 				"i",
+		-- 				function()
+		-- 					dap.step_into()
+		-- 				end,
+		-- 				desc = "Step Into",
+		-- 			},
+		-- 			{
+		-- 				"J",
+		-- 				function()
+		-- 					dap.down()
+		-- 				end,
+		-- 				desc = "Down",
+		-- 			},
+		-- 			{
+		-- 				"K",
+		-- 				function()
+		-- 					dap.up()
+		-- 				end,
+		-- 				desc = "Up",
+		-- 			},
+		-- 			{
+		-- 				"L",
+		-- 				function()
+		-- 					dap.run_last()
+		-- 				end,
+		-- 				desc = "Run Last",
+		-- 			},
+		-- 			{
+		-- 				"o",
+		-- 				function()
+		-- 					dap.step_out()
+		-- 				end,
+		-- 				desc = "Step Out",
+		-- 			},
+		-- 			{
+		-- 				"O",
+		-- 				function()
+		-- 					dap.step_over()
+		-- 				end,
+		-- 				desc = "Step Over",
+		-- 			},
+		-- 			{
+		-- 				"p",
+		-- 				function()
+		-- 					dap.pause()
+		-- 				end,
+		-- 				desc = "Pause",
+		-- 			},
+		-- 			{
+		-- 				"r",
+		-- 				function()
+		-- 					dap.repl.toggle()
+		-- 				end,
+		-- 				desc = "Toggle REPL",
+		-- 			},
+		-- 			{
+		-- 				"s",
+		-- 				function()
+		-- 					dap.session()
+		-- 				end,
+		-- 				desc = "Session",
+		-- 			},
+		-- 			{
+		-- 				"t",
+		-- 				function()
+		-- 					dap.terminate()
+		-- 				end,
+		-- 				desc = "Terminate",
+		-- 			},
+		-- 			{
+		-- 				"w",
+		-- 				function()
+		-- 					require("dap.ui.widgets").hover()
+		-- 				end,
+		-- 				desc = "Widgets",
+		-- 			},
+		-- 		},
+		-- 	})
 	end,
 }

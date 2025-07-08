@@ -17,7 +17,7 @@ vim.opt.backup = false
 vim.opt.undodir = os.getenv("HOME") .. "/.config/vim/undodir"
 vim.opt.undofile = true
 -- search options
-vim.opt.hlsearch = false
+vim.opt.hlsearch = true
 vim.opt.incsearch = true
 -- search bar is non cases sensitive ignorecase is need for smartcase to work
 vim.opt.ignorecase = true

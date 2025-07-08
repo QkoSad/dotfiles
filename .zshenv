@@ -14,7 +14,19 @@ export PYTHONUSERBASE=$XDG_DATA_HOME/python
 export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history
 export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
 export DOCKER_CONFIG="$XDG_CONFIG_HOME"/docker
-export W3M_DIR="$XDG_STATE_HOME/w3m"
+export W3M_DIR="$XDG_STATE_HOME"/w3m
+export GOPATH="$XDG_DATA_HOME"/go
+export GOMODCACHE="$XDG_CACHE_HOME"/go/mod
+export WINEPREFIX="$XDG_DATA_HOME"/wineprefixes/default
+export WGETRC="$XDG_CONFIG_HOME"/wgetrc
+export VSCODE_PORTABLE="$XDG_DATA_HOME"/vscode
+export OMNISHARPHOME="$XDG_CONFIG_HOME"/omnisharp
+export OLLAMA_MODELS=$XDG_DATA_HOME/ollama/models
+export NUGET_PACKAGES="$XDG_CACHE_HOME"/NuGetPackages
+export MYSQL_HISTFILE="$XDG_DATA_HOME"/mysql_history
+export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
+
+
 
 # fabric AI, if fabric fails i can uncomment those
 # export GOROOT=/usr/local/go
