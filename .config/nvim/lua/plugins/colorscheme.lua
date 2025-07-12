@@ -1,31 +1,28 @@
 return {
-	-- { "rose-pine/neovim", name = "rose-pine" },
-	-- { "folke/tokyonight.nvim" },
-	-- { "ellisonleao/gruvbox.nvim" },
-	-- { "nxvu699134/vn-night.nvim" },
-	-- { "EdenEast/nightfox.nvim", },
-	-- { "navarasu/onedark.nvim" },
-	-- { "Shatur/neovim-ayu" },
-	-- { "Yagua/nebulous.nvim" },
-	-- { "navarasu/onedark.nvim" },
-	-- { "marko-cerovac/material.nvim" },
-	-- { "Matsuuu/pinkmare" },
-	-- { "DilanGMB/nightbuddy" },
-	-- { "ChristianChiarulli/nvcode-color-schemes.vim" },
-	-- { "bkegley/gloombuddy" },
-	-- { "nekonako/xresources-nvim" },
-	-- { "fenetikm/falcon" },
-	-- { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-	{
-		"rebelot/kanagawa.nvim",
-		config = function()
-			vim.cmd("colorscheme kanagawa-wave")
-		end,
-	},
-	{
-		"norcalli/nvim-colorizer.lua",
-		config = function()
-			require("colorizer").setup()
-		end,
-	},
+  -- { "rose-pine/neovim", name = "rose-pine" },
+  -- { "folke/tokyonight.nvim" },
+  -- { "ellisonleao/gruvbox.nvim" },
+  -- { "nxvu699134/vn-night.nvim" },
+  -- { "EdenEast/nightfox.nvim", },
+  -- { "navarasu/onedark.nvim" },
+  -- { "Shatur/neovim-ayu" },
+  -- { "Yagua/nebulous.nvim" },
+  -- { "navarasu/onedark.nvim" },
+  -- { "marko-cerovac/material.nvim" },
+  -- { "Matsuuu/pinkmare" },
+  -- { "DilanGMB/nightbuddy" },
+  -- { "ChristianChiarulli/nvcode-color-schemes.vim" },
+  -- { "bkegley/gloombuddy" },
+  -- { "nekonako/xresources-nvim" },
+  -- { "fenetikm/falcon" },
+  -- { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+  {
+    "rebelot/kanagawa.nvim",
+    config = function() vim.cmd("colorscheme kanagawa-wave") end,
+  },
+  {
+    "norcalli/nvim-colorizer.lua",
+    event = "VeryLazy",
+    config = function() require("colorizer").setup() end,
+  },
 }

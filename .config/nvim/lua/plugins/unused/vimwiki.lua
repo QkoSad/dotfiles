@@ -1,6 +1,6 @@
 return {
-	"vimwiki/vimwiki",
-	opts = {},
-	lazy = true,
-	enabled = false,
+  "vimwiki/vimwiki",
+  opts = {},
+  lazy = true,
+  enabled = false,
 }
