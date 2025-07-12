@@ -39,17 +39,25 @@ alias grep="grep --with-filename --line-number --color=auto -i"
 alias docker=podman
 
 # makes nnn rash instead of delete
-alias n="nnn_tmux"
-export NNN_PLUG="z:autojump;i:imgview;p:preview-tui;"
-export NNN_FIFO=/tmp/nnn.fifo
-# since preview need tmux 
-function nnn_tmux(){
-  tmux has-session -t nnn 2>/dev/null
-  if [[  $? -eq 0 ]]; then
-    tmux a -t nnn
-  else
-    tmux new-session -s nnn 'NNN_PREVIEWIMGPROG=viu NNN_TRASH=1 nnn -e;'
-  fi
+# alias n="NNN_TRASH=1 nnn -e"
+# alias nnnp="nnn_tmux"
+# export NNN_PLUG="z:autojump;i:imgview;p:preview-tui;"
+# export NNN_FIFO=/tmp/nnn.fifo
+# # since preview need tmux 
+# function nnn_tmux(){
+#   tmux has-session -t nnn 2>/dev/null
+#   if [[  $? -eq 0 ]]; then
+#     tmux a -t nnn
+#   else
+#     tmux new-session -s nnn 'NNN_PREVIEWIMGPROG=viu NNN_TRASH=1 nnn -e;'
+#   fi
+# }
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
 }
 
 # alias cp="advcp -gi"
@@ -172,6 +180,17 @@ alias "?"=duck
 
 # zoxided
 eval "$(zoxide init zsh)"
+# uv
+eval "$(uv generate-shell-completion zsh)"
+# Fix completions for uv run to autocomplete .py files
+_uv_run_mod() {
+    if [[ "$words[2]" == "run" && "$words[CURRENT]" != -* ]]; then
+        _arguments '*:filename:_files -g "*.py"'
+    else
+        _uv "$@"
+    fi
+}
+compdef _uv_run_mod uv
 
 # shell built ins man pages
 unalias run-help

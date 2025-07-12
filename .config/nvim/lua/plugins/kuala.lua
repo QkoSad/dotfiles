@@ -1,9 +1,10 @@
 return {
 	"mistweaverco/kulala.nvim",
 	keys = {
-		{ "<leader>Rs", desc = "Send request" },
-		{ "<leader>Ra", desc = "Send all requests" },
-		{ "<leader>Rb", desc = "Open scratchpad" },
+		{ "<leader>R", "", desc = "+Kuala", mode = { "n", "v" } },
+		{ "<leader>Rs", desc = "Send request(Kuala)" },
+		{ "<leader>Ra", desc = "Send all requests(Kuala)" },
+		{ "<leader>Rb", desc = "Open scratchpad(Kuala)" },
 	},
 	ft = { "http", "rest" },
 	opts = {

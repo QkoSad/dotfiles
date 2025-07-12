@@ -4,6 +4,7 @@ return {
 	cmd = "Trouble",
 	enabled = true,
 	keys = {
+		{ "<leader>x", "", desc = "+Trouble", mode = { "n", "v" } },
 		{
 			"<leader>xx",
 			"<cmd>Trouble diagnostics toggle<cr>",
