@@ -44,11 +44,6 @@ window#waybar.fullscreen #window {
   color: @occupied;
 }
 
-#taskbar button.active {
-  color: @focused;
-  font-weight: bold;
-}
-
 #tray {
   padding: 0px 12px;
 }
