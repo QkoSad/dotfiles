@@ -1,2 +1,3 @@
 *.gpg
 **/lazy-lock.json
+**/state.pickle

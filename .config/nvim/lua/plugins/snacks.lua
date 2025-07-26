@@ -44,6 +44,14 @@ return {
     { "<leader>sS", function() Snacks.picker.lsp_workspace_symbols() end, desc = "LSP Workspace Symbols" },
   },
   opts = {
+    image = {
+      enabled = true,
+      doc = {
+        enabled = true,
+        max_width = 100,
+        max_height = 100,
+      },
+    },
     bufdelete = { enabled = true },
     picker = {
       enabled = true,

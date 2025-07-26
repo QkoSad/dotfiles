@@ -75,10 +75,19 @@ nvim-treesitter-textobjects = adds more objects besides word and brackets
 
 
 # Unused
-set filetype? - prints the current buffer file type
 
 tsc-nvim, ts-error-translator might be unneeded not sure what use they are
 Unsure about trouble
 lsp-zero.nvim = lsp managers helps set up and running lsp servers. It removes the
     need of manual configuration with nvim-cmp and nvim-lspconfig. 
     !No longer used.
+# random
+set filetype? - prints the current buffer file type
+
+
+In order to use molten
+Every new project that uses vnev shoudl do:
+pip install ipykernel
+python -m ipykernel install --user --name project_name
+Project name should match the venev name in order for Molten to automatically
+load the kernel

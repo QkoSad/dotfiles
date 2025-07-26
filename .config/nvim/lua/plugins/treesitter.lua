@@ -1,7 +1,4 @@
-return { -- treesitter defaults
-  -- {
-  --   "nvim-treesitter/nvim-treesitter-textobjects",
-  -- },
+return {
   {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
@@ -27,12 +24,12 @@ return { -- treesitter defaults
             enable = true,
             lookahead = true,
             keymaps = {
-              -- ["af"] = "@function.outer",
-              -- ["if"] = "@function.inner",
-              -- ["ac"] = "@conditional.outer",
-              -- ["ic"] = "@conditional.inner",
-              -- ["al"] = "@loop.outer",
-              -- ["il"] = "@loop.inner",
+              ["af"] = "@function.outer",
+              ["if"] = "@function.inner",
+              ["ac"] = "@conditional.outer",
+              ["ic"] = "@conditional.inner",
+              ["al"] = "@loop.outer",
+              ["il"] = "@loop.inner",
               ["ib"] = { query = "@code_cell.inner", desc = "in block" },
               ["ab"] = { query = "@code_cell.outer", desc = "around block" },
             },

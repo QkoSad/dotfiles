@@ -46,6 +46,7 @@ return {
         function() runner.run_all(true) end,
         { desc = "run all cells of all languages", silent = true }
       )
+      quarto.activate()
     end,
   },
   {
