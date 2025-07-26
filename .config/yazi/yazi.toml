@@ -1,0 +1,5 @@
+[plugin]
+  append_spotters = [
+    { name = "*/", run = "file-extra-metadata" },
+    { name = "*", run = "file-extra-metadata" },
+  ]

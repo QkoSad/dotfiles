@@ -22,9 +22,22 @@ return {
         "html",
         "jsonls",
         "lua_ls",
-        "pylsp",
+        -- "pylsp",
         "yamlls",
-        -- "omnisharp",
+      },
+    })
+    -- TODO clean this up
+    require("lspconfig")["pyright"].setup({
+      on_attach = on_attach,
+      capabilities = capabilities,
+      settings = {
+        python = {
+          analysis = {
+            diagnosticSeverityOverrides = {
+              reportUnusedExpression = "none",
+            },
+          },
+        },
       },
     })
     vim.diagnostic.config({

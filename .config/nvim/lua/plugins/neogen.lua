@@ -5,6 +5,6 @@ return {
   keys = { {
     "<leader>n",
     function() require("neogen").generate() end,
-    { desc = "Neogen" },
+    desc = "Neogen",
   } },
 }

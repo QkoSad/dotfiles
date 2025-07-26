@@ -38,7 +38,11 @@ export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
 
 # from archwiki to prevent path duplication
 typeset -U path PATH
-path=($HOME/Documents/scripts/bin $path)
+# personal bins
+path=($HOME/bin $path)
+# bins from pipx
+path=($HOME/.local/bin $path)
+# dotnet
 path=($HOME/.dotnet/tools $path)
 
 # needed for webUI stable diffusion

@@ -1,0 +1,7 @@
+[mgr]
+prepend_keymap = [
+	{ on = "<Esc>", run = "close", desc = "Close" },
+	{ on = "F", run = "plugin smart-filter", desc = "Smart Filter" },
+	{ on = "<Enter>", run = "plugin augment-command open", desc = "Smart Filter" },
+
+]

@@ -1,15 +1,13 @@
 return { -- treesitter defaults
-  {
-    "nvim-treesitter/nvim-treesitter-textobjects",
-    dependencies = "nvim-treesitter/nvim-treesitter",
-    event = "VeryLazy",
-  },
+  -- {
+  --   "nvim-treesitter/nvim-treesitter-textobjects",
+  -- },
   {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
+    dependencies = { "nvim-treesitter/nvim-treesitter-textobjects" },
     config = function()
-      local configs = require("nvim-treesitter.configs")
-      configs.setup({
+      require("nvim-treesitter.configs").setup({
         ensure_installed = {
           "lua",
           "typescript",
@@ -18,6 +16,8 @@ return { -- treesitter defaults
           "css",
           "tsx",
           "json",
+          "python",
+          "bash",
         },
         sync_install = false,
         highlight = { enable = true },
@@ -27,14 +27,28 @@ return { -- treesitter defaults
             enable = true,
             lookahead = true,
             keymaps = {
-              ["af"] = "@function.outer",
-              ["if"] = "@function.inner",
-              ["ac"] = "@conditional.outer",
-              ["ic"] = "@conditional.inner",
-              ["al"] = "@loop.outer",
-              ["il"] = "@loop.inner",
+              -- ["af"] = "@function.outer",
+              -- ["if"] = "@function.inner",
+              -- ["ac"] = "@conditional.outer",
+              -- ["ic"] = "@conditional.inner",
+              -- ["al"] = "@loop.outer",
+              -- ["il"] = "@loop.inner",
+              ["ib"] = { query = "@code_cell.inner", desc = "in block" },
+              ["ab"] = { query = "@code_cell.outer", desc = "around block" },
             },
             include_surrounding_whitespace = true,
+          },
+          move = {
+            enable = true,
+            set_jumps = false, -- you can change this if you want.
+            goto_next_start = {
+              --- ... other keymaps
+              ["]b"] = "@code_cell.inner",
+            },
+            goto_previous_start = {
+              --- ... other keymaps
+              ["[b"] = { query = "@code_cell.inner", desc = "previous code block" },
+            },
           },
         },
       })

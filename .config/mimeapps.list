@@ -1,0 +1,19 @@
+[Default Applications]
+video/x-matroska=mpv.desktop
+video/mp4=mpv.desktop
+text/html=mullvad-browser.desktop
+x-scheme-handler/http=mullvad-browser.desktop
+x-scheme-handler/https=mullvad-browser.desktop
+x-scheme-handler/about=mullvad-browser.desktop
+x-scheme-handler/unknown=mullvad-browser.desktop
+x-scheme-handler/gitkraken=GitKraken.desktop
+image/jpeg=feh.desktop
+image/png=feh.desktop
+text/plain=nvim.desktop
+text/x-shellscript=nvim.desktop
+x-scheme-handler/viber=viber.desktop
+application/pdf=org.pwmt.zathura.desktop
+application/epub+zip=org.pwmt.zathura.desktop
+application/lrf=calibre-lrfviewer.desktop
+inode/directory=yazi.desktop
+[Added Associations]

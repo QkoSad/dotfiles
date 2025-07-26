@@ -1,5 +1,6 @@
 autoload -U colors && colors
 HISTFILE=~/.zsh_history
+HISTTIMEFORMAT="%F %T "
 HISTSIZE=10000
 SAVEHIST=10000
 alias history="history 1 | cut -c 8- | sort -u | fzf"
@@ -34,24 +35,9 @@ alias ll="eza -l"
 alias rm=trash-put
 # starts bc in float mode
 alias bc="bc -l"
-# alias cd=z
 alias grep="grep --with-filename --line-number --color=auto -i"
-alias docker=podman
+alias vale="vale --config ~/.config/vale/config"
 
-# makes nnn rash instead of delete
-# alias n="NNN_TRASH=1 nnn -e"
-# alias nnnp="nnn_tmux"
-# export NNN_PLUG="z:autojump;i:imgview;p:preview-tui;"
-# export NNN_FIFO=/tmp/nnn.fifo
-# # since preview need tmux 
-# function nnn_tmux(){
-#   tmux has-session -t nnn 2>/dev/null
-#   if [[  $? -eq 0 ]]; then
-#     tmux a -t nnn
-#   else
-#     tmux new-session -s nnn 'NNN_PREVIEWIMGPROG=viu NNN_TRASH=1 nnn -e;'
-#   fi
-# }
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	yazi "$@" --cwd-file="$tmp"
@@ -60,8 +46,6 @@ function y() {
 	rm -f -- "$tmp"
 }
 
-# alias cp="advcp -gi"
-# alias mv="advmv -gi"
 alias webRip="wget --random-wait -r -p -e robots=off -U mozilla"
 
 # prompt
@@ -128,7 +112,7 @@ notes() { nvim --cmd 'cd ~/.notes'}
 # commands
 mem(){
   if [[ -z $1 ]]; then
-    \cat ~/.commands
+    \cat ~/.scriptFiles/commands
   else
     echo "Description:\n"$1"\nCommand:\n"$2"\n------------" >> ~/.commands 
   fi
@@ -136,14 +120,14 @@ mem(){
 #time-tracking
 time-start(){
   declare desc="$1"
-  echo "${1} Started - `date +'%H:%m %D'`" >>  ~/.time
+  echo "${1} Started - `date +'%H:%m %D'`" >>  ~/.scriptFiles/time
 }
 time-stop(){
   declare desc="$1"
-  echo "${1} Finished - `date +'%H:%m %D'`" >>  ~/.time
+  echo "${1} Finished - `date +'%H:%m %D'`" >>  ~/.scriptFiles/time
 }
 time-ls(){
-  cat ~/.time
+  cat ~/.scriptFiles/time
 }
 # finding things
 fcd(){

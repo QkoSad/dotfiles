@@ -14,7 +14,7 @@ vim.opt.textwidth = 80
 -- backup moved to the undotree plugin
 vim.opt.swapfile = false
 vim.opt.backup = false
-vim.opt.undodir = os.getenv("HOME") .. "/.config/vim/undodir"
+vim.opt.undodir = os.getenv("HOME") .. "/.local/share/nvim/undodir"
 vim.opt.undofile = true
 -- search options
 vim.opt.hlsearch = true
@@ -47,3 +47,5 @@ vim.opt.grepformat = "%f:%l:%c:%m"
 vim.opt.wildignore:append({ "**/node_modules", ".git/**" })
 -- stop windows from auto resizing
 vim.opt.equalalways = false
+-- spelling false
+vim.opt.spell = false

@@ -16,13 +16,19 @@ return {
   -- { "nekonako/xresources-nvim" },
   -- { "fenetikm/falcon" },
   -- { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+  -- { "vague2k/vague.nvim" },
   {
     "rebelot/kanagawa.nvim",
-    config = function() vim.cmd("colorscheme kanagawa-wave") end,
+    lazy = false, -- make sure we load this during startup if it is your main colorscheme
+    priority = 1000, -- make sure to load this before all the other start plugins
+    config = function()
+      -- load the colorscheme here
+      vim.cmd([[colorscheme kanagawa-wave]])
+    end,
   },
   {
     "norcalli/nvim-colorizer.lua",
-    event = "VeryLazy",
+    cmd = "ColorizerAttachToBuffer",
     config = function() require("colorizer").setup() end,
   },
 }

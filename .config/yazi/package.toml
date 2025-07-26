@@ -1,0 +1,17 @@
+[[plugin.deps]]
+use = "yazi-rs/plugins:smart-filter"
+rev = "1ab21d4"
+hash = "a9d553bd19a3cd7f4eab3abaac5d67ff"
+
+[[plugin.deps]]
+use = "hankertrix/augment-command"
+rev = "edc1bcf"
+hash = "d5874bfb59265c96e8d9d5ef53c9450"
+
+[[plugin.deps]]
+use = "boydaihungst/file-extra-metadata"
+rev = "ec035d6"
+hash = "b23b7db6beb2854a689c648a38843f8c"
+
+[flavor]
+deps = []
