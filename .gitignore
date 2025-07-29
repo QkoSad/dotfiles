@@ -1,3 +1,4 @@
 *.gpg
 **/lazy-lock.json
 **/state.pickle
+.config/nvim/localPlugs

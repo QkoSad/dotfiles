@@ -3,8 +3,6 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- vim.api.nvim_set_keymap('n','<leader>pv',':Lex 30 <cr>',{desc=""})
-
 -- don't move the cursor for J
 vim.keymap.set("n", "J", "mzJ`z", { desc = "Join Lines without moving cursor" })
 -- center screen on movement
@@ -41,7 +39,7 @@ vim.keymap.set("n", "<C-k>", "gT", { desc = "Prev buffer" })
 
 -- change dir
 vim.keymap.set("n", "<leader>cd", ":cd %:h<CR>", { desc = "Change dir" })
---window
+-- window
 -- vim.keymap.set("n", "<C-w>x", "<C-w>q",{ desc=""})
 vim.keymap.set("n", "<A-h>", "<C-w>h", { desc = "Left Window" })
 vim.keymap.set("n", "<A-j>", "<C-w>j", { desc = "Bottom Window" })
@@ -55,22 +53,22 @@ vim.keymap.set("n", "<A-_>", "<C-w>_", { desc = "Minimize vertical" })
 vim.keymap.set("n", "<A-=>", "<C-w>=", { desc = "Normalize size" })
 
 -- quickfix
-vim.keymap.set("n", "<leader>q", function()
-	vim.cmd(vim.fn.getqflist({ winid = 0 }).winid > 0 and "cclose" or "copen")
-end, { desc = "Toggle Quickfix" })
+vim.keymap.set(
+  "n",
+  "<leader>q",
+  function() vim.cmd(vim.fn.getqflist({ winid = 0 }).winid > 0 and "cclose" or "copen") end,
+  { desc = "Toggle Quickfix" }
+)
 
-vim.keymap.set("n", "<leader>l", function()
-	vim.cmd(vim.fn.getloclist(0, { winid = 0 }).winid > 0 and "lclose" or "lopen")
-end, { desc = "Toggle Location", silent = true })
+vim.keymap.set(
+  "n",
+  "<leader>l",
+  function() vim.cmd(vim.fn.getloclist(0, { winid = 0 }).winid > 0 and "lclose" or "lopen") end,
+  { desc = "Toggle Location", silent = true }
+)
 
--- vim.keymap.set("n", "<leader>q", ":copen<CR>", { desc = "Open quickfix" })
--- vim.keymap.set("n", "<leader>l", ":lli<CR>", { desc = "Open location" })
 vim.keymap.set("n", "]c", ":cn<CR>", { desc = "Next quickfix" })
 vim.keymap.set("n", "[c", ":cp<CR>", { desc = "Prev quickfix" })
 
 --terminal
--- vim.keymap.set("t", "<A-h>", "<C-\\><C-N><C-w>h", { desc = "Left Window" })
--- vim.keymap.set("t", "<A-j>", "<C-\\><C-N><C-w>j", { desc = "Bottom Window" })
--- vim.keymap.set("t", "<A-k>", "<C-\\><C-N><C-w>k", { desc = "Top Window" })
--- vim.keymap.set("t", "<A-l>", "<C-\\><C-N><C-w>l", { desc = "Right Window" })
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", { desc = "Exit terminal" })

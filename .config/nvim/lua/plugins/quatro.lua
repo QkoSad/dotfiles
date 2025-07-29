@@ -4,6 +4,8 @@ return {
     dependencies = {
       "jmbuhr/otter.nvim",
       "nvim-treesitter/nvim-treesitter",
+      -- just need to load after
+      "benlubas/molten-nvim",
     },
     ft = { "quarto", "markdown" },
     config = function()

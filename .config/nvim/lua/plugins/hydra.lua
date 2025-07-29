@@ -12,8 +12,8 @@ return {
       heads = {
         { ">", "<C-w>>", { desc = "Increase windth" } },
         { "<", "<C-w><", { desc = "Decrease windth" } },
-        { "+", "<C-w>+", { desc = "Increase hight" } },
-        { "-", "<C-w>-", { desc = "Decrease hight" } },
+        { "+", "<C-w>+", { desc = "Increase height" } },
+        { "-", "<C-w>-", { desc = "Decrease height" } },
       },
     })
     local function keys(str)

@@ -34,12 +34,6 @@ vim.opt.updatetime = 50
 -- add visual column at the 80
 vim.opt.colorcolumn = "80"
 vim.opt.diffopt = "vertical"
-
--- folding plugin
-vim.opt.foldcolumn = "0" -- sets column on left telling the fold level
-vim.opt.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
-vim.opt.foldlevelstart = 10
-vim.opt.foldenable = true
 -- grep
 vim.opt.grepprg = "rg --vimgrep"
 vim.opt.grepformat = "%f:%l:%c:%m"
@@ -49,3 +43,10 @@ vim.opt.wildignore:append({ "**/node_modules", ".git/**" })
 vim.opt.equalalways = false
 -- spelling false
 vim.opt.spell = false
+
+vim.o.foldmethod = "expr"
+vim.o.foldexpr = "v:lua.vim.lsp.foldexpr()"
+vim.opt.foldcolumn = "0"
+vim.opt.foldlevel = 99
+vim.opt.foldlevelstart = 99
+vim.opt.foldenable = true

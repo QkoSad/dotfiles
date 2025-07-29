@@ -1,9 +1,7 @@
 autoload -U colors && colors
 HISTFILE=~/.zsh_history
-HISTTIMEFORMAT="%F %T "
 HISTSIZE=10000
 SAVEHIST=10000
-alias history="history 1 | cut -c 8- | sort -u | fzf"
 # when i kill tmux it writes properly
 setopt APPEND_HISTORY 
 # different sessions share history
@@ -37,6 +35,8 @@ alias rm=trash-put
 alias bc="bc -l"
 alias grep="grep --with-filename --line-number --color=auto -i"
 alias vale="vale --config ~/.config/vale/config"
+
+alias his="history 1 | cut -c 8- | sort -u | fzf"
 
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd

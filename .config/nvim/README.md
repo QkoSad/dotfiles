@@ -1,93 +1,106 @@
-lazy.nvim = plugin manager that supports lazy loading which means not everything
+# package manager
+* lazy.nvim = plugin manager that supports lazy loading which means not everything
     is loaded at the start nvim. Plugins can be loaded at events key combinations
     commands etc
 # lsp
-nvim-lspconfig = part of base neovim. Used to connect and interact with language
+* nvim-lspconfig = part of base neovim. Used to connect and interact with language
     servers.
-mason.nvim = used to download language servers, for maters, daps and Linters
-mason-lspconfig.nvim = Instead of copying the configuration for each new LSP
+* mason.nvim = used to download language servers, for maters, daps and Linters
+* mason-lspconfig.nvim = Instead of copying the configuration for each new LSP
     this does it automatically
-fidged = shows little information about mounting lsps and formatters in the
-    bottom right corner
-conform = like mason-lspconfig but for formatters
-lazydev = lua lsp
-roslyn =  lsp for c#
-typescript-tools = lsp for ts
-nvim-dap = debugger
-nvim-dap-ui = debugger UI
-nvim-dap-virtual-text = addition to debugger UI
+* lazydev = lua lsp
+* roslyn =  lsp for c#
+* typescript-tools = lsp for ts
+## Notes
+* for c# netcoredbg use the second option when choosing debugger
 
-for c# netcoredbg use the second option when choosing debugger
+# formatter
+* conform = configures formatters
+
+# Linter
+* nvim-lint - configures lintes
+
+# Debugger
+* nvim-dap = debugger
+* nvim-dap-ui = debugger UI
+* nvim-dap-virtual-text = addition to debugger UI
 
 # completions
-nvim-cmp = part of base neovim. Used for autocompletions for anything from lsp
-    to auto suggestion like in a messaging app
-cmp-buffer = completions from buffer
-cmp-nvim-lsp = completions from lsp
-cmp-nvim-lua = completions for lua
-cmp-path = completions for when writing path 
-cmp_luasnip = completions for snippet engines
-friendly-snippets = snippet engine
-LuaSnip = snippet engine
+* blink - completions engine
+* friendly-snippets = snippet engine
 
 # git
-gitsigns = show what change have been made to a file
-diffview = shows git diff of a file
-vim-fugitive = git interface so don't need to open terminal
+* gitsigns = show what change have been made to a file
+* diffview = shows git diff of a file
+* vim-fugitive = git interface so don't need to open terminal
+* git-confict = resolve conflicts
 
 # editing
-mini.comment = comment a line
-nvim-ts-context-commentstring  = commenting html jsx tsx
-nvim-ts-autotag = tag completion and tag renaming
-nvim-surround = change the surroundings of text objects, yss etc.
-nvim-autopairs = adds second pair
+* ts-comments = commenting html jsx tsx
+* nvim-ts-autotag = tag completion and tag renaming
+* nvim-surround = change the surroundings of text objects, yss etc.
+* mini-pairs = adds second pair
+* foldtext = better folding
 
 # movement
-harpoon = quick movement between couple of files
-telescope.nvim = quick search and open files
-oil = file explorere
-scope = makes each tab have separate buffers
+* harpoon = quick movement between couple of files
+* snacks.picker = quick search and open files
+* yazi = file explorere
+* scope = makes each tab have separate buffers
+
+# Docs
+* Neogen = generate docs
+
+# Testing
+* Neotest = testing framework
+* neotest-dotnet = allow running C# tests
+* neotest-jest = allow running js tests
+
+# Database
+* vim-dadbod = interface with Databases
+* vim-dadbod-completion = completions for DBUI
+* vim-dadbod-ui = UI for dadbod
 
 # Misc
-nvim-ufo = better folding
-quicker = better quickfix list
-Neogen = 
-Neotest = testing framework
-neotest-dotnet = allow running C# tests
-neotest-jest = allow running js tests
-undotree = git of each files keeps them in a tree for easy going back to changes
-vim-dadbod = interface with Databases
-vim-dadbod-completion = completions for DBUI
-vim-dadbod-ui = UI for dadbod
-zen-mode.nvim = clear the UI for when working on 1 file
-vimwiki 
-FixCursorHold = library
-nvim-nio = library
-promise-async = library
-plenary.nvim = collection of lua modules required by some other plugins
-nvim-web-devicons = icons
-telescope-fzf-native.nvim = fzf for telescope
+* undotree = git of each files keeps them in a tree for easy going back to changes
+* zen-mode.nvim = clear the UI for when working on 1 file
+* FixCursorHold = library
+* plenary.nvim = collection of lua modules required by some other plugins
 
 # Visual
 mini.tabline =  basic tabline with buffers and tabs
 nvim-treesitter = code parser allows coloring indentation
 nvim-treesitter-textobjects = adds more objects besides word and brackets 
 
+# 
+hydra - creates new modes, in which keys do different things. Usefull for UI's
+    like DAP and Kulala
+molten - working with jupyter notebook
+jupytext - molten dep
+quatro - molten dep
+otter - molte dep
+whichkey - Show what each key does
+kulala - HTTP client
+workspace-diagnostics - loads all the errors in the entire project
+trouble - fancy error display
 
-# Unused
-
-tsc-nvim, ts-error-translator might be unneeded not sure what use they are
-Unsure about trouble
-lsp-zero.nvim = lsp managers helps set up and running lsp servers. It removes the
-    need of manual configuration with nvim-cmp and nvim-lspconfig. 
-    !No longer used.
-# random
-set filetype? - prints the current buffer file type
-
-
+# Additional installation instuctions
 In order to use molten
-Every new project that uses vnev shoudl do:
+Every new project that uses vnev should do:
+```
 pip install ipykernel
 python -m ipykernel install --user --name project_name
+```
 Project name should match the venev name in order for Molten to automatically
 load the kernel
+
+If nvim is installed on new machine:
+1. Create new venv for molten to use
+```
+mkdir ~/.local/share/nvim/molten
+python -m venv ~/.local/share/nvim/molten/moltenvenv
+source ~/.local/share/nvim/molten/moltenvenv/bin/activate
+pip install pynvim jupyter_client cairosvg plotly kaleido pnglatex pyperclip
+nbformat # nbformat is not in the docs but it is needed
+```
+2. UpdateRemotePlugins

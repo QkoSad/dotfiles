@@ -18,7 +18,7 @@ return {
     -- Define your formatters
     formatters_by_ft = {
       lua = { "stylua" },
-      python = { "black" },
+      python = { "ruff_format" },
       javascript = { "prettierd" },
       typescript = { "prettierd" },
       typescriptreact = { "prettierd" },
@@ -36,7 +36,7 @@ return {
     -- Customize formatters
     formatters = {
       -- necessary since csharpier has been change, will remove when conform
-      -- mergers a PR for fixing it
+      -- mergers a PR for fixing it https://github.com/stevearc/conform.nvim/pull/695
       csharpier = function()
         local useDotnet = not vim.fn.executable("csharpier")
 

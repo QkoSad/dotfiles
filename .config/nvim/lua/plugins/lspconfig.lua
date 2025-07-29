@@ -22,22 +22,9 @@ return {
         "html",
         "jsonls",
         "lua_ls",
-        -- "pylsp",
         "yamlls",
-      },
-    })
-    -- TODO clean this up
-    require("lspconfig")["pyright"].setup({
-      on_attach = on_attach,
-      capabilities = capabilities,
-      settings = {
-        python = {
-          analysis = {
-            diagnosticSeverityOverrides = {
-              reportUnusedExpression = "none",
-            },
-          },
-        },
+        -- "basedpyright",
+        "pyright",
       },
     })
     vim.diagnostic.config({
@@ -50,6 +37,20 @@ return {
         prefix = "",
       },
       virtual_text = false,
+    })
+
+    -- TODO clean this up
+    -- This is for molten, to not see all the errors
+    vim.lsp.config("pyright", {
+      settings = {
+        python = {
+          analysis = {
+            diagnosticSeverityOverrides = {
+              reportUnusedExpression = "none",
+            },
+          },
+        },
+      },
     })
 
     vim.lsp.config("roslyn_ls", {

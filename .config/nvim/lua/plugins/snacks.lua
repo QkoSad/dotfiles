@@ -1,6 +1,5 @@
 return {
   "folke/snacks.nvim",
-  ---@type snacks.Config
   keys = {
     -- Top Pickers & Explorer
     { "<leader>bd", function() Snacks.bufdelete.delete() end },
@@ -43,6 +42,8 @@ return {
     { "<leader>ss", function() Snacks.picker.lsp_symbols() end, desc = "LSP Symbols" },
     { "<leader>sS", function() Snacks.picker.lsp_workspace_symbols() end, desc = "LSP Workspace Symbols" },
   },
+  lazy = false,
+  priority = 1000,
   opts = {
     image = {
       enabled = true,
