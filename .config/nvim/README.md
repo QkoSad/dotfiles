@@ -1,3 +1,7 @@
+# TODO's
+1. configure molten and quatro so they dont trigger for all markdowns
+2. the custom treesitter textobjects brake constantly, need to find a fix
+3. fix blink working differently in command mode
 # package manager
 * lazy.nvim = plugin manager that supports lazy loading which means not everything
     is loaded at the start nvim. Plugins can be loaded at events key combinations
@@ -8,7 +12,7 @@
 * mason.nvim = used to download language servers, for maters, daps and Linters
 * mason-lspconfig.nvim = Instead of copying the configuration for each new LSP
     this does it automatically
-* lazydev = lua lsp
+* lazydev = adds vim commands to the lua lsp, 
 * roslyn =  lsp for c#
 * typescript-tools = lsp for ts
 ## Notes

@@ -2,6 +2,7 @@ autoload -U colors && colors
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
+HIST_STAMPS="%d/%m/%y %T"
 # when i kill tmux it writes properly
 setopt APPEND_HISTORY 
 # different sessions share history

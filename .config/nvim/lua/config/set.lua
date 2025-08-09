@@ -1,5 +1,6 @@
 -- linenumber
 vim.opt.relativenumber = true
+vim.opt.number = true
 -- 4 space indets
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
