@@ -1,7 +1,6 @@
 return {
   "saghen/blink.cmp",
-  dependencies = { "rafamadriz/friendly-snippets" },
-
+  dependencies = { "echasnovski/mini.snippets" },
   version = "1.*",
 
   ---@module 'blink.cmp'
@@ -17,7 +16,19 @@ return {
       documentation = { auto_show = true, auto_show_delay_ms = 500 },
       list = { selection = { preselect = true, auto_insert = false } },
     },
+    -- keymaps for cmdline mode, not default
+    cmdline = {
+      keymap = {
+        ["<Tab>"] = { "select_and_accept" },
+        ["<C-p>"] = { "select_prev", "fallback" },
+        ["<C-n>"] = { "select_next", "fallback" },
+      },
+      completion = {
+        menu = { auto_show = true },
+      },
+    },
 
+    snippets = { preset = "mini_snippets" },
     sources = {
       default = { "lsp", "path", "snippets", "buffer" },
       per_filetype = {
@@ -38,6 +49,7 @@ return {
     },
 
     fuzzy = {
+      implementation = "rust",
       sorts = {
         "exact",
         -- defaults

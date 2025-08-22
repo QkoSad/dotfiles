@@ -12,6 +12,7 @@
     "custom/clients_titles"
   ],
   "modules-right": [
+    "custom/timer",
     "wireplumber",
     "tray",
     "hyprland/language",
@@ -64,5 +65,11 @@
     "exec-on-event": false,
     "restart-interval": 0,
     "markup": "pango"
+  },
+  "custom/timer": {
+    "format": "{} ",
+    "exec": "cat /tmp/timer_output",
+    "on-click": "~/.config/waybar/scripts/toggle_timer.sh",
+    "interval": 1
   }
 }

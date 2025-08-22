@@ -168,26 +168,30 @@ return {
       --     vim.cmd("MoltenInit python3")
       --   end
       -- end,
-      { desc = "Initialize Molten for python3", silent = true },
+      { silent = true },
+      desc = "Initialize Molten for python3",
     },
     {
       "<leader>mo",
       ":MoltenEvaluateOperator<CR>",
-      { silent = true, desc = "Run operator selection(Molten)" },
+      { silent = true },
+      desc = "Run operator selection(Molten)",
     },
-    { "<leader>ml", ":MoltenEvaluateLine<CR>", { silent = true, desc = "Evaluate line(Molten)" } },
-    { "<leader>mr", ":MoltenReevaluateCell<CR>", { silent = true, desc = "Re-evaluate cell(Molten)" } },
+    { "<leader>ml", ":MoltenEvaluateLine<CR>", { silent = true }, desc = "Evaluate line(Molten)" },
+    { "<leader>mr", ":MoltenReevaluateCell<CR>", { silent = true }, desc = "Re-evaluate cell(Molten)" },
     {
       "<leader>mv",
       ":<C-u>MoltenEvaluateVisual<CR>gv",
       mode = { "v" },
-      { silent = true, desc = "evaluate visual selection" },
+      { silent = true },
+      desc = "evaluate visual selection",
     },
     {
       "<localleader>me",
       ":noautocmd MoltenEnterOutput<CR>",
       mode = { "n" },
-      { silent = true, desc = "show/enter output" },
+      { silent = true },
+      desc = "show/enter output",
     },
     {
       "<leader>mn",
@@ -201,7 +205,7 @@ return {
         -- Move cursor to the empty line (2nd line inserted)
         vim.api.nvim_win_set_cursor(0, { row + 2, 0 })
       end,
-      { desc = "new python cell" },
+      desc = "new python cell",
     },
   },
 }

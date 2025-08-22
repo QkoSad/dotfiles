@@ -118,6 +118,9 @@ mem(){
     echo "Description:\n"$1"\nCommand:\n"$2"\n------------" >> ~/.commands 
   fi
 }
+todo(){
+  nvim ~/.TODO.md
+}
 #time-tracking
 time-start(){
   declare desc="$1"
@@ -218,3 +221,5 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 # colors for command, example show errored commands
 source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+
+source /home/arch/.config/broot/launcher/bash/br

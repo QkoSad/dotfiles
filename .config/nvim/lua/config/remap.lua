@@ -32,6 +32,7 @@ vim.keymap.set("n", "q:", "<nop>", { desc = "Remove q:" })
 vim.keymap.set("n", "<C-l>", ":bnext<CR>", { desc = "Next buffer" })
 vim.keymap.set("n", "<C-h>", ":bprevious<CR>", { desc = "Prev buffer" })
 vim.keymap.set("n", "<A-Tab>", ":b#<CR>", { desc = "Prev buffer" })
+-- replace with snacks buffdelete
 -- vim.keymap.set("n", "<leader>bd", ":bp | sp | bn | bd<CR>", { desc = "Delete buffer" })
 -- tabs
 vim.keymap.set("n", "<C-j>", "gt", { desc = "Next tab" })
@@ -66,9 +67,9 @@ vim.keymap.set(
   function() vim.cmd(vim.fn.getloclist(0, { winid = 0 }).winid > 0 and "lclose" or "lopen") end,
   { desc = "Toggle Location", silent = true }
 )
-
-vim.keymap.set("n", "]c", ":cn<CR>", { desc = "Next quickfix" })
-vim.keymap.set("n", "[c", ":cp<CR>", { desc = "Prev quickfix" })
+-- there are default mappings for those: [q and ]q
+-- vim.keymap.set("n", "]c", ":cn<CR>", { desc = "Next quickfix" })
+-- vim.keymap.set("n", "[c", ":cp<CR>", { desc = "Prev quickfix" })
 
 --terminal
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", { desc = "Exit terminal" })

@@ -2,6 +2,21 @@
 
 local autocmd = vim.api.nvim_create_autocmd
 
+-- autocmd("BufWritePre", {
+--   pattern = "*.md",
+--   callback = function()
+--     local line = vim.fn.getline("$")
+--     if line ~= "" and line:sub(-1) ~= "\n" then vim.fn.append(vim.fn.line("$"), "") end
+--   end,
+-- })
+
+autocmd({
+  "BufWritePost",
+}, {
+  pattern = { "*" },
+  callback = function() require("lint").try_lint() end,
+})
+
 -- highlights searched text, removes highlight when no longer searching
 autocmd("CursorMoved", {
   group = vim.api.nvim_create_augroup("auto-hlsearch", { clear = true }),
@@ -34,9 +49,9 @@ autocmd({
 autocmd("TextYankPost", {
   pattern = "*",
   callback = function()
-    vim.highlight.on_yank({
-      higroup = "IncSearch",
-      timeout = 40,
+    vim.hl.on_yank({
+      higroup = "Visual",
+      timeout = 300,
     })
   end,
 })
@@ -62,29 +77,3 @@ autocmd("BufWritePre", {
 -- 		io.write("\027]111\027\\")
 -- 	end,
 -- })
-
--- add shortcuts for lsp
-autocmd("LspAttach", {
-  callback = function(e)
-    local opts = { buffer = e.buf }
-    -- defaults kept here for reference
-    vim.keymap.set("n", "gl", function() vim.diagnostic.open_float() end)
-    vim.keymap.set("n", "[d", function() vim.diagnostic.goto_prev() end)
-    vim.keymap.set("n", "]d", function() vim.diagnostic.goto_next() end)
-    vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
-    vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
-    vim.keymap.set("n", "gD", function() vim.lsp.buf.declaration() end, opts)
-    vim.keymap.set("n", "gi", function() vim.lsp.buf.implementation() end, opts)
-    vim.keymap.set("n", "go", function() vim.lsp.buf.type_definition() end, opts)
-    vim.keymap.set("n", "gr", function() vim.lsp.buf.references() end, opts)
-    vim.keymap.set("n", "gs", function() vim.lsp.buf.signature_help() end, opts)
-    vim.keymap.set("i", "<C-k>", function() vim.lsp.buf.signature_help() end, opts)
-    vim.keymap.set("n", "<F2>", function() vim.lsp.buf.rename() end, opts)
-    -- vim.keymap.set({ "n", "x" }, "<F3>", function()
-    -- 	vim.lsp.buf.format({ async = true })
-    -- end, opts)
-    vim.keymap.set("n", "<F4>", function() vim.lsp.buf.code_action() end, opts)
-    -- no sure what this does stole it from primegen might need it later
-    vim.keymap.set("n", "<leader>vws", function() vim.lsp.buf.workspace_symbol() end, opts)
-  end,
-})

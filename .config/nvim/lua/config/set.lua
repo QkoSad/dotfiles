@@ -27,13 +27,16 @@ vim.opt.smartcase = true
 vim.opt.termguicolors = true
 -- never have less the 8 lines on top or bottom
 vim.opt.scrolloff = 8
--- stop the signcolumn from disappearing when there are no errors
+-- stop the signcolumn from disappearing when there are no errors, signcolumn is
+-- the one on the left containing lsp errors
 vim.opt.signcolumn = "yes"
+-- no idea
 vim.opt.isfname:append("@-@")
 -- fast updatetime
 vim.opt.updatetime = 50
 -- add visual column at the 80
 vim.opt.colorcolumn = "80"
+-- diffmode is vertical
 vim.opt.diffopt = "vertical"
 -- grep
 vim.opt.grepprg = "rg --vimgrep"
