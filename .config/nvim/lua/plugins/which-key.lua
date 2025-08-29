@@ -1,9 +1,13 @@
 return {
   "folke/which-key.nvim",
   opts = {
-    delay = 1000,
+    -- remove triggers for normal mode so i can only use the register and mark
+    -- additions
+    triggers = {
+      {},
+    },
   },
-  cmd = "WhichKey",
+  event = "VeryLazy",
   keys = {
     {
       "<leader>?",

@@ -1,13 +1,21 @@
 return {
   {
+    "GCBallesteros/jupytext.nvim",
+    config = function()
+      require("jupytext").setup({
+        style = "markdown",
+        output_extension = "md",
+        force_ft = "markdown",
+      })
+    end,
+  },
+  {
     "quarto-dev/quarto-nvim",
     dependencies = {
+      "GCBallesteros/jupytext.nvim",
       "jmbuhr/otter.nvim",
-      "nvim-treesitter/nvim-treesitter",
-      -- just need to load after
-      "benlubas/molten-nvim",
     },
-    ft = { "quarto", "markdown" },
+    cmd = { "QuartoActivate" },
     config = function()
       local quarto = require("quarto")
       quarto.setup({
@@ -49,16 +57,6 @@ return {
         { desc = "run all cells of all languages", silent = true }
       )
       quarto.activate()
-    end,
-  },
-  {
-    "GCBallesteros/jupytext.nvim",
-    config = function()
-      require("jupytext").setup({
-        style = "markdown",
-        output_extension = "md",
-        force_ft = "markdown",
-      })
     end,
   },
 }

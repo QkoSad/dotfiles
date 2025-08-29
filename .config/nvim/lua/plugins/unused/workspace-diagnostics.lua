@@ -2,14 +2,17 @@
 -- Workspace Diagnostics Plugin
 -- https://github.com/artemave/workspace-diagnostics.nvim
 -- Populates project-wide lsp diagnostics, regardless of what files are opened.
+--
 -- does not work for c#, nvim is goind to add native capabilities that will
 -- replace this plugin
+-- https://github.com/neovim/neovim/pull/34262
 -------------------------------------------------------------------------------
 
 return {
   "artemave/workspace-diagnostics.nvim",
   -- event = { "BufReadPre", "BufNewFile" },
   event = "VeryLazy",
+  enabled = false,
   dependencies = {
     "neovim/nvim-lspconfig",
     "folke/trouble.nvim",

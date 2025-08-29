@@ -1,6 +1,6 @@
 return {
   "nvimtools/hydra.nvim",
-  enabled = true,
+  event = "VeryLazy",
   config = function()
     local Hydra = require("hydra")
     -- local dap = require("dap")
@@ -8,12 +8,17 @@ return {
       name = "window",
       mode = "n",
       body = "<C-w>",
-      hint = [[ Resize window ]],
+      config = {
+        hint = {
+          type = "statusline",
+          show_name = false,
+        },
+      },
       heads = {
-        { ">", "<C-w>>", { desc = "Increase windth" } },
-        { "<", "<C-w><", { desc = "Decrease windth" } },
-        { "+", "<C-w>+", { desc = "Increase height" } },
-        { "-", "<C-w>-", { desc = "Decrease height" } },
+        { ">", "<C-w>>" },
+        { "<", "<C-w><" },
+        { "+", "<C-w>+" },
+        { "-", "<C-w>-" },
       },
     })
     local function keys(str)
@@ -27,7 +32,6 @@ return {
       _l_: run line  _R_: run above
       ^^     _<esc>_/_q_: exit ]],
       config = {
-        color = "pink",
         invoke_on_body = true,
       },
       mode = { "n" },
@@ -47,8 +51,9 @@ return {
       name = "Debug",
       hint = [[ _b_: breakpoint _c_: continue _C_ : run to cursor _i_: step into _o_: step out _O_: step over _t_: stop _w_: stop _B_: BP condition _p_: pause _<esc>_/_q_: exit]],
       config = {
-        color = "pink",
         invoke_on_body = true,
+        foreign_keys = "run",
+        color = "pink",
       },
       mode = { "n" },
       body = "<leader>b", -- this is the key that triggers the hydra

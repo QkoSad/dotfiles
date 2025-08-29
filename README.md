@@ -1,13 +1,15 @@
 Dotfiles repo for the current programs I use that need configuration.
 
 TODO:
-1. beet completions not working and - maybe fixed on its own
-2. trash completions - solved by copying the completion of it from the
+* yazi needs preview cache, and tree mode
+* wait for this zathura to get merged and then add TTS https://github.com/pwmt/zathura/pull/780/files
+* beet completions not working and - maybe fixed on its own
+* trash completions - solved by copying the completion of it from the
    zsh-completions repo https://github.com/zsh-users/zsh-completions/pull/456/files
-2. hyprland 
-    * messing the order of windows when I one window in full screen
+* hyprland 
+    * messing the order of windows when one window in full screen
     * can't minimize
-3. neomutt -  
+* neomutt -  
     * abook install and configure, 
     * notmuch, 
     * how to write html

@@ -6,7 +6,7 @@ IMAPAccount malakrapon.gmail
 Host imap.gmail.com
 Port 993
 User malakrapon@gmail.com
-PassCmd "gpg -dq --for-your-eyes-only --no-tty ~/.config/mutt/accounts/malakrapon.gmail/isync.gpg"
+PassCmd "gpg --batch --yes --pinentry-mode loopback --no-tty --passphrase-file ~/Documents/scripts/pass-gpg.txt -dq ~/.config/mutt/accounts/malakrapon.gmail/isync.gpg"
 TLSType IMAPS
 CertificateFile /etc/ssl/certs/ca-certificates.crt
 
@@ -29,7 +29,7 @@ Host imap.gmail.com
 Port 993
 AuthMechs LOGIN
 User andrean.grudev@gmail.com
-PassCmd "gpg -dq --for-your-eyes-only --no-tty ~/.config/mutt/accounts/andreangrudev.gmail/isync.gpg"
+PassCmd "gpg --batch --yes --pinentry-mode loopback --no-tty --passphrase-file ~/Documents/scripts/pass-gpg.txt -dq ~/.config/mutt/accounts/andreangrudev.gmail/isync.gpg"
 TLSType IMAPS
 CertificateFile /etc/ssl/certs/ca-certificates.crt
 

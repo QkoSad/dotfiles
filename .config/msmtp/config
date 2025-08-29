@@ -13,7 +13,7 @@ port           465
 tls_starttls   off
 from           malakrapon@gmail.com
 user           malakrapon@gmail.com
-passwordeval   "gpg -dq ~/.config/mutt/accounts/malakrapon.gmail/msmtp.gpg"
+passwordeval   "gpg --batch --yes --pinentry-mode loopback  --passphrase-file ~/Documents/scripts/pass-gpg.txt -dq ~/.config/mutt/accounts/malakrapon.gmail/msmtp.gpg"
 
 # Gmail 2
 account        andrean.grudev@gmail.com
@@ -22,7 +22,7 @@ port           465
 tls_starttls   off
 from           andreangrudev@gmail.com
 user           andreangrudev@gmail.com
-passwordeval   "gpg -dq ~/.config/mutt/accounts/andreangrudev.gmail/msmtp.gpg"
+passwordeval   "gpg --batch --yes --pinentry-mode loopback  --passphrase-file ~/Documents/scripts/pass-gpg.txt -dq ~/.config/mutt/accounts/andreangrudev.gmail/msmtp.gpg"
 
 # Cock
 account        cockaroach@cock.li
@@ -31,7 +31,7 @@ port           465
 tls_starttls   off
 from           cockaroach@cock.li
 user           cockaroach@cock.li
-passwordeval   "gpg -dq ~/.config/mutt/accounts/cockaroach.cock/isync-msmtp.gpg"
+passwordeval   "gpg --batch --yes --pinentry-mode loopback  --passphrase-file ~/Documents/scripts/pass-gpg.txt -dq ~/.config/mutt/accounts/cockaroach.cock/isync-msmtp.gpg"
 
 # Cock 2
 account        baloonbalrog@cock.li
@@ -40,7 +40,7 @@ port           465
 tls_starttls   off
 from           baloonbalrog@cock.li
 user           baloonbalrog@cock.li
-passwordeval   "gpg -dq ~/.config/mutt/accounts/baloonbalrog.cock/isync-msmtp.gpg"
+passwordeval   "gpg --batch --yes --pinentry-mode loopback  --passphrase-file ~/Documents/scripts/pass-gpg.txt -dq ~/.config/mutt/accounts/baloonbalrog.cock/isync-msmtp.gpg"
 
 # abv
 account        malak_rapon@abv.bg
@@ -49,7 +49,7 @@ port           465
 tls_starttls   off
 from           malak_rapon@abv.bg
 user           malak_rapon@abv.bg
-passwordeval   "gpg -dq ~/.config/mutt/accounts/malakrapon.abv/isync-msmtp.gpg"
+passwordeval   "gpg --batch --yes --pinentry-mode loopback  --passphrase-file ~/Documents/scripts/pass-gpg.txt -dq ~/.config/mutt/accounts/malakrapon.abv/isync-msmtp.gpg"
 
 # Set a default account
 account default: malakrapon@gmail.com

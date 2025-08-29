@@ -28,15 +28,15 @@ vim.keymap.set("n", "Q", "<nop>", { desc = "Remove Q" })
 vim.keymap.set("n", "q:", "<nop>", { desc = "Remove q:" })
 -- puts the current word under cursort to be replaced
 -- vim.keymap.set("v", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],{ desc="Put current word into search"})
--- buffer navigation
-vim.keymap.set("n", "<C-l>", ":bnext<CR>", { desc = "Next buffer" })
-vim.keymap.set("n", "<C-h>", ":bprevious<CR>", { desc = "Prev buffer" })
+-- buffer navigation replaced with dart.nvim
+-- vim.keymap.set("n", "<C-l>", ":bnext<CR>", { desc = "Next buffer" })
+-- vim.keymap.set("n", "<C-h>", ":bprevious<CR>", { desc = "Prev buffer" })
 vim.keymap.set("n", "<A-Tab>", ":b#<CR>", { desc = "Prev buffer" })
 -- replace with snacks buffdelete
 -- vim.keymap.set("n", "<leader>bd", ":bp | sp | bn | bd<CR>", { desc = "Delete buffer" })
 -- tabs
 vim.keymap.set("n", "<C-j>", "gt", { desc = "Next tab" })
-vim.keymap.set("n", "<C-k>", "gT", { desc = "Prev buffer" })
+vim.keymap.set("n", "<C-k>", "gT", { desc = "Prev tab" })
 
 -- change dir
 vim.keymap.set("n", "<leader>cd", ":cd %:h<CR>", { desc = "Change dir" })
@@ -50,7 +50,8 @@ vim.keymap.set("n", "<A-w>", "<C-w>w", { desc = "Prev Window" })
 vim.keymap.set("n", "<A-q>", "<C-w>q", { desc = "Close window" })
 vim.keymap.set("n", "<A-s>", "<C-w>s", { desc = "Side split" })
 vim.keymap.set("n", "<A-v>", "<C-w>v", { desc = "Vertical split" })
-vim.keymap.set("n", "<A-_>", "<C-w>_", { desc = "Minimize vertical" })
+vim.keymap.set("n", "<A-->", "<C-w>_", { desc = "Minimize vertical" })
+vim.keymap.set("n", "<A-\\>", "<C-w>|", { desc = "Minimize horizontal" })
 vim.keymap.set("n", "<A-=>", "<C-w>=", { desc = "Normalize size" })
 
 -- quickfix

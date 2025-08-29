@@ -21,11 +21,8 @@ fi
 export MANPAGER='nvim +Man!'
 
 #aliases
-alias -g ...='cd ../..'
-alias -g ....='cd ../../..'
-alias -g .....='cd ../../../..'
-alias -g ......='cd ../../../../..'
-
+alias lue="~/projects/lue/.venv/bin/lue --tts kokoro"
+alias tuir="~/projects/tuir/.venv/bin/tuir"
 alias sync-mail="mpop -a | /home/arch/Documents/scripts/send-notify-mpop && mbsync -aV | tee /dev/tty | \grep -A 4 -B 6 'Opening near side box INBOX' | tee /dev/tty | /home/arch/Documents/scripts/send-notify-isync "
 alias cat=bat
 alias ls=eza
@@ -165,7 +162,8 @@ duck () {
   lynx "https://duckduckgo.com/lite?q=$url"
 }
 alias "?"=duck
-
+#atuin
+eval "$(atuin init zsh)"
 # zoxided
 eval "$(zoxide init zsh)"
 # uv

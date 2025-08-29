@@ -1,6 +1,11 @@
 # TODO's
 
-[] configure molten and quatro so they don't trigger for all markdowns
+[] find a way to fold comments
+[] mini.snippets leaves annoying virtual text and Lua snippets doesn't move as it
+should in the snippet and doesn't have snippets menu
+[X] use which key only for registers and not keys
+[] paste text that has a new line without the new line
+[X] configure molten and quarto so they don't trigger for all markdowns
 [X] the custom treesitter textobjects brake constantly, need to find a fix
 turns out markdown files need an empty line at the end of file. But this is
 new it wasn't the case and somehow no one else has the same problem
@@ -9,18 +14,10 @@ Alas other people also suffer
 https://github.com/nvim-treesitter/nvim-treesitter/issues/8043
 fixed with this merge
 https://github.com/neovim/neovim/pull/35307
-merge is for 0.11.4 and im on 0.11.3. For now merge is manually applied
-[X] fix blink working differently in command mode
-[X] blink snippets is somewhat annoying
+merge is for 0.11.4 and in on 0.11.3. For now merge is manually applied
 
 # Maybe remove
 
-Neogen -- rarely use, but probably should
-Harpoon -- seems nice always forget about it, can be raplced with marsk
-zen -- never use but i like how it looks
-workspace-diagnostics -- should be removed when the new changes are merged in
-nvim
-lazydev -- it annoys me
 kulala -- curl seemed better, but maybe i don't know its syntax
 
 # package manager
@@ -33,7 +30,7 @@ kulala -- curl seemed better, but maybe i don't know its syntax
 
 - nvim-lspconfig = part of base neovim. Used to connect and interact with language
   servers.
-- mason.nvim = used to download language servers, for maters, daps and Linters
+- mason.nvim = used to download language servers, formaters, daps and Linters
 - mason-lspconfig.nvim = Instead of copying the configuration for each new LSP
   this does it automatically
 - lazydev = adds vim commands to the lua lsp,
@@ -50,7 +47,7 @@ kulala -- curl seemed better, but maybe i don't know its syntax
 
 # Linter
 
-- nvim-lint - configures lintes
+- nvim-lint - configures linters
 
 # Debugger
 
@@ -68,7 +65,6 @@ kulala -- curl seemed better, but maybe i don't know its syntax
 - gitsigns = show what change have been made to a file
 - diffview = shows git diff of a file
 - vim-fugitive = git interface so don't need to open terminal
-- git-confict = resolve conflicts
 
 # editing
 
@@ -80,9 +76,8 @@ kulala -- curl seemed better, but maybe i don't know its syntax
 
 # movement
 
-- harpoon = quick movement between couple of files
 - snacks.picker = quick search and open files
-- yazi = file explorere
+- yazi = file explorers
 - scope = makes each tab have separate buffers
 
 # Docs
@@ -93,7 +88,7 @@ kulala -- curl seemed better, but maybe i don't know its syntax
 
 - Neotest = testing framework
 - neotest-dotnet = allow running C# tests
-- neotest-jest = allow running js tests
+- neotest-jest = allow running JS tests
 
 # Database
 
@@ -104,33 +99,33 @@ kulala -- curl seemed better, but maybe i don't know its syntax
 # Misc
 
 - undotree = git of each files keeps them in a tree for easy going back to changes
-- zen-mode.nvim = clear the UI for when working on 1 file
 - FixCursorHold = library
-- plenary.nvim = collection of lua modules required by some other plugins
+- plenary.nvim = library
 
 # Visual
 
-mini.tabline = basic tabline with buffers and tabs
-nvim-treesitter = code parser allows coloring indentation
-nvim-treesitter-textobjects = adds more objects besides word and brackets
+- mini.tabline = basic tabline with buffers and tabs
+- nvim-treesitter = code parser allows coloring indentation
+- nvim-treesitter-textobjects = adds more objects besides word and brackets
 
 # misc
 
-hydra - creates new modes, in which keys do different things. Useful for UI's
+- hydra - creates new modes, in which keys do different things. Useful for UI's
 like DAP and Kulala
-molten - working with jupyter notebook
-jupytext - molten dep
-quatro - molten dep
-otter - molte dep
-whichkey - Show what each key does
-kulala - HTTP client
-workspace-diagnostics - loads all the errors in the entire project
-trouble - fancy error display
+- molten - working with jupyter notebook
+- jupytext - turns ipynb files in md. All it does is call cli jupytext with
+  option --to markdown
+- quarto - works only with md or qmd files, thats why we need jupytext
+- otter - provides LSP features for embedded languages, quarto uses it for LSP
+- whichkey - Show what each key does
+- kulala - HTTP client
+- workspace-diagnostics - loads all the errors in the entire project
+- trouble - fancy error display
 
 # Additional installation instructions
 
 In order to use molten
-Every new project that uses vnev should do:
+Every new project that uses venev should do:
 
 ```bash
 pip install ipykernel

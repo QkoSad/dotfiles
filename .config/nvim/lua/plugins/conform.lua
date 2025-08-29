@@ -19,7 +19,6 @@ return {
     formatters_by_ft = {
       lua = { "stylua" },
       python = { "ruff_format" },
-      markdown = { "prettierd" },
       javascript = { "prettierd" },
       typescript = { "prettierd" },
       typescriptreact = { "prettierd" },
@@ -35,31 +34,6 @@ return {
     -- Set up format-on-save
     format_on_save = { timeout_ms = 1500 },
     -- Customize formatters
-    formatters = {
-      -- necessary since csharpier has been change, will remove when conform
-      -- mergers a PR for fixing it https://github.com/stevearc/conform.nvim/pull/695
-      csharpier = function()
-        local useDotnet = not vim.fn.executable("csharpier")
-
-        local command = useDotnet and "dotnet csharpier" or "csharpier"
-
-        local version_out = vim.fn.system(command .. " --version")
-
-        --NOTE: system command returns the command as the first line of the result, need to get the version number on the final line
-        local version_result = version_out[#version_out]
-        local major_version = tonumber((version_out or ""):match("^(%d+)")) or 0
-        local is_new = major_version >= 1
-
-        local args = is_new and { "format", "$FILENAME" } or { "--write-stdout" }
-
-        return {
-          command = command,
-          args = args,
-          stdin = not is_new,
-          require_cwd = false,
-        }
-      end,
-    },
     shfmt = {
       prepend_args = { "-i", "2" },
     },
@@ -67,5 +41,10 @@ return {
   init = function()
     -- If you want the formatexpr, here is the place to set it
     vim.o.formatexpr = "v:lua.require'conform'.formatexpr()"
+    -- format with conform.nvim plugin
+    vim.api.nvim_create_autocmd("BufWritePre", {
+      pattern = "*",
+      callback = function(args) require("conform").format({ bufnr = args.buf }) end,
+    })
   end,
 }

@@ -36,8 +36,9 @@ vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 -- add visual column at the 80
 vim.opt.colorcolumn = "80"
--- diffmode is vertical
-vim.opt.diffopt = "vertical"
+-- diff is vertical and has empty lines uses internal diffing algo
+vim.opt.diffopt:append({ "vertical", "algorithm:histogram" })
+
 -- grep
 vim.opt.grepprg = "rg --vimgrep"
 vim.opt.grepformat = "%f:%l:%c:%m"

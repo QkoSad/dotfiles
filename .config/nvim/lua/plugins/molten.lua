@@ -1,9 +1,8 @@
 return {
-  dir = "~/.config/nvim/localPlugs/molten-nvim/",
-  -- enabled = false,
+  "benlubas/molten-nvim",
   version = "^1.0.0", -- use version <2.0.0 to avoid breaking changes
   build = ":UpdateRemotePlugins",
-  lazy = false,
+  lazy = true,
   config = function()
     -- vim.g.molten_output_win_max_height = 20
     vim.g.python3_host_prog = vim.fn.expand("~/.local/share/nvim/molten/moltenvenv/bin/python3")
@@ -12,9 +11,6 @@ return {
     -- vim.g.molten_copy_output = true
     vim.g.molten_enter_output_behavior = "open_and_enter"
     vim.g.molten_image_location = "both"
-    -- to use snacks have to change the branch of molten in
-    -- .local/share/nvim/lazy/molten
-    -- after the new version is release it won't be necesseray vim.g.molten_image_provider = "snacks.nvim" vim.g.molten_output_crop_border = false
     vim.g.molten_image_provider = "snacks.nvim"
     vim.g.molten_output_virt_lines = true
     vim.g.molten_output_show_more = true
@@ -69,6 +65,7 @@ return {
     --     if require("molten.status").initialized() == "Molten" then vim.cmd("MoltenExportOutput!") end
     --   end,
     -- })
+
     -- change settings for python files
     vim.api.nvim_create_autocmd("BufEnter", {
       pattern = "*.py",

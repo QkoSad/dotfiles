@@ -2,7 +2,6 @@ return {
   "folke/trouble.nvim",
   opts = {}, -- for default options, refer to the configuration section for custom setup.
   cmd = "Trouble",
-  enabled = true,
   lazy = true,
   keys = {
     { "<leader>x", "", desc = "+Trouble", mode = { "n", "v" } },

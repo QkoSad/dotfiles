@@ -1,5 +1,6 @@
 return {
   "saghen/blink.cmp",
+  event = "VeryLazy",
   dependencies = { "echasnovski/mini.snippets" },
   version = "1.*",
 
@@ -30,21 +31,15 @@ return {
 
     snippets = { preset = "mini_snippets" },
     sources = {
+      min_keyword_length = 3,
       default = { "lsp", "path", "snippets", "buffer" },
       per_filetype = {
         sql = { "dadbod" },
         mysql = { "dadbod" },
         -- optionally inherit from the `default` sources
-        lua = { inherit_defaults = true, "lazydev" },
       },
       providers = {
         dadbod = { module = "vim_dadbod_completion.blink" },
-        lazydev = {
-          name = "LazyDev",
-          module = "lazydev.integrations.blink",
-          -- make lazydev completions top priority (see `:h blink.cmp`)
-          score_offset = 100,
-        },
       },
     },
 
