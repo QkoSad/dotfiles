@@ -5,7 +5,8 @@ class_map_json='{
   "footclient": "Terminal",
   "Mullvad Browser": "Mullvad",
   "librewolf": "Librewolf",
-  "firefox": "Firefox"
+  "firefox": "Firefox",
+  "org.qutebrowser.qutebrowser":"Qutebrowser"
 }'
 
 print_clients() {

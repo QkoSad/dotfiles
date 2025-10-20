@@ -1,6 +1,6 @@
 # TODO's
 
-[] find a way to fold comments
+[] mark dart put new buffers on the right
 [] mini.snippets leaves annoying virtual text and Lua snippets doesn't move as it
 should in the snippet and doesn't have snippets menu
 [X] use which key only for registers and not keys
@@ -16,10 +16,6 @@ fixed with this merge
 https://github.com/neovim/neovim/pull/35307
 merge is for 0.11.4 and in on 0.11.3. For now merge is manually applied
 
-# Maybe remove
-
-kulala -- curl seemed better, but maybe i don't know its syntax
-
 # package manager
 
 - lazy.nvim = plugin manager that supports lazy loading which means not everything
@@ -31,9 +27,6 @@ kulala -- curl seemed better, but maybe i don't know its syntax
 - nvim-lspconfig = part of base neovim. Used to connect and interact with language
   servers.
 - mason.nvim = used to download language servers, formaters, daps and Linters
-- mason-lspconfig.nvim = Instead of copying the configuration for each new LSP
-  this does it automatically
-- lazydev = adds vim commands to the lua lsp,
 - roslyn = lsp for c#
 - typescript-tools = lsp for ts
 
@@ -63,7 +56,6 @@ kulala -- curl seemed better, but maybe i don't know its syntax
 # git
 
 - gitsigns = show what change have been made to a file
-- diffview = shows git diff of a file
 - vim-fugitive = git interface so don't need to open terminal
 
 # editing

@@ -152,6 +152,11 @@ return {
   keys = {
     { "<leader>m", "", desc = "+Molten", mode = { "n", "v" } },
     {
+      "<leader>mq",
+      ":QuartoActivate<CR>",
+    },
+
+    {
       "<leader>mi",
       ":MoltenInit<CR>",
       -- automatically Initialize the kernel based on current virtualenv
@@ -172,23 +177,23 @@ return {
       "<leader>mo",
       ":MoltenEvaluateOperator<CR>",
       { silent = true },
-      desc = "Run operator selection(Molten)",
+      desc = "Run operator selection",
     },
-    { "<leader>ml", ":MoltenEvaluateLine<CR>", { silent = true }, desc = "Evaluate line(Molten)" },
-    { "<leader>mr", ":MoltenReevaluateCell<CR>", { silent = true }, desc = "Re-evaluate cell(Molten)" },
+    { "<leader>ml", ":MoltenEvaluateLine<CR>", { silent = true }, desc = "Evaluate line" },
+    { "<leader>mr", ":MoltenReevaluateCell<CR>", { silent = true }, desc = "Re-evaluate cell" },
     {
       "<leader>mv",
       ":<C-u>MoltenEvaluateVisual<CR>gv",
       mode = { "v" },
       { silent = true },
-      desc = "evaluate visual selection",
+      desc = "Evaluate visual selection",
     },
     {
       "<localleader>me",
       ":noautocmd MoltenEnterOutput<CR>",
       mode = { "n" },
       { silent = true },
-      desc = "show/enter output",
+      desc = "Showo utput",
     },
     {
       "<leader>mn",
@@ -202,7 +207,7 @@ return {
         -- Move cursor to the empty line (2nd line inserted)
         vim.api.nvim_win_set_cursor(0, { row + 2, 0 })
       end,
-      desc = "new python cell",
+      desc = "New python cell",
     },
   },
 }

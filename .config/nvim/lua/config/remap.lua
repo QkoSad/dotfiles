@@ -31,10 +31,15 @@ vim.keymap.set("n", "q:", "<nop>", { desc = "Remove q:" })
 -- buffer navigation replaced with dart.nvim
 -- vim.keymap.set("n", "<C-l>", ":bnext<CR>", { desc = "Next buffer" })
 -- vim.keymap.set("n", "<C-h>", ":bprevious<CR>", { desc = "Prev buffer" })
-vim.keymap.set("n", "<A-Tab>", ":b#<CR>", { desc = "Prev buffer" })
 -- replace with snacks buffdelete
 -- vim.keymap.set("n", "<leader>bd", ":bp | sp | bn | bd<CR>", { desc = "Delete buffer" })
 -- tabs
+vim.keymap.set("n", "<C-1>", "1gt", { desc = "First tab" })
+vim.keymap.set("n", "<C-2>", "2gt", { desc = "Second tab" })
+vim.keymap.set("n", "<C-3>", "3gt", { desc = "Third tab" })
+vim.keymap.set("n", "<C-4>", "4gt", { desc = "Fourth tab" })
+vim.keymap.set("n", "<C-5>", "5gt", { desc = "Fifth tab" })
+
 vim.keymap.set("n", "<C-j>", "gt", { desc = "Next tab" })
 vim.keymap.set("n", "<C-k>", "gT", { desc = "Prev tab" })
 

@@ -25,7 +25,8 @@ export OLLAMA_MODELS=$XDG_DATA_HOME/ollama/models
 # removed because roslyn pakcage looks for .nuget/packages
 # export NUGET_PACKAGES="$XDG_CACHE_HOME"/NuGetPackages
 export MYSQL_HISTFILE="$XDG_DATA_HOME"/mysql_history
-export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
+# adroid recommended removing it
+# export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
 
 
 

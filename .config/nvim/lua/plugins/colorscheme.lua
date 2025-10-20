@@ -17,6 +17,7 @@ return {
   -- { "fenetikm/falcon" },
   -- { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
   -- { "vague2k/vague.nvim" },
+  { "https://github.com/darianmorat/gruvdark.nvim" },
   {
     "rebelot/kanagawa.nvim",
     lazy = false, -- make sure we load this during startup if it is your main colorscheme

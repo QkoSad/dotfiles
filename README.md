@@ -9,6 +9,7 @@ TODO:
 * hyprland 
     * messing the order of windows when one window in full screen
     * can't minimize
+    * missing the dwm tag functionality
 * neomutt -  
     * abook install and configure, 
     * notmuch, 
