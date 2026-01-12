@@ -11,7 +11,7 @@
     "custom/clients_titles"
   ],
   "modules-right": [
-    "custom/timer",
+    // "custom/timer",
     "wireplumber",
     "tray",
     "hyprland/language",

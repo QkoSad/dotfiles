@@ -13,6 +13,7 @@ vim.opt.smartindent = true
 vim.opt.wrap = false
 vim.opt.textwidth = 80
 -- backup moved to the undotree plugin
+-- look into those 2 and whether i can use them
 vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.undodir = os.getenv("HOME") .. "/.local/share/nvim/undodir"

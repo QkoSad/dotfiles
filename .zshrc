@@ -15,7 +15,7 @@ setopt extendedglob nomatch notify
 unsetopt autocd beep
 # autostart DE
 if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
-  exec Hyprland
+  exec start-hyprland
 fi
 # use vim for man pages
 export MANPAGER='nvim +Man!'
@@ -219,3 +219,5 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 # colors for command, example show errored commands
 source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+
+. "$HOME/.local/share/../bin/env"

@@ -32,6 +32,8 @@ return {
         "vimdoc",
         "vim",
         "ninja",
+        "kotlin",
+        "java",
       },
     },
     config = function(_, opts)

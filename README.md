@@ -15,3 +15,4 @@ TODO:
     * notmuch, 
     * how to write html
     * add ics to neomutt
+neovim - figure out why does treesitter install ts in one place and then looks for them in another

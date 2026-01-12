@@ -1,6 +1,7 @@
 directory: /mnt/hardDrive/Music
 library: ~/.local/share/beets/musiclibrary.db
-plugins: fetchart lyrics lastgenre
+plugins: fetchart lyrics lastgenre musicbrainz
+musicbrainz:
+  data_source_mismatch_penalty: 0.3 # Lower penalty = preferred
 import:
-    write: yes
-
+  write: yes

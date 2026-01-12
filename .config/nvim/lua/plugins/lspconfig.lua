@@ -133,6 +133,8 @@ return {
         },
       },
     })
+    -- Configure kotlin_lsp for Android projects
+
     local languages = {
       "ansiblels",
       "awk_ls",
@@ -145,9 +147,11 @@ return {
       "marksman",
       "pyright",
       "roslyn_ls",
-      "systemd_ls",
+      "systemd_lsp",
       "ts_ls",
-      "yaml_ls",
+      "yamlls",
+      "kotlin_lsp",
+      "gradle_ls",
     }
     for _, val in ipairs(languages) do
       vim.lsp.enable(val)

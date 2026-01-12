@@ -3,3 +3,5 @@
     { name = "*/", run = "file-extra-metadata" },
     { name = "*", run = "file-extra-metadata" },
   ]
+[preview]
+  cache_dir = "~/.cache/yazi/preview"
